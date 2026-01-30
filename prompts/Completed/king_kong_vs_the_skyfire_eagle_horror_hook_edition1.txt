@@ -1,0 +1,89 @@
+// Scene length: Keep camera/VO cuts tight to ~8 seconds; each scene must resolve a mini-question (What happened? Why it matters?).
+
+**Scene Title:** The Last Normal Sunset
+**Camera Style:** Static long shot, wide-angle lens. The camera is locked down, almost like a security camera, to establish a sense of mundane reality about to be shattered. A slow, almost imperceptible zoom begins at the end of the shot, creating a subtle sense of focus and dread.
+**Environment:** A tranquil suburban street. Identical houses with manicured lawns sit under a sky of deep, bruised purple and orange of late dusk. A single streetlight flickers on. Sprinklers hiss rhythmically, casting arcs of water in the fading light.
+**Character & Action:** A teenager on a skateboard glides silently down the empty street, the only movement in the frame. He doesn't look up. In the sky above him, a faint, sickly green aurora begins to pulse, subtly at first, then with more intensity, unnoticed.
+**Mood/Expression:** Serene unease. The placid, fragile calm before an unknown storm.
+**Audio:** The sharp, rhythmic hiss of lawn sprinklers and the soft, smooth whir of skateboard wheels on pavement. A distant dog bark. A low, almost subsonic hum begins to subtly fade in, unheard by the character.
+
+---
+
+**Scene Title:** Waveform Collapse
+**Camera Style:** Extreme close-up on a spectrograph monitor, then a rapid, jarring rack focus to the scientist's eye. The shot is handheld and shaky, conveying panic and urgency. Anamorphic lens with significant, glitching lens flare from the monitor.
+**Environment:** The cold, dark interior of an observatory control room. Blinking server lights reflect on polished concrete floors. The only light source is the harsh blue-white glow from a bank of monitors displaying cascading, chaotic data. The air smells of ozone and hot electronics.
+**Character & Action:** DR. ARIS THORNE, 50s, stares at a screen, his face illuminated by the data. His eyes are wide, pupils dilated. He rips off his glasses, leaning closer as if in disbelief. His hand trembles as he reaches for a phone, fumbling the receiver. The data on the screen is a jagged, screaming waveform that defies all known models.
+**Mood/Expression:** Dawning intellectual terror. The horror of empirical data confirming the impossible.
+**Audio:** The frantic, high-pitched digital screech of the anomaly on the monitor. The loud, panicked clatter of the phone receiver being dropped. Thorne’s sharp, terrified gasp for air.
+
+---
+
+**Scene Title:** Pretty Colors
+**Camera Style:** Low-angle shot from a child's POV, looking straight up. A slight, dreamlike Dutch angle that makes the world feel off-kilter. The camera is completely still. A 50mm "prime" lens creates a natural, human-eye perspective that feels both intimate and vast.
+**Environment:** A backyard at twilight. The dark silhouette of a swing set frames the shot. The sky is now filled with shimmering, unnatural geometric patterns of light, like iridescent cracks appearing in glass. The colors shift from emerald green to a violent magenta.
+**Character & Action:** A 7-year-old girl, LILY, lies on her back in the cool grass. She isn't scared. She lifts a small hand, her fingers outstretched as if trying to touch the shifting patterns in the sky. A look of pure, innocent wonder is on her face.
+**Mood/Expression:** Awe and eerie beauty. The sublime horror of the unknown seen through innocent eyes.
+**Audio:** The gentle, rhythmic creak of the swing set moving in the breeze. Distant, muffled sirens begin to fade in, a counterpoint to the calm. A single, clear, high-frequency musical note holds, almost like a singing bowl.
+
+---
+
+**Scene Title:** The Cacophony
+**Camera Style:** A chaotic whip pan across a crowded street, shot from a high-angle on a long lens. The compression makes the crowd feel dense and inescapable. The camera suddenly crash-zooms onto one person, then another, capturing raw, unfiltered reactions.
+**Environment:** A media-saturated urban canyon like Times Square. Giant LED billboards flicker and then display corrupted static. The street is packed with pedestrians and gridlocked traffic. A cold rain begins to fall, reflecting the glitching screens on the wet pavement.
+**Character & Action:** The instant the scream hits, the entire crowd reacts as one unified body. People drop their shopping bags and phones. They clutch their heads, their faces contorting in agony. Some collapse to their knees, others stumble blindly into traffic. It is a synchronized, involuntary reaction of pure, neurological pain.
+**Mood/Expression:** Visceral, collective agony and mass panic.
+**Audio:** A sudden, overwhelming blast of discordant, multi-layered sound—a shriek mixed with grinding metal and digital distortion. This is the "Scream." It drowns out all other diegetic sounds like traffic and chatter, which are instantly silenced by its arrival.
+
+---
+
+**Scene Title:** Thirty Thousand Feet
+**Camera Style:** Extreme close-up on the pilot's face, reflected in the dark glass of a dead instrument panel. The shot is violently shaking, achieved with a camera rig physically attached to the actor. The focus is razor-thin on her widening eyes.
+**Environment:** The claustrophobic cockpit of a commercial airliner at night. Every screen is black. The only light is from the strobing, unnatural colors of the sky outside and the frantic red glow of a single, sputtering emergency lamp. The acrid smell of electrical smoke.
+**Character & Action:** CAPTAIN EVA ROSTOVA, 40s, struggles with a dead control yoke, her knuckles white with strain. Her co-pilot is slumped over, unconscious. She screams unheard commands into her headset, but only static answers. A tear of pure terror and frustration streaks through the grime on her cheek.
+**Mood/Expression:** Terminal helplessness. The horror of a total loss of control at maximum altitude.
+**Audio:** The deafening roar of wind shear. The continuous, piercing wail of a stall alarm. The pilot's ragged, desperate breathing and the crackle of dead static in the headset. The non-diegetic "Scream" is a distorted, pulsating undercurrent beneath the chaos.
+
+---
+
+**Scene Title:** The Great Extinguishing
+**Camera Style:** God's-eye-view, an extreme high-angle shot as if from a satellite. The movement is a slow, steady, inexorable track across a vast landscape, emphasizing the sheer scale of the event. An ultra-wide lens captures the curvature of the Earth.
+**Environment:** A sprawling network of cities and towns seen from orbit at night, a glittering web of golden light. Below, clouds swirl in impossible, geometric shapes, illuminated from above by the strange sky-phenomenon.
+**Character & Action:** There are no individual characters. The action is the death of the grid. In a cascading wave, entire sections of the city lights blink out, spreading like a contagion. The vibrant tapestry of human civilization is extinguished, plunging the continent into darkness, block by block.
+**Mood/Expression:** Apocalyptic scale. Impersonal, cold, and absolute finality.
+**Audio:** A deep, resonant, low-frequency thrum that grows in intensity. As the lights go out, a series of deep, bass-heavy 'thuds' are heard, like colossal circuit breakers being thrown. The non-diegetic "Scream" fades out, replaced by an unnerving, profound silence.
+
+---
+
+**Scene Title:** The Watcher
+**Camera Style:** A tight, over-the-shoulder shot, focusing on a man's hands as they grip a weathered wooden fence post. The camera then slowly, smoothly pushes in on his face. A shallow depth of field keeps the background, a chaotic and silent sky, softly out of focus.
+**Environment:** A desolate field on a prairie farm at night. A lone farmhouse stands dark and powerless in the distance. The wind whips through dead cornstalks. The air is cold and carries the smell of damp earth and ozone. The sky above is a silent, terrifying light show.
+**Character & Action:** An old farmer, ELI, late 60s, stands rigidly, his back to the camera. He doesn't cower or scream. He just watches the sky with a look of grim, stoic resignation, as if witnessing something he always knew was coming. A single tear traces a path down his weathered face.
+**Mood/Expression:** Stoic despair. The quiet apocalypse for those far from the chaos.
+**Audio:** Only the sound of the harsh wind whistling through the fence posts and rattling the dry corn. The diegetic world is otherwise silent. A faint, sorrowful cello note begins to swell non-diegetically.
+
+---
+
+**Scene Title:** Signal Lost
+**Camera Style:** Vertigo-style dolly zoom on the news anchor. The camera physically dollies back while the lens zooms in, making the background appear to warp and rush forward while the anchor remains static, visually representing her world collapsing around her.
+**Environment:** A high-tech news studio in shambles. On the massive video wall behind the anchor, dozens of feeds show riots, collapsing buildings, and static. Papers are scattered everywhere. Red emergency lights cast long, dancing shadows.
+**Character & Action:** The news anchor, CHLOE, 30s, sits frozen at her desk, the teleprompter dead. Her professional composure has shattered. Her mouth is slightly agape. She stares directly into the camera lens—at the audience—her eyes pleading, lost. She is no longer a reporter; she is just another victim.
+**Mood/Expression:** The collapse of authority and information. Shared, public terror broadcast live.
+**Audio:** A cacophony of overlapping, distorted audio feeds from the video wall—sirens, screaming, static. A repeating, automated "This is not a test" emergency broadcast message stutters and glitches. Chloe's own microphone feeds back with a sharp squeal.
+
+---
+
+**Scene Title:** The Source
+**Camera Style:** An impossible, cosmic zoom. Starts on a close-up of a shattered window reflecting the sky, then pulls back at an incredible speed, through the clouds, through the stratosphere, until it stops at the edge of space. Telephoto lens, creating a flattened, detached, observational perspective.
+**Environment:** The mesosphere. Thin, electric-blue noctilucent clouds drift by. The gentle curve of the darkened Earth is below. Above is the infinite, star-dusted black of space.
+**Character & Action:** There is no character. The "action" is the reveal of the source: a vast, non-Euclidean entity of shifting geometry and fractured light. It is not a ship, but a living hole in reality, pulsing in time with the faint, residual psychic echo of the Scream. It is utterly alien and incomprehensible.
+**Mood/Expression:** Cosmic horror. Awe-inspiring and mind-breaking revelation.
+**Audio:** Absolute, total silence. All previous sound cuts out completely. The only sound is a very low, pulsing, non-diegetic synth pad that sounds like a colossal, sleeping heartbeat.
+
+---
+
+**Scene Title:** Day One
+**Camera Style:** A slow, majestic crane shot, starting low on a single object on the ground and rising up to reveal a panoramic vista of the new reality. A wide-angle lens captures the full scope of the change.
+**Environment:** The same city street from Scene 4, now at dawn. The street is empty and silent, littered with abandoned cars and personal belongings. A strange, reddish-brown dust coats everything. The sky is a pale, sickly, jaundiced yellow. The air is unnervingly still.
+**Character & Action:** The crane begins on a child's dropped teddy bear lying in a murky puddle. As the camera rises, it reveals the silent, desolate cityscape. Nothing is on fire, nothing is destroyed—it is simply empty. Humanity has vanished.
+**Mood/Expression:** Haunting emptiness. Profound, unsettling quiet. The silent, terrifying question of "what happens next?"
+**Audio:** For the first few seconds, absolute silence. Then, the faint sound of the wind whispering through concrete canyons. A single, mournful piano key is struck, and its note hangs in the air, echoing over the empty city as the scene fades to black.

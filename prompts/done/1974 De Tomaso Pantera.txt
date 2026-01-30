@@ -1,0 +1,543 @@
+Scene 1 — Phase 1 Discovery: Establishing the Barn Environment**
+**Camera:** Slow, low-angle tracking shot pushing through heavy wooden barn doors.
+**Action:** Sunlight pierces through gaps in the roof, illuminating swirling dust motes and revealing the wedge-shaped silhouette of the Pantera.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. The camera pushes through decaying industrial barn doors. Volumetric fog and dust motes dance in sharp shafts of afternoon sunlight. The car is partially obscured by rusted oil drums and cobwebs. The yellow paint is matte with age, covered in a thick layer of grey silt. Shadows wrap around the aggressive Italian wedge profile. 8K resolution, Unreal Engine 5 render style, hyper-realistic textures of rotting wood and cold iron. Ray-traced reflections on the dirty glass. The atmosphere is heavy, silent, and ancient.
+
+---
+
+Scene 2 — Phase 1 Discovery: The Spider-Webbed Hood**
+**Camera:** Macro close-up, shallow depth of field, panning across the front trunk (frunk).
+**Action:** Detailed focus on the fiberglass surface showing fine "spider-web" stress cracks and a thick layer of grime.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. The camera pans across the low-slung front hood. The focus is sharp on the fiberglass surface, revealing intricate, crystalline spider-webbing cracks in the yellow paint. A thick crust of industrial barn dust fills the crevices. In the background, the blurred silhouette of an old workbench is visible. High-fidelity textures show the transition from smooth, aged paint to rough, oxidized fiberglass. 8K, ray tracing, macro photography style, extreme detail on the surface imperfections and micro-debris.
+
+---
+
+Scene 3 — Phase 1 Discovery: The Deflated Tires and Campagnolo Wheels**
+**Camera:** Extreme low-angle static shot looking at the rear driver-side wheel.
+**Action:** The heavy weight of the car presses the dry-rotted rubber flat against the dirt-covered concrete floor.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. The focus is on the rear Campagnolo magnesium wheel, caked in brake dust and grime. The wide tire is completely flat, the sidewall bulging and showing deep dry-rot cracks under the pressure of the mid-engine weight. The ground is a mix of cracked concrete and oily dirt. Soft, ambient barn light catches the edge of the rim. 8K, Unreal Engine 5, hyper-detailed rubber textures, volumetric lighting, realistic weight physics visible in the tire deformation.
+
+---
+
+Scene 4 — Phase 1 Discovery: The Mid-Engine Glimpse**
+**Camera:** High-angle crane shot looking through the louvers of the rear engine deck.
+**Action:** The camera peers through the black slats to reveal the dust-covered Ford 351 Cleveland V8 engine.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. The camera looks down through the iconic black rear slats into the engine bay. A massive Ford 351 Cleveland V8 sits dormant, covered in a shroud of grey dust and dry leaves. Rusted valve covers and a grime-streaked carburetor are visible in the shadows. The yellow bodywork framing the engine is dull and lifeless. 8K, cinematic lighting, sharp focus on the mechanical heart of the machine, ray-traced shadows, hyper-realistic metal oxidation.
+
+---
+
+Scene 5 — Phase 1 Discovery: The Interior Time Capsule**
+**Camera:** Tracking shot moving from the exterior door handle to the dusty window.
+**Action:** The camera attempts to look through the side window; the black leather interior is visible under a film of interior "fogging" and dust.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. The camera glides along the door line toward the side glass. The window is covered in a translucent layer of grime. Inside, the gated shifter and black vinyl dashboard are visible, frozen in time. The seats show signs of mold and humidity damage. Reflections of the barn's rafters play across the glass surface. 8K, Unreal Engine 5, complex glass shaders, realistic interior shadows, volumetric dust, hyper-detailed weathered leather textures.
+
+---
+
+Scene 6 — Phase 1 Discovery: The Emblem and Front Grille**
+**Camera:** Slow zoom-in on the De Tomaso "T" logo on the nose.
+**Action:** The camera focuses on the enamel emblem, which is chipped and surrounded by a ring of rust on the yellow paint.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. The camera zooms slowly into the front nose emblem. The "T" shaped logo is pitted and faded, set against the pale, oxidized yellow paint. Small rust bubbles are forming at the edge of the metal trim. The pop-up headlight seams are filled with dirt. 8K, macro cinematography, extreme texture detail, ray-traced reflections on the emblem's remaining chrome, cinematic color grading highlighting the decay.
+
+---
+
+Scene 7 — Phase 1 Discovery: The Rear Quad Exhausts**
+**Camera:** Wide shot from the floor level looking up at the rear bumper.
+**Action:** The four rusted exhaust tips poke out from under the black rear valance, surrounded by industrial debris.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. Low-angle view of the rear quad exhaust pipes. The chrome has long since turned to a textured orange rust. The black rear valance is peeling. Bits of straw and old newspaper are caught in the suspension components visible below. The massive rear tires frame the shot. 8K, Unreal Engine 5, realistic metal corrosion, volumetric shadows, deep depth of field, gritty industrial aesthetic.
+
+---
+
+Scene 8 — Phase 1 Discovery: The First Touch**
+**Camera:** Close-up of a gloved hand entering the frame.
+**Action:** A finger wipes a clean streak through the thick dust on the yellow fender, revealing the vibrant color hidden beneath.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. A hand in a black work glove reaches out and wipes a single horizontal line across the dusty rear haunch. The movement reveals a brilliant, glossy Sunburst Yellow underneath the grey filth. The contrast between the dead dust and the living paint is startling. 8K, high-speed camera movement, hyper-detailed dust displacement, ray-traced reflections in the newly cleaned streak, cinematic focus.
+
+---
+
+Scene 9 — Phase 1 Discovery: Setting the Winch**
+**Camera:** Wide shot from the front of the car looking toward the barn entrance.
+**Action:** A steel winch cable is pulled into the frame and hooked onto the Pantera’s front tow point.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. A heavy, greased steel cable is dragged across the barn floor, kicking up dust. The hook is attached to the lower chassis. In the background, the bright silhouette of a modern flatbed truck is visible at the barn door. 8K, Unreal Engine 5, volumetric light beams, realistic metal cable textures, dramatic tension, industrial atmosphere.
+
+---
+
+Scene 10 — Phase 1 Discovery: The First Movement**
+**Camera:** Side profile tracking shot.
+**Action:** The winch tightens, and the Pantera groans as it is pulled forward for the first time in decades, tires dragging.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. The winch cable goes taut with a metallic "ping." The car slowly begins to move forward, its flat tires protesting against the concrete with a heavy rubber screech. Clouds of ancient dust erupt from the wheel wells. The car leaves dark streaks on the floor as it emerges from its tomb. 8K, slow-motion physics, volumetric dust clouds, ray-traced shadows, hyper-realistic mechanical movement.
+
+---
+
+
+Scene 11 — Phase 2 Extraction: Emerging into the Daylight**
+**Camera:** Wide exterior shot from outside the barn doors, looking in.
+**Action:** The Pantera is winched out of the darkness; as the nose hits the sunlight, the yellow paint flares brilliantly against the shadows.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. The car is slowly winched out of the dark industrial barn. As the wedge-shaped nose crosses the threshold into the harsh afternoon sun, the yellow paint explodes with color, contrasting sharply with the dark interior of the barn. Dust falls from the chassis in golden sparks. The camera remains static as the car fills the frame. 8K, Unreal Engine 5, extreme dynamic range, volumetric sunlight, lens flare, hyper-realistic dust particles and weathered textures.
+
+---
+
+Scene 12 — Phase 2 Extraction: High-Angle Flatbed Loading**
+**Camera:** High-angle drone shot looking straight down.
+**Action:** The Pantera is pulled onto the diamond-plate steel deck of a modern black car hauler.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. A top-down view shows the Italian exotic being centered on the silver diamond-plate ramp of a flatbed truck. The contrast between the sleek, dusty wedge and the industrial geometry of the truck is striking. The flat tires deform over the metal ridges. 8K, photorealistic materials, ray-traced reflections on the truck’s chrome, sharp shadows, high-fidelity mechanical detail of the winch and car movement.
+
+---
+
+Scene 13 — Phase 2 Extraction: Securing the Wheels**
+**Camera:** Close-up, low-angle tracking shot along the flatbed deck.
+**Action:** Heavy-duty orange nylon straps are looped through the Campagnolo wheels and ratcheted tight.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. A technician's hands secure bright orange ratchet straps through the dirty magnesium spokes of the rear wheel. The camera focuses on the tensioning mechanism as it clicks, pulling the car down into its suspension. The weathered yellow fender vibrates slightly. 8K, macro detail on the nylon weave and rusted wheel metal, realistic physics of the strap tightening, shallow depth of field, industrial color palette.
+
+---
+
+Scene 14 — Phase 2 Transport: Leaving the Barn Behind**
+**Camera:** Tracking shot from the rear of the truck as it pulls away.
+**Action:** The barn recedes into the distance as the truck enters a gravel road, the Pantera’s rear quad-exhausts vibrating on the bed.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black sitting on a moving flatbed. The camera looks past the car's rusted rear towards the decaying industrial barn. Gravel dust kicks up from the truck tires, swirling around the Pantera's rear deck. The movement causes the car to bounce gently on its flat tires. 8K, motion blur, volumetric dust, ray-traced environment reflections in the grimy rear glass, cinematic wide-angle lens.
+
+---
+
+Scene 15 — Phase 2 Transport: Highway Transit Profile**
+**Camera:** Side-parallel tracking shot from a chase car at 60mph.
+**Action:** The Pantera looks like a low-slung predator even on the back of a truck, passing under flickering highway lights.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black in transit. The truck carries the car along a coastal highway at sunset. Orange light catches the wedge-shaped profile and the "Pantera" side stripes. Wind whips through the open engine slats, clearing away loose debris and leaves. 8K, high-speed motion blur, cinematic lighting, golden hour hues, Unreal Engine 5, realistic wind physics on the dust and debris.
+
+---
+
+Scene 16 — Phase 2 Transport: Arrival at the Restoration Lab**
+**Camera:** Low-angle wide shot of a modern, clinical white garage door opening.
+**Action:** The truck backs toward a pristine, brightly lit workshop; the contrast between the dirty car and the clean lab is extreme.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. The truck backs the car toward a high-tech restoration facility with white epoxy floors and clinical LED lighting. The dirty, yellow Italian exotic looks out of place in the sterile environment. The garage door hums as it rolls upward, revealing tool chests and hydraulic lifts. 8K, architectural lighting, ray-traced reflections on the epoxy floor, high-contrast visual storytelling.
+
+---
+
+Scene 17 — Phase 2 Transport: The First Pressure Wash (Pre-Disassembly)**
+**Camera:** Slow-motion macro shot of a water nozzle.
+**Action:** A high-pressure water stream hits the yellow hood, blasting away decades of barn filth in a single pass.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. High-pressure water strikes the front fender in slow motion. The grey silt and bird droppings are vaporized, revealing the original Sunburst Yellow paint underneath. Water beads up on the surface, catching the bright overhead LEDs. 8K, high-speed liquid simulation, realistic light refraction through water droplets, hyper-detailed paint texture, Unreal Engine 5.
+
+---
+
+Scene 18 — Phase 2 Transport: Degreasing the Engine Bay**
+**Camera:** Over-the-shoulder shot looking into the rear engine compartment.
+**Action:** Foam degreaser is sprayed over the Ford 351 Cleveland; the white foam turns brown as it melts grease and grime.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. Thick, white chemical foam is sprayed over the mid-mounted V8 engine. The camera watches as the foam reacts with thirty years of oil and dirt, dripping down into the frame. The yellow metal of the engine bay walls starts to peek through. 8K, realistic fluid chemistry simulation, macro textures of metal and rubber, volumetric workshop lighting, sharp focus.
+
+---
+
+Scene 19 — Phase 2 Transport: Moving onto the Hydraulic Lift**
+**Camera:** Wide-angle floor-level shot.
+**Action:** The Pantera is rolled over a twin-post lift; the metal arms are swung under the chassis points.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. The car is pushed manually across a glossy white floor. The camera stays low as the yellow rocker panels pass over the blue steel arms of a heavy-duty hydraulic lift. Technicians in clean uniforms position the lift pads. 8K, Unreal Engine 5, ray-traced reflections, clean industrial aesthetic, focus on the low-clearance Italian chassis.
+
+---
+
+Scene 20 — Phase 2 Transport: The Ascent**
+**Camera:** Static wide shot as the car rises.
+**Action:** The lift engages, and the Pantera rises to eye level, exposing the rusted undercarriage and suspension for the first time.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. The car rises slowly on the hydraulic lift toward the ceiling. The overhead LED banks illuminate the underside, revealing rusted floor pans, a grime-coated transaxle, and weathered suspension components. The yellow body glimmers above the mechanical rot. 8K, cinematic vertical movement, volumetric lighting, hyper-realistic undercarriage textures, professional workshop environment.
+
+---
+
+Scene 21 — Phase 3 Disassembly: Removing the Front Grille**
+**Camera:** Close-up, slightly off-center.
+**Action:** A technician uses a magnetic screwdriver to remove the small screws holding the front grille; the black mesh is pulled away to reveal the spare tire tub.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. A technician's hand carefully unscrews the fasteners on the front black grille mesh. As the grille is pulled away, the hollow cavity of the front trunk is exposed, showing weathered yellow fiberglass and aged wiring looms. The lighting is crisp and clinical, highlighting the contrast between the yellow paint and the dark interior recesses. 8K, Unreal Engine 5, macro detail on the screw threads and metal mesh, ray-traced shadows, professional workshop setting.
+
+---
+
+Scene 22 — Phase 3 Disassembly: The Pop-up Headlight Extraction**
+**Camera:** Macro shot looking into the headlight bucket.
+**Action:** The square headlight housing is disconnected and lifted out, leaving a gaping "eye" in the yellow fender.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. The camera focuses on the driver-side pop-up headlight. A hand lifts the entire bulb and motor assembly out of the body. The yellow fiberglass edges of the headlight bucket are chipped and dusty. Behind the assembly, the hidden mechanical linkages are coated in a fine layer of rust. 8K, high-fidelity textures, macro lens, volumetric workshop light, realistic electrical connector detail, sharp focus on the empty headlight cavity.
+
+---
+
+Scene 23 — Phase 3 Disassembly: Stripping the "Pantera" Side Stripes**
+**Camera:** Tracking shot following a heat gun and a plastic scraper.
+**Action:** Heat is applied to the cracked black vinyl "Pantera" side stripe; the letters are slowly peeled away from the yellow door.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. A heat gun glows orange as it warms the brittle black vinyl lettering on the lower door. A plastic tool peels the "P" and "A" of the Pantera logo away, revealing pristine, unfaded Sunburst Yellow paint underneath the adhesive. The texture of the peeling vinyl is hyper-realistic. 8K, ray-traced heat distortion, macro detail of the adhesive residue, realistic light play on the glossy yellow vs. the matte black vinyl.
+
+---
+
+Scene 24 — Phase 3 Disassembly: Door Handle Removal**
+**Camera:** Close-up profile shot.
+**Action:** The flush-mounted black door handle is unscrewed from the inside and popped out, leaving a clean rectangular hole in the door skin.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. The camera captures the moment the black door handle is pushed outward from the interior of the door panel. The yellow paint around the handle slot is slightly stained with old wax. The technician’s gloved fingers catch the handle as it comes free. 8K, Unreal Engine 5, sharp focus on the mechanical tolerances, realistic paint depth, volumetric lighting reflecting off the door's curvature.
+
+---
+
+Scene 25 — Phase 3 Disassembly: Extracting the Gated Shifter**
+**Camera:** Low-angle shot from the floorboards looking up at the center console.
+**Action:** The iconic chrome gated shifter plate is unbolted, revealing the mechanical linkage and the dust-filled transmission tunnel.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. Inside the dusty cabin, the technician removes the four screws of the classic Italian gated shifter. The polished chrome plate, scratched and dull from years of use, is lifted away to reveal the raw mechanical shift rods below. Dust particles fly as the plate is moved. 8K, macro photography, realistic metal scratching and patina, ray-traced chrome reflections, shallow depth of field.
+
+---
+
+Scene 26 — Phase 3 Disassembly: Dashboard Removal**
+**Camera:** Wide-angle interior shot from the passenger side.
+**Action:** The entire black vinyl dashboard is carefully maneuvered out through the passenger door, exposing a chaotic web of 1970s wiring.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. Two technicians carefully tilt and slide the massive black dashboard assembly out of the cabin. As it clears the car, the firewall is revealed, showing a complex maze of multicolored wires and old ventilation ducts. The sunlight from the workshop door hits the interior floor. 8K, Unreal Engine 5, complex object physics, hyper-detailed wiring textures, volumetric dust, cinematic framing.
+
+---
+
+Scene 27 — Phase 3 Disassembly: Rear Glass Removal**
+**Camera:** High-angle shot from the engine bay looking toward the cabin.
+**Action:** A suction-cup tool is used to pull the vertical rear glass away from its rubber seal behind the seats.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. Large industrial suction cups are attached to the small vertical window that separates the driver from the engine. The seal groans as the glass is pulled free. The yellow window frame is visible, showing a ring of black adhesive residue. 8K, ray-traced glass transparency and reflections, realistic rubber seal texture, cinematic lighting, high-fidelity workshop environment.
+
+---
+
+Scene 28 — Phase 3 Disassembly: Tail Light Housing Extraction**
+**Camera:** Close-up of the rear corner.
+**Action:** The large rectangular tail light lens is pulled out, revealing the bulb sockets and the yellow fiberglass mounting points.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. The camera focuses on the rear passenger-side tail light. The red and amber plastic lens is pulled away from the body. Behind it, the silver-painted reflector bowls are tarnished and dusty. The yellow paint of the rear valance shows a stark line where the light once sat. 8K, macro detail on the plastic lens textures, realistic bulb filaments, ray-traced shadows, Unreal Engine 5.
+
+---
+
+Scene 29 — Phase 3 Disassembly: Removing the Engine Louvers**
+**Camera:** Mid-shot panning across the rear deck.
+**Action:** The black horizontal slats (louvers) are unbolted and lifted off, fully exposing the 351 Cleveland engine for the first time.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. The technician removes the iconic black slats covering the engine bay. As the heavy louvers are lifted, the full scale of the mid-mounted V8 engine is revealed in the workshop light. The yellow body lines look sharper without the trim. 8K, cinematic lighting, realistic metal-on-metal sound visualized through vibration, ray-traced reflections on the yellow paint, deep shadows.
+
+---
+
+Scene 30 — Phase 3 Disassembly: The Naked Shell Profile**
+**Camera:** Slow tracking shot circling the car at a 45-degree angle.
+**Action:** The Pantera is now a "naked" shell—no glass, no trim, no lights, and a gutted interior—ready for the mechanical phase.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. The car sits on the lift, now completely stripped of its jewelry. It is a raw, yellow wedge of fiberglass and steel. The empty window frames and light buckets give it a haunting, skeletal appearance. The floor is covered in discarded parts and old bolts. 8K, Unreal Engine 5, wide-angle lens, dramatic workshop lighting, hyper-realistic weathered textures, volumetric atmosphere.
+
+---
+
+
+Scene 31 — Phase 4 Engine: Disconnecting the Half-Shafts**
+**Camera:** Extreme low-angle looking up from beneath the rear suspension.
+**Action:** A pneumatic impact wrench spins off the heavy bolts securing the driveshafts to the transaxle; sparks of rust fly as the metal vibrates.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. Underneath the car, a technician uses a high-torque impact wrench on the rear half-shafts. Rust flakes and dried grease spray into the air as the bolts break loose. The massive ZF transaxle housing is visible, caked in black sludge. The yellow undercarriage is stained with old oil. 8K, high-speed camera movement, realistic particle physics for the rust flakes, volumetric lighting from the workshop floor lamps, hyper-detailed mechanical textures, Unreal Engine 5.
+
+---
+
+Scene 32 — Phase 4 Engine: Draining the Ancient Oil**
+**Camera:** Static close-up of the oil pan.
+**Action:** The drain plug is removed, and a thick, pitch-black stream of old oil glugs into a metal catch pan.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. The focus is on the engine's oil pan. As the plug is turned, a viscous, ink-black fluid pours out, reflecting the overhead fluorescent lights. The yellow paint of the surrounding frame is flecked with grime. The sound of the splashing oil is visualized through realistic surface ripples in the pan. 8K, fluid simulation, ray-traced reflections on the liquid surface, macro photography, clinical workshop environment.
+
+---
+
+Scene 33 — Phase 4 Engine: The Engine Hoist Arrival**
+**Camera:** Wide shot of the rear of the car.
+**Action:** A heavy-duty blue engine crane is rolled into position over the rear engine bay, its steel chains dangling over the V8.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. A large hydraulic engine hoist is wheeled into the frame, its shadow stretching across the yellow rear deck. The steel chains clink as they are lowered into the engine compartment. The 351 Cleveland V8 sits ready, stripped of its hoses and wires. 8K, Unreal Engine 5, realistic metal-on-metal textures, volumetric workshop lighting, cinematic framing, sharp focus on the industrial crane components.
+
+---
+
+Scene 34 — Phase 4 Engine: Tensioning the Chains**
+**Camera:** Close-up of the lift points on the engine block.
+**Action:** The chains are hooked to the lift plates on the intake manifold; the technician pumps the hydraulic handle, and the chains go taut.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. The camera zooms in on the heavy steel hooks biting into the engine’s lift points. As the hydraulic jack is pumped, the chains snap tight with a metallic ring. The engine mounts strain, and the entire car body rises an inch on its suspension. 8K, macro detail of the chain links and rusted bolt heads, realistic physics of the suspension rebound, ray-traced shadows, sharp mechanical focus.
+
+---
+
+Scene 35 — Phase 4 Engine: The Great Extraction**
+**Camera:** Mid-shot, tracking the engine as it rises vertically.
+**Action:** The massive V8 engine and transaxle assembly are lifted clear of the car; the empty engine bay is revealed in all its grimy glory.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in faded Yellow and Black. The 351 Cleveland engine is slowly hoisted out of the rear of the car. It swings slightly, a massive hunk of iron and aluminum covered in thirty years of neglect. Below it, the empty engine bay is a cavern of yellow fiberglass and rusted frame rails. 8K, Unreal Engine 5, complex object physics, dramatic lighting, hyper-realistic metal and grease textures, cinematic wide-angle lens.
+
+---
+
+Scene 36 — Phase 4 Engine: Engine on the Stand**
+**Camera:** 360-degree slow rotation around the engine stand.
+**Action:** The engine is now bolted to a rotating stand; it is being sprayed with a heavy degreaser, melting away the crust.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of the Ford 351 Cleveland engine from a 1974 De Tomaso Pantera. The engine is mounted on a red steel stand in the center of the workshop. A technician sprays a translucent green degreaser over the valve covers. The chemical eats through the black sludge, revealing the original blue paint of the engine block. 8K, macro textures, realistic fluid runoff, ray-traced reflections on the wet metal, volumetric workshop atmosphere.
+
+---
+
+Scene 37 — Phase 4 Engine: Valve Cover Removal**
+**Camera:** Macro top-down shot.
+**Action:** The bolts are removed, and the valve cover is lifted to reveal the rocker arms and the golden-brown patina of aged oil.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of the Ford 351 Cleveland engine from a 1974 De Tomaso Pantera. A hand lifts the stamped-steel valve cover. Underneath, the valve train is revealed—rocker arms and springs coated in a thick, amber-colored oil varnish. The light catches the intricate mechanical details. 8K, Unreal Engine 5, hyper-detailed metal textures, ray-traced reflections in the oil film, shallow depth of field, clinical lighting.
+
+---
+
+Scene 38 — Phase 4 Engine: Sandblasting the Intake Manifold**
+**Camera:** Close-up through the glass of a sandblasting cabinet.
+**Action:** A high-pressure stream of abrasive grit strips the corrosion from the aluminum intake, turning it from grey to sparkling silver.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of engine parts from a 1974 De Tomaso Pantera. Inside a sandblasting booth, a jet of white sand hits the pitted aluminum intake manifold. The oxidation vanishes instantly, leaving a beautiful, satin-silver finish. Dust swirls inside the cabinet, illuminated by a harsh internal light. 8K, high-speed particle simulation, realistic surface transformation, macro detail on the metal grain, professional restoration equipment.
+
+---
+
+Scene 39 — Phase 4 Engine: Installing New Pistons**
+**Camera:** Macro shot looking into a cylinder bore.
+**Action:** A brand-new, shiny aluminum piston is carefully slid into the freshly honed cylinder sleeve.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of the engine rebuild for a 1974 De Tomaso Pantera. The camera looks down into a perfectly honed cylinder with cross-hatch patterns. A pristine, polished aluminum piston is lowered into the hole. The rings are compressed and disappear into the block. The contrast between the old blue block and the new silver parts is striking. 8K, Unreal Engine 5, macro photography, realistic metal reflections, sharp focus, clinical workshop setting.
+
+---
+
+Scene 40 — Phase 4 Engine: The Reborn Heart (Bench Test)**
+**Camera:** Low-angle shot of the completed engine on a test stand.
+**Action:** The engine is fired up for the first time; it shakes in its mount as blue flames spit from the open headers.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of the restored 351 Cleveland engine for a 1974 De Tomaso Pantera. The engine is now painted a deep, metallic blue with polished chrome accents. It roars to life on a test stand, vibrating with raw power. Small blue flames flicker at the exhaust ports. The workshop is filled with a light haze of spent fuel. 8K, high-speed vibration effects, volumetric fire and smoke, ray-traced reflections on the chrome, cinematic sound visualization.
+
+---
+
+
+Scene 41 — Phase 4 Engine: The Polished ZF Transaxle**
+**Camera:** Macro tracking shot along the cooling fins of the transaxle.
+**Action:** The massive ZF 5-speed manual transaxle is now bead-blasted to a satin aluminum finish; a technician torques the final bolts on the rear cover.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of the restored ZF transaxle for a 1974 De Tomaso Pantera. The camera glides over the intricate cooling fins of the aluminum casing, now glowing with a clean, satin-silver luster. Every bolt head is polished and marked with a yellow torque stripe. The workshop’s bright LED lights reflect off the metallic surfaces. 8K, Unreal Engine 5, macro texture detail, ray-traced metallic reflections, shallow depth of field, clinical restoration environment.
+
+---
+
+Scene 42 — Phase 4 Engine: Suspension Component Refinishing**
+**Camera:** Top-down shot of a workbench.
+**Action:** A row of A-arms and coil springs are laid out; they have been powder-coated in a high-gloss industrial black.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of suspension parts from a 1974 De Tomaso Pantera. The camera pans across a series of double-wishbone A-arms and heavy-duty springs, freshly coated in deep, reflective gloss-black powder coat. They rest on a clean wooden workbench. The contrast between the black parts and the light wood is sharp. 8K, hyper-realistic coating textures, ray-traced reflections, volumetric workshop lighting, sharp focus on the mechanical geometry.
+
+---
+
+Scene 43 — Phase 5 Bodywork: Stripping to Bare Metal**
+**Camera:** Mid-shot, side profile of the rear quarter panel.
+**Action:** Using a dual-action sander, the technician grinds away the faded yellow paint, revealing the shiny, swirling silver of the Italian steel beneath.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera being stripped. A high-speed pneumatic sander moves across the rear haunch, throwing a fine mist of yellow dust. Behind the pad, a trail of bright, raw steel is exposed, showing the original grinding marks from the factory. The transition from yellow paint to bare metal is jagged and industrial. 8K, high-speed particle simulation, realistic surface abrasion, ray-traced metal reflections, cinematic lighting.
+
+---
+
+Scene 44 — Phase 5 Bodywork: Chemical Stripping the "Frunk"**
+**Camera:** Close-up of the front hood surface.
+**Action:** A thick layer of chemical stripper is applied; the yellow paint begins to bubble and wrinkle in a grotesque, organic fashion.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera. A chemical stripping agent is brushed onto the yellow fiberglass front hood. The camera captures the paint as it reacts, bubbling, blistering, and lifting away from the substrate in slow motion. The underlying fiberglass weave starts to become visible in patches. 8K, realistic chemical reaction simulation, macro detail of the bubbling textures, volumetric workshop fumes, sharp focus.
+
+---
+
+Scene 45 — Phase 5 Bodywork: Metal Finishing the Roof Line**
+**Camera:** Tracking shot along the thin roof pillars.
+**Action:** A technician uses a metal file and a shrinking hammer to smooth out a small dent in the steel roof, sparks of metal dust falling.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera. The car is now mostly bare metal. A specialist uses a body hammer and dolly on the sleek roofline, rhythmically tapping out imperfections. Small vibrations are visible in the surrounding steel. The lighting is low and directional to highlight the straightness of the metal. 8K, Unreal Engine 5, realistic metal deformation, macro sound visualization through vibration, ray-traced shadows, gritty industrial aesthetic.
+
+---
+
+Scene 46 — Phase 5 Bodywork: Fiber-glass Repair on the Nose**
+**Camera:** Close-up of the front valence.
+**Action:** Fresh resin and glass matting are applied to the "spider-webbed" areas identified in the discovery phase, smoothed by a spreader.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera. The camera focuses on the front nose where the fiberglass was cracked. A technician applies translucent green resin over a new layer of glass mat. The spreader moves across the surface, squeezing out air bubbles and creating a smooth, wet finish. 8K, realistic fluid viscosity, macro detail on the fiberglass weave, volumetric lighting, professional body shop environment.
+
+---
+
+Scene 47 — Phase 5 Bodywork: Block Sanding the Doors**
+**Camera:** Low-angle tracking shot moving parallel to the door.
+**Action:** A long sanding block is moved in a cross-hatch pattern over grey body filler; clouds of white dust cover the floor.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera. The car’s door is covered in patches of grey and pink body filler. A technician uses a long manual sanding block to level the surface. Each stroke releases a cloud of fine white dust that settles on the dark floor. The iconic wedge shape is becoming perfectly flat and sharp. 8K, high-fidelity dust physics, macro texture of the sandpaper and filler, cinematic motion blur, realistic labor.
+
+---
+
+Scene 48 — Phase 5 Bodywork: The First Coat of Epoxy Primer**
+**Camera:** Wide shot in the prep booth.
+**Action:** A spray gun sweeps across the bare metal shell, covering the silver steel in a uniform, matte-black epoxy primer.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera. The bare metal shell is being sprayed with black epoxy primer. The camera follows the spray fan as it transforms the shiny steel into a stealthy, non-reflective black. The mist of the paint is illuminated by the booth’s high-intensity lights. 8K, realistic spray physics, volumetric paint mist, ray-traced shadows, Unreal Engine 5, transition from metal to matte black.
+
+---
+
+Scene 49 — Phase 5 Bodywork: Guide Coat Application**
+**Camera:** Close-up of the primed fender.
+**Action:** A light mist of "guide coat" (contrasting dust) is sprayed over the black primer; a sanding block then reveals high and low spots.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in black primer. A technician lightly mists a white powder over the surface. As the sanding block passes over it, the white remains in the low spots, revealing the microscopic topography of the body. The precision of the restoration is evident in the razor-sharp body lines. 8K, macro detail of the dust particles, realistic surface topography, sharp focus, professional workshop lighting.
+
+---
+
+Scene 50 — Phase 5 Bodywork: The Perfected Wedge**
+**Camera:** Slow, dramatic 360-degree rotation.
+**Action:** The Pantera stands in the center of the booth, now entirely in smooth, grey high-build primer, looking like a solid stone carving.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera. The car is now fully prepped and sits in a uniform coat of light grey high-build primer. There are no parts, no glass, just the pure, unadulterated wedge shape. The surface is as smooth as glass, catching the overhead lights in long, straight reflections. 8K, Unreal Engine 5, perfect geometry, ray-traced lighting, volumetric atmosphere, the calm before the paint phase.
+
+---
+
+
+Scene 51 — Phase 5 Bodywork: Final Wet Sanding**
+**Camera:** Macro close-up, following the rhythmic motion of a hand.
+**Action:** A technician uses ultra-fine sandpaper and a constant stream of water to sand the grey primer; the water runs off in a milky grey slurry.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in grey high-build primer. A technician performs final wet sanding on the rear haunch. A steady stream of water flows over the surface, turning into a milky grey liquid as it carries away microscopic primer dust. The primer becomes smooth as polished marble. 8K, high-speed liquid simulation, realistic water surface tension and beads, macro texture of the wet sandpaper, ray-traced reflections on the wet grey surface, Unreal Engine 5.
+
+---
+
+Scene 52 — Phase 5 Bodywork: Masking the Engine Bay**
+**Camera:** High-angle tracking shot moving around the rear opening.
+**Action:** Green automotive masking tape and brown paper are applied to the interior of the engine bay to protect the fresh chassis paint.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in grey primer. Precise hands apply green 3M masking tape along the sharp edges of the engine compartment. Large sheets of brown masking paper are crinkled and tucked into the voids where the V8 once sat. The lighting is bright and clinical. 8K, macro detail of the tape adhesive and paper texture, realistic crinkling physics, ray-traced shadows in the deep bay, professional body shop environment.
+
+---
+
+Scene 53 — Phase 5 Bodywork: The Final Tack-Rag Wipe**
+**Camera:** Slow-motion tracking shot following a yellow cloth.
+**Action:** A technician wipes a resin-treated tack rag across the hood, removing every microscopic speck of dust before the car enters the paint booth.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in grey primer. A yellow tack rag glides across the wide, flat front hood in slow motion. The camera captures the cloth picking up tiny, invisible particles of dust, leaving a perfectly sterile surface behind. The grey primer has a subtle, dull sheen under the LED arrays. 8K, Unreal Engine 5, high-fidelity textile textures, volumetric lighting, static electricity visualization through dust movement, sharp focus.
+
+---
+
+Scene 54 — Phase 5 Bodywork: Entering the Pressurized Paint Booth**
+**Camera:** Wide-angle shot from inside the paint booth looking at the doors.
+**Action:** The grey Pantera shell is rolled slowly into a bright, white-walled, pressurized downdraft paint booth.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera in grey primer. The car is pushed on a rolling chassis into a pristine, high-tech paint booth. The walls are bright white with vertical LED banks, and the floor is a galvanized metal grate. As the heavy doors seal shut, the sound of the ventilation fans hums into life. 8K, architectural lighting, ray-traced reflections on the booth walls, cinematic symmetry, clean industrial aesthetic.
+
+---
+
+Scene 55 — Phase 6 Painting: Mixing the Sunburst Yellow**
+**Camera:** Close-up of a stainless steel mixing scale.
+**Action:** Vibrant yellow paint is poured into a mixing cup; it swirls with a metallic silver toner, creating a deep, liquid gold.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of the paint preparation for a 1974 De Tomaso Pantera. Thick, vibrant Sunburst Yellow pigment is poured into a translucent mixing cup. A stir stick incorporates a shimmer of metallic pearl toner. The liquid swirls in a hypnotic, viscous dance. 8K, realistic fluid dynamics, macro photography of the paint pigments, ray-traced reflections in the liquid, clinical laboratory lighting, Unreal Engine 5.
+
+---
+
+Scene 56 — Phase 6 Painting: The First Base Coat (The Nose)**
+**Camera:** Tracking shot following the spray gun nozzle.
+**Action:** The spray gun releases a fine mist of Sunburst Yellow; the grey primer on the front nose vanishes under a layer of brilliant color.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera. The spray gun nozzle atomizes the Sunburst Yellow paint into a perfect fan. As it sweeps across the front nose, the dull grey primer is instantly replaced by a vibrant, semi-matte yellow. The mist hangs in the air, illuminated by the booth lights. 8K, realistic spray particle simulation, volumetric paint mist, high-speed camera, ray-traced color transition, professional painting technique.
+
+---
+
+Scene 57 — Phase 6 Painting: Coating the Roof and Pillars**
+**Camera:** High-angle shot looking down at the roof.
+**Action:** The painter moves in a steady, linear path; the yellow paint flows over the roof and down the thin A-pillars with perfect overlap.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera. The camera follows the painter’s arm as he applies the second coat of yellow to the roof. The paint is wet and vibrant, catching the ceiling lights. The pillars are coated with surgical precision. 8K, Unreal Engine 5, realistic paint overlap and "wet edge" physics, volumetric lighting, ray-traced reflections on the freshly applied pigment, cinematic motion.
+
+---
+
+Scene 58 — Phase 6 Painting: The Side Profile Transformation**
+**Camera:** Side-parallel tracking shot moving from front to back.
+**Action:** The entire side of the Pantera is now yellow; the painter applies the final pass of base coat to the rear quarter panel.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera. The camera glides along the beltline of the car. The once-rusty, then-primed wedge is now a solid, glowing Sunburst Yellow. The painter finishes the rear haunch, the spray fan disappearing off the back of the car. The color is deep and uniform across the entire side profile. 8K, cinematic lighting, ray-traced shadows, hyper-realistic paint texture, professional workshop atmosphere.
+
+---
+
+Scene 59 — Phase 6 Painting: The High-Gloss Clear Coat (The Hood)**
+**Camera:** Macro shot of the paint surface at a 15-degree angle.
+**Action:** The clear coat is applied; the matte yellow instantly transforms into a deep, mirror-like finish that reflects the booth lights.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera. As the clear coat hits the yellow base, a miraculous transformation occurs. The surface turns from matte to a high-gloss, liquid-deep shine. The reflection of the overhead LED strips becomes crystal clear on the hood. 8K, realistic "wet look" shaders, ray-traced reflections, macro detail of the clear coat atomization, Unreal Engine 5, high-contrast visual payoff.
+
+---
+
+Scene 60 — Phase 6 Painting: The Full Body Gloss**
+**Camera:** Dramatic crane shot rising from the floor to above the car.
+**Action:** The entire Pantera is now covered in wet clear coat; it glows under the intense lights of the booth like a piece of yellow candy.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):**
+A cinematic, photorealistic shot of a 1974 De Tomaso Pantera. The car sits in the center of the booth, fully cleared and dripping with shine. The Sunburst Yellow is electric. The sharp Italian lines of the Ghia design are accentuated by the mirror-like reflections of the white booth walls. 8K, Unreal Engine 5, extreme ray-traced reflections, volumetric lighting, cinematic wide-angle, the pinnacle of the painting phase.
+
+---

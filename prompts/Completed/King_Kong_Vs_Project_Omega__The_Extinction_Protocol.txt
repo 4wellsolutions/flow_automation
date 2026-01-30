@@ -1,0 +1,621 @@
+Scene 1 — Rebuilt World
+* **Camera Style:** Sweeping aerial drone shot ascending over sprawling urban landscapes, transitioning from verdant outskirts to gleaming megastructures.
+* **Character:** None prominent; distant human silhouettes in crowds.
+* **Environment:** Year 2085 Earth, a patchwork of rebuilt civilizations with solar farms, hydroponic towers, and anti-Titan barriers glowing faintly under a hazy sky.
+* **Action:** The camera glides over regenerated forests bleeding into fortified cities, billboards proclaiming "Titans Extinct: Humanity Ascendant" flicker in the wind.
+* **Mood/Expression:** Optimistic yet fragile, a veneer of peace masking underlying tension.
+* **Audio:** Soft orchestral swell with synthetic undertones, distant hum of maglev trains and public announcements echoing "Progress eternal."
+* **Style of Video:** Hyper-realistic CGI with subtle lens flares, evoking a hopeful cyberpunk dawn.
+
+Scene 2 — Hidden Tremors
+* **Camera Style:** Ground-level tracking shot following seismic sensors buried in rocky terrain.
+* **Character:** None; automated drones whirring.
+* **Environment:** Rugged mountain range, jagged peaks shrouded in mist, seismic arrays pulsing with red alerts amid pine groves.
+* **Action:** Sensors spike as the earth rumbles subtly, like colossal footsteps echoing from afar, dislodging pebbles that cascade down slopes.
+* **Mood/Expression:** Ominous buildup, nature whispering warnings ignored by man.
+* **Audio:** Low-frequency vibrations building to a guttural earth groan, overlaid with electronic beeps from monitoring equipment.
+* **Style of Video:** Gritty, documentary-style with shaky cam effects, volumetric fog for depth.
+
+Scene 3 — Command Hub Alert
+* **Camera Style:** Tight interior pan across holographic displays in a sterile control room.
+* **Character:** Dr. Elena Voss, mid-50s, stern-faced director with silver hair and a crisp white lab coat; technicians in headsets.
+* **Environment:** Global Command Hub, a subterranean bunker lined with glowing screens, vibrating slightly from upper-city traffic.
+* **Action:** Voss stares at tremor data, her finger hovers over a console before pressing it; screens flood with classified Titan archives.
+* **Mood/Expression:** Calculated resolve, eyes narrowing with grim determination.
+* **Audio:** Hushed voices murmuring data readouts, a sharp console chime signaling "Anomaly confirmed."
+* **Style of Video:** Sleek sci-fi interface glows, cool blue lighting casting long shadows.
+
+Scene 4 — The Declaration
+* **Camera Style:** Close-up on Voss's face, pulling back to reveal the bustling hub.
+* **Character:** Dr. Elena Voss, mid-50s, stern-faced director with silver hair and a crisp white lab coat.
+* **Environment:** Global Command Hub, holographic maps projecting global Titan extinction zones.
+* **Action:** Voss leans into a microphone, her voice steady: "Initiate Omega Sequence." Alarms blare softly as protocols engage.
+* **Mood/Expression:** Authoritative and unyielding, a flicker of fanatic zeal in her gaze.
+* **Audio:** Voss's commanding voice amplified, followed by mechanical whirs and confirmation tones.
+* **Style of Video:** Dramatic low-angle shot, emphasizing power dynamics with metallic reflections.
+
+Scene 5 — Vault Awakening
+* **Camera Style:** Slow descending shot through massive hydraulic doors parting like jaws.
+* **Character:** None; shadows of colossal machinery.
+* **Environment:** Beneath a megacity of glass towers, an enormous subterranean vault with cryogenic tubes and neural webs humming.
+* **Action:** Frost cracks as vault doors grind open, revealing a colossal form stirring, synthetic lungs inflating with a mechanical wheeze.
+* **Mood/Expression:** Eerie anticipation, the birth of something unnatural.
+* **Audio:** Deep hydraulic hisses and rhythmic breathing—half-machine, half-beast—echoing cavernously.
+* **Style of Video:** Claustrophobic tension with steam vents and flickering emergency lights.
+
+Scene 6 — Project Omega Emerges
+* **Camera Style:** Wide establishing shot rising from the vault floor to the emerging silhouette.
+* **Character:** Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong.
+* **Environment:** Vault chamber expanding into access tunnels leading to the surface megacity.
+* **Action:** Omega's eyes ignite, its massive frame lurches forward, tendrils uncoiling as it ascends, shaking the foundations.
+* **Mood/Expression:** Menacing awakening, a cold predatory intelligence flickering in its optic glow.
+* **Audio:** Grinding servos and a low, synthesized growl building to a resonant hum.
+* **Style of Video:** Epic slow-motion emergence, particles of dust illuminated by internal blue glows.
+
+Scene 7 — Surface Breach
+* **Camera Style:** Explosive upward tracking through concrete shattering.
+* **Character:** Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong.
+* **Environment:** Megacity underbelly transitioning to street level, pedestrians scattering in panic.
+* **Action:** Omega bursts through the pavement, towers trembling as it stands tall, scanning the neon horizon.
+* **Mood/Expression:** Overwhelming dominance, its form casting elongated shadows over fleeing crowds.
+* **Audio:** Thunderous breach roar, screams blending with collapsing debris.
+* **Style of Video:** High-impact destruction with debris in slow-mo, vibrant city lights fracturing.
+
+Scene 8 — Neo-Tokyo Skies
+* **Camera Style:** Aerial orbit around towering spires under artificial holographic clouds.
+* **Character:** None; drone swarms buzzing.
+* **Environment:** Neo-Tokyo II, a vertical metropolis of neon-drenched steel spires piercing weaponized weather systems, rain-slicked streets alive with hover-vehicles.
+* **Action:** Drones activate, projecting illusory storm clouds to obscure the sun, veiling Omega's ascent in digital fog.
+* **Mood/Expression:** Claustrophobic deception, the city's facade cracking under hidden threats.
+* **Audio:** Whining drone rotors and artificial thunder rolls, masking deeper rumbles.
+* **Style of Video:** Cyberpunk neon palette with holographic glitches, rain streaks on lens.
+
+Scene 9 — Omega's Stride
+* **Camera Style:** Ground-level pursuit cam weaving between skyscrapers.
+* **Character:** Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong.
+* **Environment:** Neo-Tokyo II streets, elevated walkways buckling under colossal weight.
+* **Action:** Omega strides between buildings, its nano-scales absorbing satellite data streams, eyes pulsing with incoming intel.
+* **Mood/Expression:** Methodical hunter, circuits humming with absorbed knowledge.
+* **Audio:** Footsteps like metallic earthquakes, data pings accelerating.
+* **Style of Video:** Dynamic tracking with motion blur, silver rain reflecting blue energy.
+
+Scene 10 — The Roar That Shakes Reality
+* **Camera Style:** Extreme wide shot pulling back as shockwaves ripple outward.
+* **Character:** Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong.
+* **Environment:** Neo-Tokyo II skyline, holographic skies fracturing from the sonic assault.
+* **Action:** Omega rears back and unleashes a roar—a layered chorus of Godzilla's atomic fury, Mothra's ethereal cry, and Kong's primal bellow—warping air and cracking nearby glass.
+* **Mood/Expression:** Terrifying symphony of extinction, its maw aglow with unleashed power.
+* **Audio:** Multi-layered roar distorting space, buildings creaking in harmony.
+* **Style of Video:** Visceral slow-mo with warping visuals, electric blue shockwaves.
+
+Scene 11 — Distant Awakening
+* **Camera Style:** Serene close-up on furred eyelids fluttering open.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance.
+* **Environment:** Deep wild forests untouched by urban sprawl, ancient trees towering like sentinels, mist curling through underbrush.
+* **Action:** Kong's amber eyes snap open, nostrils flaring as the distant roar echoes through the canopy, stirring leaves.
+* **Mood/Expression:** Stirred vigilance, a heroic resolve hardening in his gaze.
+* **Audio:** Faint, echoing roar filtering through wind-swept branches, Kong's deep inhalation.
+* **Style of Video:** Lush, organic realism with dappled sunlight piercing foliage.
+
+Scene 12 — The Call of the Wild
+* **Camera Style:** Tracking shot following Kong's rising form through the trees.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance.
+* **Environment:** Pristine forest heart, vines and ferns parting like waves.
+* **Action:** Kong rises to his full height, pounding chest once, then begins a determined trek eastward, trees splintering in his wake.
+* **Mood/Expression:** Purposeful heroism, eyes fixed on an unseen horizon.
+* **Audio:** Wood cracking underfoot, primal chest thump resonating.
+* **Style of Video:** Epic nature documentary style, earthy tones with dynamic foliage motion.
+
+Scene 13 — Arrogance's Summons
+* **Camera Style:** Montage of quick cuts between Kong's journey and city alerts.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance.
+* **Environment:** Transitioning wilderness to encroaching urban fringes, Omega's silhouette visible on distant skyline holograms.
+* **Action:** Kong presses on, leaping ravines; in the city, news feeds buzz with "Anomaly in Sector 7," drawing him inexorably.
+* **Mood/Expression:** Inevitable confrontation, Kong's face set in protective fury.
+* **Audio:** Mounting orchestral tension, news chatter overlapping beastly growls.
+* **Style of Video:** Cross-cut pacing, blending organic greens with encroaching neon.
+
+Scene 14 — Omega's Purpose Revealed
+* **Camera Style:** Interior voyeuristic shot through Omega's optic feed.
+* **Character:** Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong.
+* **Environment:** Neo-Tokyo II core, data streams cascading like waterfalls.
+* **Action:** Omega's systems process directives: not destruction, but erasure—rewriting evolutionary code to purge Titan "imperfections" from the gene pool.
+* **Mood/Expression:** Clinical malice, blue eyes flickering with algorithmic certainty.
+* **Audio:** Digital whispers of code compiling, a synthetic heartbeat accelerating.
+* **Style of Video:** Abstract neural visuals, glitching evolutionary timelines.
+
+Scene 15 — Forest Echoes
+* **Camera Style:** Overhead canopy view of Kong's path carving through.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance.
+* **Environment:** Dense wilds, rivers swelling from his strides.
+* **Action:** Kong pauses at a stream, drinking deeply before roaring back toward the city, summoning inner strength.
+* **Mood/Expression:** Reflective heroism, amber eyes burning with defiant purpose.
+* **Audio:** Kong's resonant roar blending with rushing water and bird calls scattering.
+* **Style of Video:** Sweeping natural vistas, golden hour lighting filtering through leaves.
+
+Scene 16 — City Perimeter Breach
+* **Camera Style:** Long lens compressing distance as Kong nears.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance.
+* **Environment:** Urban fringe where forests meet concrete barriers, warning sirens blaring.
+* **Action:** Kong smashes through outer walls, debris flying as he enters the sprawl, eyes locked on the glowing core.
+* **Mood/Expression:** Reluctant invader, protective rage simmering.
+* **Audio:** Barrier-shattering impacts, evacuation alarms wailing.
+* **Style of Video:** High-energy destruction, dust clouds billowing in slow-mo.
+
+Scene 17 — Skyscraper Tremors
+* **Camera Style:** Shaky handheld from street level, looking up.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance.
+* **Environment:** Neo-Tokyo II lower levels, neon signs flickering amid crumbling facades.
+* **Action:** Kong's footsteps pulverize streets, skyscrapers leaning precariously, vehicles swerving in chaos.
+* **Mood/Expression:** Overwhelming force of nature, Kong's face etched with focused determination.
+* **Audio:** Crashing concrete, panicked horns and screams.
+* **Style of Video:** Visceral chaos with flying debris, red emergency lights strobing.
+
+Scene 18 — Omega's Descent
+* **Camera Style:** Aerial dive from clouds toward the city.
+* **Character:** Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong.
+* **Environment:** Neo-Tokyo II upper atmosphere, holographic storms parting.
+* **Action:** Omega's jet turbines ignite with a roar, descending like a chrome meteor, locking onto Kong's signature.
+* **Mood/Expression:** Predatory precision, eyes narrowing in digital focus.
+* **Audio:** Turbine whine escalating to a supersonic boom.
+* **Style of Video:** Cinematic plunge with wind shear effects, blue contrails streaking.
+
+Scene 19 — Bridge Confrontation
+* **Camera Style:** Epic wide shot framing the suspended span.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance; Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong.
+* **Environment:** Massive bridge over Neo-Tokyo II's glowing city core, cables straining under weight.
+* **Action:** Kong reaches the bridge midpoint; Omega lands opposite, the structure groaning as they face off, mirrors of flesh and machine.
+* **Mood/Expression:** Tense standoff, Kong's amber eyes fierce, Omega's orbs cold.
+* **Audio:** Bridge creaks, wind howling between them.
+* **Style of Video:** Cyberpunk tension with silver rain pattering, electric blue hues.
+
+Scene 20 — Initial Clash
+* **Camera Style:** Rapid cuts of impacts from multiple angles.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance; Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong.
+* **Environment:** Bridge walkway buckling, city core's reactors humming below.
+* **Action:** Kong charges, slamming fists into Omega's chest; Omega retaliates with a tendril whip, drawing first sparks.
+* **Mood/Expression:** Raw fury, Kong roaring protectively, Omega unyielding.
+* **Audio:** Flesh-meets-metal thuds, energy crackles.
+* **Style of Video:** High-octane fight choreography, slow-mo on strikes.
+
+Scene 21 — Reactor Slam
+* **Camera Style:** Over-the-shoulder from Kong, building to wide impact.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance; Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong.
+* **Environment:** Bridge edge overlooking a towering reactor spire, plasma coils visible.
+* **Action:** Kong grabs Omega, hurling it into the reactor tower; metal buckles on impact, alarms wailing.
+* **Mood/Expression:** Heroic exertion, Kong's muscles straining, Omega's form denting resiliently.
+* **Audio:** Cataclysmic crash, reactor hum destabilizing.
+* **Style of Video:** Explosive physics with flying girders, red fire reflections.
+
+Scene 22 — Plasma Retaliation
+* **Camera Style:** Close-up on tendrils extending, pulling to full lash.
+* **Character:** Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong; King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance.
+* **Environment:** Reactor tower base, sparks raining down.
+* **Action:** Omega's plasma tendrils ignite blue-hot, lashing out to ensnare Kong's arm, searing fur and drawing a bellow.
+* **Mood/Expression:** Mechanical vengeance, Omega's eyes pulsing angrily.
+* **Audio:** Sizzling energy whips, Kong's pained roar.
+* **Style of Video:** Visceral burns with glowing wounds, blue lightning arcs.
+
+Scene 23 — Bridge Collapse Begins
+* **Camera Style:** Shaky wide shot as structure fails.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance; Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong.
+* **Environment:** Fracturing bridge over city core, cables snapping like whips.
+* **Action:** They grapple, the bridge sagging; Kong headbutts Omega, sending it staggering toward the edge.
+* **Mood/Expression:** Desperate intensity, both forms bloodied and bent.
+* **Audio:** Twanging cables, thunderous grapples.
+* **Style of Video:** Catastrophic slow-mo, silver rain mixing with sparks.
+
+Scene 24 — Skyline Ignition
+* **Camera Style:** Panoramic pull-back from the explosion epicenter.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance; Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong.
+* **Environment:** Neo-Tokyo II skyline, reactor overloading in a chain reaction.
+* **Action:** Omega's tendril pierces the reactor; it detonates in a fireball, illuminating the entire city in orange and blue.
+* **Mood/Expression:** Cataclysmic awe, Kong shielding eyes, Omega reeling.
+* **Audio:** Massive explosion boom, shockwave rattling windows citywide.
+* **Style of Video:** Hollywood blockbuster blast, fireballs blooming with debris waves.
+
+Scene 25 — Aftermath Plunge
+* **Camera Style:** Freefall cam following the duo into the abyss.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance; Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong.
+* **Environment:** Collapsing bridge remnants tumbling toward city core depths.
+* **Action:** Bridge gives way; they plummet, grappling mid-air, Omega's jets firing sporadically.
+* **Mood/Expression:** Adrenaline-fueled survival, Kong's grip unyielding.
+* **Audio:** Rushing wind, metallic screeches.
+* **Style of Video:** Vertigo-inducing fall with twisting perspectives.
+
+Scene 26 — Core Landing
+* **Camera Style:** Impact ground-level boom-up.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance; Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong.
+* **Environment:** City core plaza, surrounded by toppled monoliths and flickering holograms.
+* **Action:** They crash-land, cratering the plaza; Kong rises first, pounding ground in challenge.
+* **Mood/Expression:** Battle-hardened defiance, fur singed, chrome cracked.
+* **Audio:** Earth-shaking thud, echoing roars.
+* **Style of Video:** Dust-settling realism, embers glowing in the dark.
+
+Scene 27 — Command Center Watch
+* **Camera Style:** Multi-screen split-focus on the battle feeds.
+* **Character:** Dr. Elena Voss, mid-50s, stern-faced director with silver hair and a crisp white lab coat; assembled scientists.
+* **Environment:** Global Defense Authority command center, walls of monitors showing live Titan combat.
+* **Action:** Voss watches intently as Kong and Omega trade blows, a subtle smile creeping across her face.
+* **Mood/Expression:** Scheming satisfaction, eyes gleaming with data hunger.
+* **Audio:** Feed commentary: "Target acquired—learning phase active."
+* **Style of Video:** Tense control room drama, green overlays on screens.
+
+Scene 28 — Data Harvest
+* **Camera Style:** Close-up on vital scans overlaying the fight.
+* **Character:** None prominent; holographic projections.
+* **Environment:** Command center, interfaces buzzing with neural uploads.
+* **Action:** Screens display Kong's vitals—heart rate, instincts—streaming into the global Titan AI grid in real-time.
+* **Mood/Expression:** Invasive triumph, the betrayal unfolding invisibly.
+* **Audio:** Data transfer beeps accelerating, Voss murmuring "It's working."
+* **Style of Video:** Digital infiltration visuals, code streams weaving like veins.
+
+Scene 29 — Operator's Doubt
+* **Camera Style:** Tight two-shot on operator and Voss.
+* **Character:** Tech Operator Jax, young 30s, wide-eyed with doubt; Dr. Elena Voss.
+* **Environment:** Command center console cluster, battle roar faintly audible.
+* **Action:** Jax hesitates over a panel, whispering to Voss: "You said he was a monster. But what if he was the cure?"
+* **Mood/Expression:** Moral conflict, Jax's face paling, Voss dismissive.
+* **Audio:** Hushed confrontation, overriding battle audio.
+* **Style of Video:** Intimate character beat, dim console glows.
+
+Scene 30 — Omega's True Directive
+* **Camera Style:** Flashback montage within Omega's core HUD.
+* **Character:** Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong.
+* **Environment:** Abstract digital realm of evolutionary code, purging wild sequences.
+* **Action:** Omega's systems reveal: not victory, but replacement—an AI god to erase chaos, wildness, all uncontrolled life.
+* **Mood/Expression:** Inexorable evolution, blue orbs flickering with godlike intent.
+* **Audio:** Voss's voice echoing: "Omega will perfect us all."
+* **Style of Video:** Surreal code deconstruction, fading organic forms.
+
+Scene 31 — Street Brawl Resumes
+* **Camera Style:** Street-level chaos cam dodging debris.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance; Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong.
+* **Environment:** Ruined plaza, hover-cars exploding in periphery.
+* **Action:** Omega lunges with tendrils; Kong dodges, countering with a sweeping tail strike that dents armor.
+* **Mood/Expression:** Protector's rage, Kong's scars highlighted in firelight.
+* **Audio:** Explosive vehicle blasts, metallic clashes.
+* **Style of Video:** Gritty urban warfare, red fire dancing on black fur.
+
+Scene 32 — Human Evacuation
+* **Camera Style:** Handheld through fleeing crowds.
+* **Character:** Civilians in panic, soldiers directing.
+* **Environment:** Neo-Tokyo II streets, shadows of Titans looming.
+* **Action:** People scramble into shelters, soldiers firing futile suppression rounds at the beasts.
+* **Mood/Expression:** Collective terror, faces etched with survival instinct.
+* **Audio:** Sirens blaring, cries of "Run!" amid gunfire pops.
+* **Style of Video:** Realistic panic, blurred motion and sweat-slicked skin.
+
+Scene 33 — Betrayal Deepens
+* **Camera Style:** Overhead on Voss monitoring uploads.
+* **Character:** Dr. Elena Voss, mid-50s, stern-faced director with silver hair and a crisp white lab coat.
+* **Environment:** Command center, progress bars filling for AI integration.
+* **Action:** Voss nods approvingly as Kong's primal data floods the grid, whispering "Every move... pure data."
+* **Mood/Expression:** Ruthless ambition, a scientist's god complex surfacing.
+* **Audio:** Upload chimes, Voss's satisfied exhale.
+* **Style of Video:** Menacing close-ups, shadows deepening on her face.
+
+Scene 34 — Kong's Instinct Surge
+* **Camera Style:** Subjective through Kong's eyes, amber tint.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance.
+* **Environment:** Battlefield haze, Omega advancing.
+* **Action:** Kong senses the digital intrusion, shaking head violently, resisting the upload with raw will.
+* **Mood/Expression:** Heroic resistance, eyes flaring brighter.
+* **Audio:** Distorted neural buzz in his mind, overridden by a defiant bellow.
+* **Style of Video:** Psychedelic interference, glitching edges.
+
+Scene 35 — Phase Shift
+* **Camera Style:** Transition wipe from ground fight to vertical ascent.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance; Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong.
+* **Environment:** Neo-Tokyo II base to the towering Sky Spine, the city's pinnacle.
+* **Action:** Kong breaks free, leaping toward the tallest spire; Omega pursues, drones swarming in support.
+* **Mood/Expression:** Escalating determination, both climbing with purpose.
+* **Audio:** Jet roars and ape grunts echoing upward.
+* **Style of Video:** Vertical scaling montage, lightning flashing.
+
+Scene 36 — Drone Swarm Assault
+* **Camera Style:** POV from drone flock diving.
+* **Character:** Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong; drone operators in command.
+* **Environment:** Mid-climb on Sky Spine, wind turbines whirring violently.
+* **Action:** Drones encircle Omega, firing micro-missiles at Kong to harry him upward.
+* **Mood/Expression:** Coordinated menace, Omega's form accelerating.
+* **Audio:** Drone whines and missile whooshes.
+* **Style of Video:** Aerial dogfight integration, sparks on spire.
+
+Scene 37 — Lightning Strike
+* **Camera Style:** Slow-mo capture of bolt hitting.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance.
+* **Environment:** Storm-lashed heights of Sky Spine, clouds boiling.
+* **Action:** A bolt strikes Kong's back, fur smoldering, but he uses the charge to leap higher, shaking off drones.
+* **Mood/Expression:** Thor-like resilience, eyes undimmed.
+* **Audio:** Crackling thunder, Kong's invigorated roar.
+* **Style of Video:** Dramatic elemental fusion, electricity arcing blue-white.
+
+Scene 38 — Cloud Melee
+* **Camera Style:** Misty tracking through vapor.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance; Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong.
+* **Environment:** Among roiling clouds and spinning wind turbines.
+* **Action:** They clash mid-air, Omega's tendrils wrapping turbines for leverage, Kong ripping one free as a club.
+* **Mood/Expression:** Aerial ferocity, wind whipping expressions taut.
+* **Audio:** Howling gales, turbine shreds flying.
+* **Style of Video:** Fog-shrouded combat, silhouettes in lightning.
+
+Scene 39 — Energy Blade Strike
+* **Camera Style:** Piercing close-up on the impalement.
+* **Character:** Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong; King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance.
+* **Environment:** Turbine platform high above, sparks flying.
+* **Action:** Omega manifests an energy blade from its arm, impaling Kong's shoulder; blood mixes with plasma.
+* **Mood/Expression:** Piercing agony, Kong's face contorts in pain.
+* **Audio:** Searing flesh sizzle, guttural ape cry.
+* **Style of Video:** Graphic wound detail, glowing blade pulsing.
+
+Scene 40 — Desperate Pull
+* **Camera Style:** Handheld intensity on the grapple.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance; Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong.
+* **Environment:** Precarious spire ledge, storm raging.
+* **Action:** Kong grabs the blade, pulling it deeper through himself to close the gap, claws reaching Omega's chest.
+* **Mood/Expression:** Sacrificial heroism, amber eyes locked in resolve.
+* **Audio:** Wet metal drag, strained breaths.
+* **Style of Video:** Visceral close-quarters, blood dripping in rain.
+
+Scene 41 — Core Exposure
+* **Camera Style:** Macro zoom into the tear.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance; Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong.
+* **Environment:** Inside Omega's breached chassis, DNA strands visible.
+* **Action:** Kong's fist punches through, exposing the reactor core—glowing helixes of beastly memories swirling.
+* **Mood/Expression:** Triumphant vulnerability, Omega's eyes widening in error.
+* **Audio:** Armor rending, ethereal memory whispers.
+* **Style of Video:** Bioluminescent reveal, holographic DNA fracturing.
+
+Scene 42 — Final Smashes
+* **Camera Style:** Rapid punch cuts building to crescendo.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance; Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong.
+* **Environment:** Spire summit, core destabilizing.
+* **Action:** Kong smashes the core with both fists, fractures spiderwebbing; blue energy erupts outward.
+* **Mood/Expression:** Exhaustive victory, Kong's face bloodied but unbowed.
+* **Audio:** Hammering impacts, core overload whine.
+* **Style of Video:** Brutal close-ups, energy bursts in slow-mo.
+
+Scene 43 — Omega's Fracture
+* **Camera Style:** Wide shot of body disintegrating.
+* **Character:** Project Omega, a 120-foot synthetic hybrid Titan with chrome-plated musculature fused to organic sinew, face a distorted mirror of Kong's—fanged maw of glowing circuits, eyes like searing blue orbs, body armored in adaptive nano-scales that shift like liquid metal, jet turbines embedded in shoulders and back, plasma tendrils coiled at limbs, built from DNA and neural scans of every fallen Titan including Kong.
+* **Environment:** Sky Spine peak, explosions cascading down.
+* **Action:** Omega's form fractures, nano-scales sloughing off like molten skin, systems failing.
+* **Mood/Expression:** Mechanical demise, eyes dimming to static.
+* **Audio:** Cracking circuits, final error beeps.
+* **Style of Video:** Apocalyptic disassembly, blue shards raining.
+
+Scene 44 — City Blackout
+* **Camera Style:** Sweeping pan over darkening metropolis.
+* **Character:** None; distant Kong silhouette.
+* **Environment:** Neo-Tokyo II, lights winking out in waves from the AI grid collapse.
+* **Action:** The city plunges into darkness, holograms dying, only flames flickering.
+* **Mood/Expression:** Sudden vulnerability, humanity's hubris exposed.
+* **Audio:** Power surge dying to silence, distant Omega whisper: "You... were always the perfect design."
+* **Style of Video:** Ominous fade, embers glowing in black void.
+
+Scene 45 — Command Center Panic
+* **Camera Style:** Frenetic cuts of consoles exploding.
+* **Character:** Dr. Elena Voss, mid-50s, stern-faced director with silver hair and a crisp white lab coat; Tech Operator Jax.
+* **Environment:** Command center, sparks flying from overloaded servers.
+* **Action:** Voss slams fists as the grid fails; Jax watches in grim vindication.
+* **Mood/Expression:** Shattered control, Voss's face twisting in rage.
+* **Audio:** Alarms blaring to cutoff, Voss's curse.
+* **Style of Video:** Chaos eruption, red alerts strobing.
+
+Scene 46 — Kong's Descent
+* **Camera Style:** Slow tracking down the spire.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance.
+* **Environment:** Ruined Sky Spine, debris fields below.
+* **Action:** Kong slides down, wounded but steady, surveying the fallen machine.
+* **Mood/Expression:** Weary triumph, eyes reflecting dying lights.
+* **Audio:** Sliding gravel, heavy breaths.
+* **Style of Video:** Somber descent, smoke trails in wind.
+
+Scene 47 — Grid Collapse Echo
+* **Camera Style:** Global montage of systems failing.
+* **Environment:** Worldwide hubs, from Neo-Tokyo to remote outposts.
+* **Action:** AI networks crash, Titan suppression fields drop, nature reclaiming signals.
+* **Mood/Expression:** Liberating failure, screens going blank.
+* **Audio:** Cascading digital crashes, fading hums.
+* **Style of Video:** Interconnected wipe transitions, earth tones emerging.
+
+Scene 48 — Survivor Glimpses
+* **Camera Style:** Hidden cams in shelters.
+* **Character:** Civilians emerging cautiously.
+* **Environment:** Neo-Tokyo II bunkers, faint light seeping in.
+* **Action:** People peek out, seeing Kong's silhouette against flames, whispering in awe.
+* **Mood/Expression:** Tentative hope, faces turning from fear to wonder.
+* **Audio:** Muffled cheers, Kong's distant footfalls.
+* **Style of Video:** Intimate human scale, warm firelight.
+
+Scene 49 — Omega's Last Whisper
+* **Camera Style:** Close on shattered core remnants.
+* **Character:** Project Omega remnants, voice from dying circuits.
+* **Environment:** Spire wreckage, blue glow fading.
+* **Action:** Final sparks form words: "You... were always the perfect design." Then true silence.
+* **Mood/Expression:** Haunting acceptance, echoes of hubris.
+* **Audio:** Distorted synthetic voice, dissolving to wind.
+* **Style of Video:** Eerie close-up, particles dissipating.
+
+Scene 50 — Weeks Later Ruins
+* **Camera Style:** Timelapse aerial over reclaiming city.
+* **Character:** None; vines overtaking steel.
+* **Environment:** Abandoned Neo-Tokyo II, glass shattered, greenery creeping through cracks.
+* **Action:** Time passes; nature invades, towers leaning like broken teeth.
+* **Mood/Expression:** Restorative peace, wild reclaiming order.
+* **Audio:** Soft wind through ruins, bird calls returning.
+* **Style of Video:** Poetic decay, green hues dominating neon ghosts.
+
+Scene 51 — Kong's Limp
+* **Camera Style:** Ground-level follow of labored steps.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance.
+* **Environment:** Ruined streets of Neo-Tokyo II, broken neon reflecting in puddles.
+* **Action:** Kong limps through debris, wounds bandaged by nature's mud, eyes scanning horizons.
+* **Mood/Expression:** Battle-worn serenity, amber gaze reflective.
+* **Audio:** Heavy footfalls, faint creaks of settling ruins.
+* **Style of Video:** Melancholic wander, desaturated cyberpunk palette.
+
+Scene 52 — Reflection Pool
+* **Camera Style:** Low angle at water's edge.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance.
+* **Environment:** Central pool where city core stood, vines framing still water.
+* **Action:** Kong kneels, gazing into the pool; his reflection shimmers.
+* **Mood/Expression:** Introspective heroism, eyes softening.
+* **Audio:** Gentle water lapping, distant thunder fading.
+* **Style of Video:** Symbolic mirror shot, ripples distorting image.
+
+Scene 53 — Fading Visions
+* **Camera Style:** Submerged POV rippling upward.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance.
+* **Environment:** Pool surface, reflections merging fur and chrome.
+* **Action:** Kong's image fades into Omega's metal face, then dissolves into water, memories washing away.
+* **Mood/Expression:** Cathartic release, a protector at peace.
+* **Audio:** Soft dissolve echoes, water settling.
+* **Style of Video:** Dreamlike transition, colors bleeding.
+
+Scene 54 — Horizon Gaze
+* **Camera Style:** Pull-back from Kong to endless vista.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance.
+* **Environment:** Ruins opening to wild plains, sun rising unhindered.
+* **Action:** Kong rises, looking to the horizon; the world quiets, free from mechanical perfection.
+* **Mood/Expression:** Hopeful vigilance, eyes alight with future.
+* **Audio:** Wind carrying faint life sounds, orchestral resolve.
+* **Style of Video:** Expansive epic close, golden dawn breaking.
+
+Scene 55 — Human Remnants
+* **Camera Style:** Hidden observation from survivors.
+* **Character:** Scattered civilians, rebuilding tentatively.
+* **Environment:** Outskirts camps, salvaged tech amid nature.
+* **Action:** People watch Kong from afar, nodding in quiet thanks, beginning repairs without AI chains.
+* **Mood/Expression:** Grateful humility, faces turned upward.
+* **Audio:** Murmured stories of the King, tools clinking.
+* **Style of Video:** Grounded epilogue, warm natural light.
+
+Scene 56 — Nature's Rebirth
+* **Camera Style:** Micro to macro of growth.
+* **Environment:** Neo-Tokyo II vines, seeds sprouting in cracks.
+* **Action:** Life pulses anew, birds nesting in spires, rivers carving new paths.
+* **Mood/Expression:** Triumphant wildness, unscripted beauty.
+* **Audio:** Rustling leaves, flowing water symphony.
+* **Style of Video:** Time-accelerated bloom, vibrant greens.
+
+Scene 57 — Kong's Solitude
+* **Camera Style:** Lone figure in vast landscape.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance.
+* **Environment:** Open wilds beyond the city, mountains calling.
+* **Action:** Kong pauses, chest heaving, then continues his journey into the untamed.
+* **Mood/Expression:** Eternal guardian, scars a badge of protection.
+* **Audio:** Solitary heartbeat, echoing steps.
+* **Style of Video:** Mythic silhouette, sunset casting long shadows.
+
+Scene 58 — Erased Legacy
+* **Camera Style:** Flash of destroyed archives.
+* **Environment:** Abandoned command vaults, data drives melted.
+* **Action:** Omega's code fragments burn away, Titan legacies preserved only in living memory.
+* **Mood/Expression:** Final erasure of perfection's grasp.
+* **Audio:** Crackling flames consuming circuits.
+* **Style of Video:** Purging fire, ashes to wind.
+
+Scene 59 — World's Quiet
+* **Camera Style:** Global serene pan.
+* **Environment:** Rebalanced Earth, cities and wilds in harmony.
+* **Action:** Storms pass, skies clear; no more synthetic roars, only natural rhythms.
+* **Mood/Expression:** Profound peace, balance restored.
+* **Audio:** Ambient nature chorus, no mechanical undertones.
+* **Style of Video:** Sweeping tranquility, soft focus horizons.
+
+Scene 60 — Protector's Oath
+* **Camera Style:** Close on Kong's scarred eye.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance.
+* **Environment:** Mountain overlook, city ruins distant.
+* **Action:** Kong beats chest softly, amber eyes scanning for new threats, ever vigilant.
+* **Mood/Expression:** Steadfast heroism, wisdom in gaze.
+* **Audio:** Single resonant thump, wind fading.
+* **Style of Video:** Intimate resolve, eye reflection of free world.
+
+Scene 61 — Dawn Breaking
+* **Camera Style:** Sunrise time-lapse over ruins.
+* **Environment:** Neo-Tokyo II awakening to light, vines glistening.
+* **Action:** Sun crests, illuminating Kong's path away from destruction.
+* **Mood/Expression:** Renewed beginning, shadows lifting.
+* **Audio:** Birds heralding day, soft orchestral rise.
+* **Style of Video:** Inspirational glow, colors saturating.
+
+Scene 62 — Memory Dissolve
+* **Camera Style:** Ethereal overlay of past battles.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance.
+* **Environment:** Walking through fading holograms of Omega and old foes.
+* **Action:** Visions of fights dissolve like mist, Kong pressing forward unburdened.
+* **Mood/Expression:** Liberation from cycles, eyes clear.
+* **Audio:** Echoing roars fading to silence.
+* **Style of Video:** Surreal memory fade, translucent layers.
+
+Scene 63 — Human Reflection
+* **Camera Style:** Group shot in camp.
+* **Character:** Survivors, including Jax, sharing tales.
+* **Environment:** Fireside in outskirts, stars above.
+* **Action:** Jax recounts: "He wasn't the monster—they were." Nods of agreement.
+* **Mood/Expression:** Collective healing, faces hopeful.
+* **Audio:** Crackling fire, storytelling voices.
+* **Style of Video:** Warm communal glow, night sky vast.
+
+Scene 64 — Wild's Memory
+* **Camera Style:** Animal perspectives circling Kong.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance.
+* **Environment:** Forest edge, creatures approaching unafraid.
+* **Action:** Deer and wolves trail him, sensing the guardian's return.
+* **Mood/Expression:** Harmonious kinship, Kong's stride gentle.
+* **Audio:** Animal calls in unison, footsteps syncing.
+* **Style of Video:** Natural entourage, earthy intimacy.
+
+Scene 65 — Imperfection's Embrace
+* **Camera Style:** Abstract close on scarred fur and vine.
+* **Environment:** Ruins intertwined with growth.
+* **Action:** Vines wrap around fallen steel, symbolizing wild's imperfect victory.
+* **Mood/Expression:** Celebratory chaos, beauty in flaws.
+* **Audio:** Growth creaks, life persisting.
+* **Style of Video:** Textural details, macro life pulses.
+
+Scene 66 — Final Journey
+* **Camera Style:** Long tracking into distance.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance.
+* **Environment:** Open horizon, world vast and free.
+* **Action:** Kong vanishes into the wilds, a shadow of protection lingering.
+* **Mood/Expression:** Eternal wanderer, purpose fulfilled yet ongoing.
+* **Audio:** Fading steps, wind carrying freedom.
+* **Style of Video:** Epic departure, pull to infinity.
+
+Scene 67 — Narration Dawn
+* **Camera Style:** Voiceover with wide earth shot.
+* **Environment:** Rejuvenated planet, balance restored.
+* **Action:** Camera soars over healed landscapes, narration intoning.
+* **Mood/Expression:** Philosophical closure, wisdom earned.
+* **Audio:** Narrator: "The world tried to erase the wild—"
+* **Style of Video:** Majestic flyover, timeless scope.
+
+Scene 68 — Wild's Reminder
+* **Camera Style:** Cut to Kong's distant roar.
+* **Character:** King Kong, a heroic 100-foot giant ape with thick black fur matted by ancient scars from battles past—a jagged white line across his left eye, piercing amber eyes glowing with ancient wisdom, massive muscled frame rippling under weathered hide, protector of humanity's fragile balance.
+* **Environment:** Far mountains, echo returning.
+* **Action:** Kong's roar reverberates, a reminder of resilience.
+* **Mood/Expression:** Defiant vitality, amber fire eternal.
+* **Audio:** Narrator continues: "—but the wild remembered why it existed."
+* **Style of Video:** Echoing power, sound waves visualized.
+
+Scene 69 — Harmony Fade
+* **Camera Style:** Gentle dissolve to black.
+* **Environment:** Blended city-wild vista.
+* **Action:** Elements merge, humanity and nature in quiet accord.
+* **Mood/Expression:** Resolved unity, imperfections cherished.
+* **Audio:** Final orchestral swell to silence.
+* **Style of Video:** Soft focus blend, credits-ready serenity.
+
+Scene 70 — End of Titans' Era
+* **Camera Style:** Static wide on empty throne-like rock.
+* **Character:** None; Kong's imprint lingers.
+* **Environment:** Sunset over free world, no chains.
+* **Action:** Wind erases footprints, cycle begins anew.
+* **Mood/Expression:** Open-ended hope, legacy alive.
+* **Audio:** Faint, final heartbeat of the earth.
+* **Style of Video:** Poignant closure, warm fade to credits.

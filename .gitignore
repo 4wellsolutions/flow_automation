@@ -1,0 +1,8 @@
+profiles/
+temp_profiles/
+cookies/
+node_modules/
+*.log
+Videos/
+frames/
+prompts_fail.txt

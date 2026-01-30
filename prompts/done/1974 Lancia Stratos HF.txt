@@ -1,0 +1,882 @@
+Scene 1 — Phase 1 Discovery: The Shaft of Light**
+**Camera:** Slow, low-angle creeping dolly shot through thick dust motes.
+**Action:** A single beam of sunlight pierces a hole in the barn roof, slowly illuminating the distinctive, sharp wedge nose of the Lancia.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. The camera moves in a slow, ground-level dolly through a dark, derelict barn filled with floating dust particles. A harsh, volumetric shaft of sunlight cuts through the gloom, slowly revealing the iconic angular front nose of the car buried under thick grey dust and dried hay. The weathered fiberglass shows cracks, and a single spiderweb stretches from the pop-up headlight to a wooden beam. 8K resolution, Unreal Engine 5 render, ray-traced shadows, hyper-realistic textures, volumetric lighting, moody atmosphere, highly detailed grime and decay, sharp focus on the hidden Italian emblem.
+
+---
+
+Scene 2 — Phase 1 Discovery: The "Stratos" Badge**
+**Camera:** Macro lens, extremely shallow depth of field, slow rack focus.
+**Action:** Focus shifts from a piece of hanging hay to the "Stratos HF" badge on the rear pillar, caked in dirt.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. A macro close-up focus on the rear B-pillar where a layer of thick, gritty barn dust obscures the vehicle's identity. The camera performs a slow rack focus, moving from a blurred piece of straw in the foreground to the metallic "Stratos HF" script badge. As the focus hits the badge, the glint of tarnished chrome is visible beneath the dirt. The lighting is low-key and dramatic, emphasizing the textures of the corroded metal and the matte finish of the aged paint. 8K, Unreal Engine 5, Ray Tracing, cinematic macro photography, hyper-detailed textures, realistic dust accumulation.
+
+---
+
+Scene 3 — Phase 1 Discovery: The Collapsed Rear Suspension**
+**Camera:** Low-angle static shot, wide-angle lens.
+**Action:** View of the rear of the car, showing the iconic round taillights half-buried as the suspension has completely failed.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. The camera is positioned at a very low rear-quarter angle, showing the car's aggressive stance now defeated by time. The rear suspension is completely collapsed, the wide rear tire partially sunken into the dirt floor of the barn. One round Alfa-sourced taillight is cracked, reflecting a dull orange glow from the barn's dim ambient light. The massive rear fiberglass clamshell is covered in bird droppings and dry rot. 8K, Unreal Engine 5, Ray Tracing, Volumetric Fog, intense environmental storytelling, weathered materials, realistic rubber degradation on the vintage Pirelli tire.
+
+---
+
+Scene 4 — Phase 1 Discovery: The Wrap-around Windshield**
+**Camera:** High-angle crane shot, slowly descending.
+**Action:** The camera descends from the barn rafters to reveal the curved, panoramic windshield covered in a thick layer of grime.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. A high-angle crane shot starting from the rotting wooden rafters of the barn, descending toward the car's roof. The focus is on the unique, curved panoramic windshield which is completely opaque with decades of dust, dried rain streaks, and hay. The reflection of the barn's internal structure is barely visible in the glass. The Rosso Corsa paint on the roof is faded to a dull pinkish-orange. 8K, Unreal Engine 5, Ray Tracing, cinematic lighting, hyper-realistic glass textures, volumetric dust, atmospheric depth, weathered fiberglass details.
+
+---
+
+Scene 5 — Phase 1 Discovery: Interior Peek through Grime**
+**Camera:** Close-up, handheld movement pressing against the side window.
+**Action:** The camera tries to look through the side window; a hand (out of frame) wipes a small circle in the dust to reveal the spartan dashboard.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. The camera moves in a tight, handheld motion toward the small, vertical side window. A small circular area of the dust has been wiped away, revealing the dark, spartan rally interior. Visible inside are the dusty, toggle-switch-heavy dashboard and the top of the racing steering wheel. The contrast between the thick exterior grime and the dark, preserved interior creates a sense of mystery. 8K, Unreal Engine 5, Ray Tracing, subsurface scattering on the dust, realistic glass reflections, industrial design, moody cinematic color grading.
+
+---
+
+Scene 6 — Phase 1 Discovery: The Front Wheel Detail**
+**Camera:** Low-angle side-profile shot, slow zoom in.
+**Action:** Zooming in on the iconic yellow magnesium Campagnolo wheel, now tarnished and surrounded by debris.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. The camera is at ground level, zooming slowly into the front driver-side wheel. The iconic five-spoke magnesium Campagnolo wheel, originally bright yellow, is now covered in dark oxidation and cobwebs. The tire is flat and cracked, its sidewall markings barely legible. Debris and old hay are piled against the rim. The lighting highlights the geometric casting of the wheel. 8K, Unreal Engine 5, Ray Tracing, realistic metal oxidation, high-fidelity texture mapping, cinematic grit, sharp focus on the center hub.
+
+---
+
+Scene 7 — Phase 1 Discovery: The Pop-up Headlight Realignment**
+**Camera:** Frontal eye-level shot, static.
+**Action:** A close-up of the front nose shows one pop-up headlight slightly ajar, misaligned due to a broken mechanism.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. A direct frontal shot focusing on the razor-sharp nose of the vehicle. The driver-side pop-up headlight is stuck in a half-open position, showing the rusted internal linkage. The gap between the headlight cover and the body is filled with dead leaves. The overall symmetry of the car is broken, emphasizing its derelict state. The paint is flaking away in small chips, revealing the raw fiberglass beneath. 8K, Unreal Engine 5, Ray Tracing, macro detail, cinematic lighting, weathered automotive materials, realistic shadow play.
+
+---
+
+Scene 8 — Phase 1 Discovery: The Rear Grille and Vents**
+**Camera:** Panning shot across the rear engine cover.
+**Action:** The camera pans across the black slats of the rear engine cover, showing the vents clogged with organic matter.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. The camera pans horizontally across the louvers of the massive rear engine cover. The black plastic slats are faded to grey and brittle, with bits of straw and old pine needles stuck in the vents. Through the slats, a hint of the dirty Ferrari-sourced V6 engine block can be seen in the shadows. The Rosso Corsa paint surrounding the vents is peeling and dull. 8K, Unreal Engine 5, Ray Tracing, intricate geometric detail, realistic environmental occlusion, cinematic texture work, dark and moody.
+
+---
+
+Scene 9 — Phase 1 Discovery: The Door Handle Mechanism**
+**Camera:** Extreme close-up, side profile.
+**Action:** The camera focuses on the flush-mounted door handle, showing the intricate dirt build-up in the crevices.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. An extreme close-up of the minimalist door handle. The metal is pitted with age, and the surrounding Rosso Corsa paint has heavy "spider-web" cracking in the clear coat. A small amount of moss is growing in the rubber seal surrounding the door. The camera remains static, allowing the viewer to absorb the extreme level of decay in the small mechanical details. 8K, Unreal Engine 5, Ray Tracing, macro cinematography, hyper-realistic weathering, industrial textures, cold cinematic lighting.
+
+---
+
+Scene 10 — Phase 1 Discovery: The Final Wide Shot**
+**Camera:** Pull-back shot, wide angle.
+**Action:** The camera pulls back from the car to show its full silhouette sitting in the center of the decaying barn.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. A dramatic pull-back shot that reveals the entire car sitting like a forgotten artifact in the middle of the barn. Dust falls from the ceiling as the camera moves. The sharp, wedge-shaped silhouette of the Stratos contrasts with the organic, rotting wood of the barn. This is the final look at the car in its "discovered" state before extraction begins. 8K, Unreal Engine 5, Ray Tracing, Volumetric Fog, wide-angle cinematography, epic scale, melancholic atmosphere, highly detailed environment.
+
+---
+
+
+Scene 11 — Phase 1 Discovery: The Gas Cap Seal**
+**Camera:** Macro lens, static with a slow focus pull.
+**Action:** Close-up of the racing-style fuel filler cap; the rubber gasket is dry-rotted and cracked, with dust heavy in the recesses.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. The camera is locked in a macro view of the silver competition-style fuel filler cap. The surrounding paint is severely oxidized, losing its luster and turning a chalky pink. The black rubber seal is brittle, showing deep geometric cracks from decades of temperature swings in the barn. As a gust of wind blows through the barn, a thin veil of dust shifts across the metal surface. 8K, Unreal Engine 5, Ray Tracing, hyper-detailed macro textures, realistic material degradation, moody lighting, sharp focus on mechanical decay.
+
+---
+
+Scene 12 — Phase 2 Extraction: Clearing the Debris**
+**Camera:** Wide-angle, low-to-the-ground tracking shot.
+**Action:** A gloved hand reaches into the frame to pull away a heavy, rotting wooden beam and piles of hay from the front of the Lancia.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. The camera tracks laterally at floor level as debris is cleared from the car’s path. A worker’s hands in heavy canvas gloves pull away water-damaged timber and clumps of grey, matted hay, uncovering the sharp front splitter of the Lancia. Thick clouds of dust are kicked up, caught in the beams of work lights now set up in the barn. 8K, Unreal Engine 5, Ray Tracing, volumetric dust, high-speed particles, cinematic action, realistic fabric and wood textures, heavy atmosphere.
+
+---
+
+Scene 13 — Phase 2 Extraction: The Hook Attachment**
+**Camera:** Extreme close-up, low angle looking up.
+**Action:** A heavy steel winch hook is lowered into the frame and attached to the Lancia’s front towing eye.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. The camera is positioned under the front nose, looking up as a heavy, rusted industrial winch hook descends. The hook clanks against the metal towing eye with a spray of rust flakes. The Rosso Corsa paint on the lower valence is scraped and scarred. The lighting is harsh, provided by a portable LED work lamp, casting deep shadows against the barn floor. 8K, Unreal Engine 5, Ray Tracing, metallic clank, high-fidelity sound visualization, gritty realism, sharp focus on the tension of the steel cable.
+
+---
+
+Scene 14 — Phase 2 Extraction: Taut Cable Tension**
+**Camera:** Mid-shot, profile view of the cable.
+**Action:** The steel winch cable goes from slack to tight, vibrating under the strain as the Lancia begins its first movement in decades.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. The camera focuses on the steel cable stretching from the winch to the car. The cable snaps taut, vibrating and shedding tiny fragments of rust and dirt. In the background, the silhouette of the Lancia lunges forward an inch, its tires groaning against the dirt floor. The tension is palpable. 8K, Unreal Engine 5, Ray Tracing, high-tension physics, cinematic suspense, realistic cable textures, blurred background for depth of field.
+
+---
+
+Scene 15 — Phase 2 Extraction: The First Roll**
+**Camera:** Low-angle side tracking shot.
+**Action:** The front wheels of the Lancia rotate slowly for the first time; the dry-rotted rubber makes a crunching sound against the debris.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. The camera tracks alongside the front driver-side Campagnolo wheel as it makes a slow, painful revolution. The flat, cracked tire deforms under the weight of the car, crunching through old wood chips and dried mud. Dust falls from the wheel well in clumps. The yellow paint of the rim is barely visible under the grime. 8K, Unreal Engine 5, Ray Tracing, slow-motion detail, realistic rubber deformation, heavy texture work, cinematic lighting.
+
+---
+
+Scene 16 — Phase 2 Extraction: Emerging into the Light**
+**Camera:** Wide shot from outside the barn, looking at the doors.
+**Action:** The Lancia is slowly pulled out of the dark barn doors and into the bright, harsh daylight of the exterior.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. The camera is positioned outside the barn as the wedge-shaped nose of the Lancia breaks the threshold of the shadows. Bright, natural sunlight hits the dust-covered Rosso Corsa paint, revealing the true extent of the fading and the layers of grey filth. The contrast between the dark barn interior and the overexposed exterior creates a powerful visual transition. 8K, Unreal Engine 5, Ray Tracing, high dynamic range, lens flare, volumetric transition, epic scale.
+
+---
+
+Scene 17 — Phase 2 Extraction: Loading onto the Flatbed**
+**Camera:** High-angle side shot, panning.
+**Action:** The car is winched up the metal ramps of a modern tilt-tray car hauler.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. The camera pans as the car ascends the polished steel ramps of a flatbed truck. The low clearance of the Stratos’s nose barely misses the metal. The contrast between the high-tech, clean flatbed and the filthy, derelict Italian rally car is stark. The winch motor hums in the background as the car levels out on the bed. 8K, Unreal Engine 5, Ray Tracing, industrial machinery, metallic reflections, cinematic framing, sharp details on the undercarriage.
+
+---
+
+Scene 18 — Phase 2 Extraction: Securing the Straps**
+**Camera:** Close-up, low angle.
+**Action:** Heavy-duty yellow ratcheting straps are looped through the magnesium wheels and tightened down.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. The camera is tight on the rear wheel as a bright yellow nylon strap is threaded through the iconic five-spoke design. The ratchet clicks loudly, compressing the suspension. The vibration shakes loose more barn dust from the bodywork, which catches the afternoon sun. 8K, Unreal Engine 5, Ray Tracing, macro mechanical action, realistic fabric textures, vibrant color contrast between the strap and the car.
+
+---
+
+Scene 19 — Phase 2 Extraction: The Journey Begins**
+**Camera:** Rear-facing chase cam, low to the road.
+**Action:** The truck drives away from the decaying barn, the Lancia sitting precariously on the back, heading toward the workshop.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. A low-angle chase shot from behind the transport truck as it pulls away down a dirt path. The barn recedes into the distance, framed by the Lancia’s iconic round taillights and rear spoiler. The car wobbles slightly on its haunches as the truck hits bumps in the road. 8K, Unreal Engine 5, Ray Tracing, motion blur, environmental storytelling, melancholic departure, high-fidelity lighting.
+
+---
+
+Scene 20 — Phase 2 Extraction: Arrival at the Workshop**
+**Camera:** Smooth, high-speed gimbal move.
+**Action:** The truck pulls into a bright, sterile, white-walled modern restoration shop. The contrast is immediate and clinical.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. The camera moves smoothly as the transport truck enters the restoration facility. The warm, dusty tones of the barn are replaced by cold, 5000K LED workshop lighting and white epoxy floors. The Lancia looks like a foreign object in this clean environment, its filth and rust highlighted by the overhead fluorescent reflections. 8K, Unreal Engine 5, Ray Tracing, clinical atmosphere, sharp architectural lines, pristine reflections, dramatic entrance.
+
+
+
+Scene 21 — Phase 2 Extraction: The First Pressure Wash**
+**Camera:** Slow-motion close-up, 120fps.
+**Action:** A high-pressure water stream hits the front hood, blasting away decades of barn filth to reveal the scarred Rosso Corsa paint beneath.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. The camera captures a high-pressure water jet in slow motion as it impacts the wedge-shaped nose. Sheets of brown mud, grey dust, and organic debris are violently stripped away, spiraling into the air in a mist of droplets. Beneath the grime, the first glimpse of the original deep red paint appears, though heavily oxidized and scratched. The reflection of the white workshop LEDs dances in the spray. 8K, Unreal Engine 5, Ray Tracing, fluid dynamics, high-speed photography, hyper-realistic water physics, intense texture contrast.
+
+---
+
+Scene 22 — Phase 2 Extraction: Drying under Shop Lights**
+**Camera:** Panning mid-shot, side profile.
+**Action:** The wet car sits on the shop floor, water dripping onto the white epoxy as the moisture highlights the sharp lines of the Gandini design.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. The camera pans across the side profile of the freshly washed car. Beads of water cling to the faded fiberglass, magnifying the cracks and "spider-webbing" in the paint. The floor is covered in a dark slurry of barn runoff. The lighting is clinical and bright, emphasizing the dramatic, short-wheelbase proportions of the Stratos. The car looks vulnerable yet aggressive. 8K, Unreal Engine 5, Ray Tracing, realistic reflections, subsurface scattering on water droplets, professional automotive studio lighting.
+
+---
+
+Scene 23 — Phase 3 Disassembly: Opening the Rear Clamshell**
+**Camera:** Low-angle wide shot, looking up at the rear.
+**Action:** Two mechanics (arms only visible) unlatch the massive rear fiberglass section and tilt it forward, revealing the engine bay.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. The camera is positioned low behind the rear wheel as the iconic, oversized rear clamshell is unlatched. The massive fiberglass body section hinges forward in a smooth, heavy arc, exposing the cramped, mid-mounted engine compartment. Dust falls from the hinges, and the shadows lift to reveal the dirt-caked Ferrari V6 engine block and complex tubular subframe. 8K, Unreal Engine 5, Ray Tracing, mechanical movement, dramatic shadow reveal, industrial textures, high-fidelity fiberglass details.
+
+---
+
+Scene 24 — Phase 3 Disassembly: Removing the Front Nose**
+**Camera:** Top-down "God's eye" view.
+**Action:** The front clamshell is lifted off the chassis and carried away, leaving the radiator and spare tire carrier exposed.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. A vertical top-down shot showing the front half of the car. The entire front body section is lifted vertically by two sets of hands, separating the red fiberglass "skin" from the mechanical "bones" of the car. Below, the spare tire well, rusted radiator, and brake master cylinders are revealed in a chaotic mess of hoses and wires. The floor around the car is starting to fill with removed hardware. 8K, Unreal Engine 5, Ray Tracing, symmetrical composition, industrial disassembly, hyper-detailed mechanical components.
+
+---
+
+Scene 25 — Phase 3 Disassembly: Interior Gutting - The Seats**
+**Camera:** Interior POV from the passenger footwell.
+**Action:** The driver's side bucket seat, covered in moldy fabric, is unbolted and pulled out through the narrow door opening.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. The camera is inside the cramped cabin as the driver’s seat is removed. The seat, featuring aged black Alcantara and visible mold spots, is hoisted out, revealing the bare metal floor pan beneath, which is littered with rusted coins and glass shards. Daylight floods into the dark cabin through the now-open door space. 8K, Unreal Engine 5, Ray Tracing, interior textures, fabric decay, realistic shadows, cramped architectural feel, automotive archaeology.
+
+---
+
+Scene 26 — Phase 3 Disassembly: The Dash Stripping**
+**Camera:** Macro lens, handheld jitter.
+**Action:** A screwdriver removes the screws from the instrument cluster; the gauge pod is pulled forward, trailing a colorful "nest" of old wires.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. An extreme close-up on the dashboard as the main gauge pod is pulled away from the binnacle. A tangle of vintage, fabric-wrapped wiring in faded yellows, reds, and greens is exposed behind the Smiths gauges. The dust on the dash surface is disturbed, creating small clouds in the bright shop light. The focus is sharp on the tarnished screw heads and the cracked plastic of the dash. 8K, Unreal Engine 5, Ray Tracing, macro electronics, realistic wire textures, cinematic focus pull.
+
+---
+
+Scene 27 — Phase 3 Disassembly: Draining the Fluids**
+**Camera:** Low-angle shot from under the car.
+**Action:** A drain plug is removed from the oil pan; thick, black, sludge-like oil glugs into a plastic catch pan.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. The camera is positioned directly beneath the engine block. A gloved hand unscrews the oil plug, and a stream of viscous, pitch-black engine oil pours out with a heavy metallic sound. The oil reflects the fluorescent overhead lights as it ripples in the catch pan. The underside of the chassis is covered in a thick layer of road grime and dried oil. 8K, Unreal Engine 5, Ray Tracing, fluid physics, metallic textures, gritty realism, high-contrast lighting.
+
+---
+
+Scene 28 — Phase 3 Disassembly: Wheel Arch Stripping**
+**Camera:** Side-on close-up, panning.
+**Action:** A technician uses an air-impact wrench to remove the lug nuts from the magnesium wheels; the air hose snakes across the floor.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. The camera pans across the wheel arch as an impact gun blurred by motion blurs onto a lug nut. A burst of dust and rust particles erupts as the nut spins off. The technician’s hands are stained with grease. The inner wheel well is revealed to be caked in decades-old mud from its last rally stage. 8K, Unreal Engine 5, Ray Tracing, motion blur, industrial sound visualization, high-speed mechanical action, gritty textures.
+
+---
+
+Scene 29 — Phase 3 Disassembly: Removing the Side Glass**
+**Camera:** Over-the-shoulder shot.
+**Action:** The distinctive, small side windows are carefully unscrewed from their tracks and lifted out with suction cups.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. The camera watches as the glass technician uses orange suction cups to lift the thin side window glass from the door frame. The glass is tinted with a slight vintage green hue and is covered in fine scratches. The removal reveals the hollow, thin-walled construction of the fiberglass doors. 8K, Unreal Engine 5, Ray Tracing, glass reflections, careful handling, realistic suction cup deformation, automotive restoration.
+
+---
+
+Scene 30 — Phase 3 Disassembly: The Bare Chassis Reveal**
+**Camera:** Wide-angle tracking shot, circling the car.
+**Action:** The car is now stripped of all body panels and interior; only the central steel monocoque and subframes remain.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rusted Rosso Corsa Red. The camera circles the car, which has been reduced to its skeleton. All Rosso Corsa panels are gone, replaced by the sight of the dark grey steel central tub and the intricate rear tubular subframe. The engine is still in place but sits exposed like a heart without a chest. The workshop floor is organized with labeled parts bins in the background. 8K, Unreal Engine 5, Ray Tracing, structural focus, cinematic orbit, clean vs. dirty contrast, engineering-focused lighting.
+
+---
+
+Scene 31 — Phase 3 Disassembly: The Wiring Loom Extraction**
+**Camera:** Overhead bird's-eye view, slow zoom in.
+**Action:** The main wiring harness is meticulously unclipped from the chassis, looking like a complex nervous system being removed from the steel frame.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Bare Steel and Rusted Rosso Corsa remnants. From a high overhead perspective, the camera zooms into the central tub. Technicians’ hands carefully lift the original, brittle wiring loom out of the center console area. The wires are wrapped in aged, frayed black electrical tape and dusty plastic sheathing. The yellowing labels on the connectors are barely legible. The stark contrast between the colorful wires and the dark, grime-covered steel chassis creates a complex industrial aesthetic. 8K, Unreal Engine 5, Ray Tracing, intricate detail, realistic plastic aging, clinical workshop lighting, high-fidelity textures.
+
+---
+
+Scene 32 — Phase 3 Disassembly: Removing the Fuel Tank**
+**Camera:** Low-angle, side-profile tracking shot.
+**Action:** The custom-shaped aluminum fuel tank is slid out from its housing behind the seats, reflecting the overhead lights for the first time in years.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Bare Steel and Rusted Rosso Corsa remnants. The camera follows at a low angle as the tarnished aluminum fuel cell is slid horizontally out of the chassis. The metal surface is covered in fuel stains and oxidation, but it catches the sharp glare of the workshop LEDs. The empty space left behind reveals the raw, unpainted welds of the Lancia's competition-bred frame. 8K, Unreal Engine 5, Ray Tracing, metallic reflections, industrial craftsmanship, gritty realism, sharp focus on the fuel tank's geometric shape.
+
+---
+
+Scene 33 — Phase 3 Disassembly: Unbolting the Steering Rack**
+**Camera:** Macro lens, static focus.
+**Action:** A socket wrench turns a heavy, rusted bolt on the steering rack, shedding flakes of metal and dried mud.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Bare Steel and Rusted Rosso Corsa remnants. An extreme macro shot of a 17mm socket engaging a corroded bolt on the steering rack assembly. As the wrench turns, the crust of rust and road salt fractures, spraying tiny particles across the frame. The steering rack itself is caked in a thick, matte layer of black grease and desert silt. 8K, Unreal Engine 5, Ray Tracing, high-speed debris particles, macro mechanical action, realistic metal fatigue, intense focus on the physical struggle of disassembly.
+
+---
+
+Scene 34 — Phase 3 Disassembly: The Empty Shell on Jack Stands**
+**Camera:** Slow-motion panning shot, mid-range.
+**Action:** The car, now completely stripped of all external and internal components, sits high on four red jack stands, looking skeletal and light.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Bare Steel. The camera pans across the workshop floor, showing the Lancia chassis perched high on professional red jack stands. The car has no wheels, no glass, and no bodywork, revealing the radical, short-wheelbase design of the central steel tub. Shadow play on the white epoxy floor emphasizes the "flying wedge" architecture even in its stripped state. 8K, Unreal Engine 5, Ray Tracing, architectural automotive photography, clean workshop environment, dramatic silhouette, hyper-detailed steel textures.
+
+---
+
+Scene 35 — Phase 3 Disassembly: Labeling the Hardware**
+**Camera:** Close-up, shallow depth of field.
+**Action:** A hand places a handful of rusted bolts into a clear plastic bag and writes "REAR SUBFRAME" on the label with a black marker.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend restoration process. A close-up focus on a technician's hand as they drop a collection of oxidized, heavy-duty bolts into a transparent poly bag. The black ink of the permanent marker creates a sharp contrast against the plastic. In the blurred background, the skeletal Lancia chassis is visible. This scene emphasizes the meticulous organization required for such a complex rebuild. 8K, Unreal Engine 5, Ray Tracing, macro photography, realistic plastic reflections, organizational detail, soft bokeh.
+
+---
+
+Scene 36 — Phase 3 Disassembly: Final Interior Scrape**
+**Camera:** Wide-angle interior shot.
+**Action:** A technician uses a heat gun and a scraper to remove the last of the sound-deadening material from the floor pans.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Bare Steel. The camera is placed inside the driver’s footwell. A heat gun glows orange, softening the old black bitumen sound-deadening mats. A metal scraper peels the material away, revealing the grey, slightly rusted factory floor pan. Wisps of smoke and the sound of scraping define the scene. 8K, Unreal Engine 5, Ray Tracing, thermal glow effects, realistic material physics, gritty interior restoration, industrial atmosphere.
+
+---
+
+Scene 37 — Phase 4 Engine & Mechanics: The Engine Crane Moves In**
+**Camera:** Low-angle, looking up at the crane arm.
+**Action:** The yellow arm of a heavy-duty engine hoist swings into position over the exposed rear subframe.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend with an exposed Ferrari V6 engine. The camera looks up from the engine bay as the massive yellow steel arm of an engine hoist enters the frame. The heavy chains dangle, casting long shadows over the dirty, 2.4-liter V6 engine block. The lighting is dramatic, highlighting the oily textures of the engine and the clean, industrial yellow of the crane. 8K, Unreal Engine 5, Ray Tracing, volumetric shadows, mechanical scale, professional restoration equipment, anticipation.
+
+---
+
+Scene 38 — Phase 4 Engine & Mechanics: Taking the Strain**
+**Camera:** Macro lens on the engine mounts.
+**Action:** The chains tighten; the engine lifts slightly, compressing and then releasing the old rubber motor mounts.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Ferrari V6 engine. A tight macro shot of the rear engine mount as the hoist takes the weight. The rubber mount, dry and cracked, stretches under the tension before the engine breaks free from the chassis. A small puff of dust and rust flakes falls from the bolt holes. The oily, cast-aluminum texture of the engine block is in sharp focus. 8K, Unreal Engine 5, Ray Tracing, macro tension, realistic rubber physics, mechanical grit, high-fidelity sound visualization.
+
+---
+
+Scene 39 — Phase 4 Engine & Mechanics: The Heart Leaves the Body**
+**Camera:** Side-on wide shot, slow tilt up.
+**Action:** The V6 engine is fully hoisted out of the rear of the Lancia, dangling in the air as it is moved away from the chassis.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend. The camera tilts up, following the dirty, compact Ferrari V6 engine as it is lifted high above the empty rear subframe. The engine is a mess of grime, old coolant hoses, and tarnished intake trumpets. Below it, the Lancia chassis looks hollow and empty. The scene captures the pivotal moment the "heart" is separated for its own restoration. 8K, Unreal Engine 5, Ray Tracing, epic scale, cinematic lighting, complex mechanical silhouette, high-contrast workshop environment.
+
+---
+
+Scene 40 — Phase 4 Engine & Mechanics: The Engine Stand Mount**
+**Camera:** Close-up, rotating shot.
+**Action:** The engine is bolted onto a rotating metal engine stand, allowing it to be spun 360 degrees for cleaning.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Ferrari V6 engine. The camera rotates around the engine as it is secured to a bright red steel engine stand. The contrast between the filthy, oil-stained aluminum engine and the clean, painted stand is prominent. The technician’s hands tighten the mounting bolts, locking the V6 into place. 8K, Unreal Engine 5, Ray Tracing, 360-degree rotation, mechanical focus, industrial textures, sharp focus on the engine's casting marks.
+
+---
+
+
+Scene 41 — Phase 4 Engine & Mechanics: Degreasing the Block**
+**Camera:** Close-up, high-angle tracking.
+**Action:** A chemical degreaser is sprayed onto the engine block; the thick, black sludge liquefies and begins to slide off the cast aluminum.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Ferrari V6 Engine. The camera tracks the movement of a spray nozzle as it coats the engine block in a foaming chemical solvent. In real-time, the decades of burnt oil and barn grime dissolve into a dark, viscous liquid that drips onto the tray below. Patches of the original silver-cast aluminum start to peak through the filth. The lighting captures the iridescent sheen of the chemicals. 8K, Unreal Engine 5, Ray Tracing, fluid simulation, chemical reaction, hyper-detailed metal textures, industrial workshop setting.
+
+---
+
+Scene 42 — Phase 4 Engine & Mechanics: Removing the Valve Covers**
+**Camera:** Macro lens, low angle looking up.
+**Action:** The iconic "Lancia" branded valve covers are unbolted and lifted, revealing the dual overhead camshafts dripping with golden-brown oil.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Ferrari V6 Engine. The camera is locked in a macro view as the red-crinkle-finish valve covers are lifted away. Beneath, the complex valvetrain is revealed, the camshafts shimmering under the shop lights with a coating of aged, amber-colored engine oil. The contrast between the dirty exterior and the well-preserved internal mechanics is striking. 8K, Unreal Engine 5, Ray Tracing, subsurface scattering on oil, macro mechanical detail, realistic metal reflections, cinematic focus.
+
+---
+
+Scene 43 — Phase 4 Engine & Mechanics: Carburetor Disassembly**
+**Camera:** Extreme close-up, top-down.
+**Action:** A pair of tweezers removes a tiny brass jet from one of the three Weber carburetors.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Weber Carburetor. An extreme close-up on the intricate internals of a triple-choke Weber carburetor. A technician’s precision tools extract a small, tarnished brass fuel jet. The surface of the carburetor is pitted with oxidation, showing its age. The scene is lit with a bright, focused desk lamp that creates sharp, clinical shadows. 8K, Unreal Engine 5, Ray Tracing, macro cinematography, industrial jewelry, hyper-realistic brass and zinc-alloy textures.
+
+---
+
+Scene 44 — Phase 4 Engine & Mechanics: Ultrasonic Cleaning**
+**Camera:** Underwater-style shot, looking through the cleaning fluid.
+**Action:** Various engine bolts and small gears are dropped into an ultrasonic cleaner; microscopic bubbles vibrate the rust away.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of 1974 Lancia Stratos HF Rally Legend mechanical components. The camera is submerged in a stainless steel ultrasonic cleaner. Small steel gears and rusted bolts descend through the translucent blue liquid. Thousands of cavitation bubbles erupt on the surface of the metal, stripping away micro-particles of corrosion. The high-frequency vibration is visualized through the shimmering water. 8K, Unreal Engine 5, Ray Tracing, fluid dynamics, macro underwater photography, scientific precision, high-tech restoration.
+
+---
+
+Scene 45 — Phase 4 Engine & Mechanics: Measuring the Crankshaft**
+**Camera:** Slow-motion panning shot.
+**Action:** A digital micrometer measures the journals of the crankshaft, showing extreme precision to the micron.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Crankshaft. The camera pans along the length of the heavy, forged steel crankshaft. A digital micrometer is clamped onto a polished journal, the red LED display flickering with precise measurements. The contrast between the rough, cast counterweights and the mirror-polished bearing surfaces is highlighted by a single overhead spotlight. 8K, Unreal Engine 5, Ray Tracing, engineering precision, polished metal reflections, cinematic technicality.
+
+---
+
+Scene 46 — Phase 4 Engine & Mechanics: Magnesium Wheel Sandblasting**
+**Camera:** Profile shot through a glass viewing port.
+**Action:** A blast of abrasive media hits the Campagnolo wheel, stripping the old yellow paint to reveal the dull grey magnesium.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Campagnolo Wheel. The camera looks through the scratched glass of a sandblasting cabinet. A high-pressure stream of beads strikes the wheel, instantly vaporizing the old, chipped yellow paint. In a single sweep, the raw, porous grey magnesium surface is exposed. Dust swirls violently inside the cabinet, illuminated by a warm internal bulb. 8K, Unreal Engine 5, Ray Tracing, particle physics, high-speed abrasion, texture transition, gritty industrial action.
+
+---
+
+Scene 47 — Phase 4 Engine & Mechanics: Piston Ring Installation**
+**Camera:** Macro lens, static.
+**Action:** A new, silver piston ring is carefully expanded and snapped into the groove of a brand-new forged piston.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Piston. A macro focus on a gleaming, new forged aluminum piston. A technician’s fingers carefully fit a dark steel piston ring into the top groove. The metallic "click" is almost visible as it seats perfectly. The background is a clean, blue-tinted engine assembly room. 8K, Unreal Engine 5, Ray Tracing, macro assembly, clean-room environment, high-fidelity metal textures, sharp focus.
+
+---
+
+Scene 48 — Phase 4 Engine & Mechanics: The Exhaust Manifold Heat Wrap**
+**Camera:** Handheld-style close-up.
+**Action:** A technician wraps the "snake-like" exhaust headers in white ceramic heat wrap, securing them with stainless steel ties.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Exhaust System. The camera follows the rhythmic wrapping of white ceramic insulation around the complex, tubular exhaust manifolds. The texture of the fabric wrap contrasts with the cold steel of the headers. A stainless steel zip-tie is pulled taut, catching the light. 8K, Unreal Engine 5, Ray Tracing, textile textures, manual craftsmanship, rally-spec preparation, high-contrast lighting.
+
+---
+
+Scene 49 — Phase 4 Engine & Mechanics: Brake Caliper Rebuild**
+**Camera:** Close-up, side profile.
+**Action:** New seals are pressed into the freshly painted gold brake calipers, the pistons sliding in smoothly.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of 1974 Lancia Stratos HF Rally Legend Brake Calipers. The camera focuses on the bright gold-anodized finish of the restored calipers. A fresh rubber seal is seated, and a polished steel piston is pressed into the bore with a drop of clear brake fluid. The clean, functional beauty of the rally brakes is the focal point. 8K, Unreal Engine 5, Ray Tracing, anodized metal textures, fluid reflections, precision assembly, vibrant colors.
+
+---
+
+Scene 50 — Phase 4 Engine & Mechanics: The Reassembled V6 Long Block**
+**Camera:** 360-degree cinematic orbit.
+**Action:** The engine is now fully reassembled, looking brand new with its red valve covers and polished intake trumpets.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Ferrari V6 Engine. The camera performs a smooth, heroic orbit around the completed engine. The block is a clean silver, the valve covers are a vibrant crinkle-cut Rosso Corsa red, and the six chrome intake trumpets gleam under the studio lights. No longer a barn find, the engine is a masterpiece of Italian engineering ready to be reinstalled. 8K, Unreal Engine 5, Ray Tracing, hero shot, mirror reflections, volumetric lighting, pristine automotive art.
+
+---
+
+Scene 51 — Phase 4 Engine & Mechanics: Gearbox Mating**
+**Camera:** Mid-shot, low angle.
+**Action:** The restored 5-speed manual transaxle is slid into place and bolted to the rear of the Ferrari V6.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Drivetrain. The camera captures the heavy, cast-aluminum transaxle as it is perfectly aligned with the engine block. The splines engage with a muffled metallic thud. The clean, silver-blasted casing of the gearbox contrasts with the red valve covers above. Professional hands torque the grade-8 bolts into the bellhousing. 8K, Unreal Engine 5, Ray Tracing, mechanical weight, industrial precision, sharp focus on the mating surfaces, high-contrast workshop lighting.
+
+---
+
+Scene 52 — Phase 4 Engine & Mechanics: The Finished Suspension Corner**
+**Camera:** Macro lens, slow tilt down.
+**Action:** A complete corner assembly—new Bilstein shock, purple spring, and cross-drilled rotor—is shown in its final state.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Suspension. The camera tilts down a brand-new, yellow Bilstein gas shock absorber and its vibrant purple coil spring. The focus lands on the ventilated brake disc and the gold-anodized caliper. Every bolt is marked with a yellow torque-seal paint line. The assembly looks like a functional sculpture of speed. 8K, Unreal Engine 5, Ray Tracing, vibrant colors, metallic textures, macro engineering, sterile environment, sharp focus.
+
+---
+
+Scene 53 — Phase 5 Bodywork & Sanding: Assessing Fiberglass Cracks**
+**Camera:** Handheld, close-up with a work light.
+**Action:** A technician shines a light across the raw fiberglass, circling stress cracks with a white grease pencil.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Fiberglass Body. The camera follows a harsh LED work light as it rakes across the dull, stripped-back fiberglass shell. The light reveals spider-web stress cracks in the composite material. A hand enters the frame, circling the damage with a white pencil. The texture of the raw, unpainted fiberglass is coarse and yellowed with age. 8K, Unreal Engine 5, Ray Tracing, high-contrast lighting, texture analysis, gritty restoration detail, macro fiberglass strands.
+
+---
+
+Scene 54 — Phase 5 Bodywork & Sanding: Grinding the Cracks**
+**Camera:** Extreme close-up, 60fps.
+**Action:** A high-speed die grinder carves into a crack, sending a plume of white fiberglass dust into the air.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Bodywork. An extreme close-up of a pneumatic grinder bit biting into the fiberglass. A violent spray of white dust and composite fibers erupts from the contact point, illuminated by a localized light source. The air is thick with particles. The technician wears a respirator, visible in the soft-focus background. 8K, Unreal Engine 5, Ray Tracing, particle physics, high-speed motion, industrial grit, volumetric dust, intense focus.
+
+---
+
+Scene 55 — Phase 5 Bodywork & Sanding: Applying Resin and Mat**
+**Camera:** Top-down macro.
+**Action:** A layer of glass mat is laid over a repair area, and clear resin is brushed in, turning the mat transparent.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Body Restoration. The camera looks directly down as a patch of fiberglass matting is saturated with translucent resin. As the brush dabs the liquid, the white fibers disappear, becoming one with the body shell. The wet resin reflects the overhead studio lights with a sticky, high-gloss sheen. 8K, Unreal Engine 5, Ray Tracing, subsurface scattering, fluid absorption, macro texture, realistic composite repair.
+
+---
+
+Scene 56 — Phase 5 Bodywork & Sanding: DA Sanding the Nose**
+**Camera:** Wide-angle tracking shot.
+**Action:** A technician uses a Dual-Action (DA) sander on the front wedge, moving in smooth, overlapping sweeps as a cloud of dust is vacuumed away.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Bodywork Phase. The camera tracks the rhythmic movement of a professional sander across the iconic flat nose of the car. The surface is a patchwork of grey filler, yellow fiberglass, and old Rosso Corsa red paint. A vacuum hose follows the sander, but a fine mist of dust still dances in the air. 8K, Unreal Engine 5, Ray Tracing, smooth motion, industrial atmospheric effects, textural contrast, workshop environment.
+
+---
+
+Scene 57 — Phase 5 Bodywork & Sanding: Block Sanding the Roof**
+**Camera:** Side profile, static.
+**Action:** The long, manual block-sanding process; the technician uses a 2-foot long sanding board to ensure the roof is perfectly flat.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Bodywork. The camera captures the slow, deliberate back-and-forth motion of a long-board sander on the car’s roof. White sanding dust builds up like snow on the edges of the panel. The focus is on the physical exertion and the pursuit of a perfectly flat surface on the Gandini-designed curves. 8K, Unreal Engine 5, Ray Tracing, manual labor, macro dust accumulation, sharp focus on the sanding block, cinematic grit.
+
+---
+
+Scene 58 — Phase 5 Bodywork & Sanding: The Guide Coat Application**
+**Camera:** Mid-shot, panning.
+**Action:** A light mist of black "guide coat" is sprayed over the grey filler to reveal any remaining low spots or imperfections.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend. The camera pans as a fine black aerosol mist settles over the matte grey body filler. This "guide coat" creates a speckled texture that highlights every microscopic peak and valley in the bodywork. The car looks like a ghost, draped in monochromatic tones. 8K, Unreal Engine 5, Ray Tracing, aerosol physics, speckled texture, technical restoration, soft industrial lighting.
+
+---
+
+Scene 59 — Phase 5 Bodywork & Sanding: Final Edge Sharpening**
+**Camera:** Extreme close-up, following the line.
+**Action:** A sanding block sharpens the aggressive "V" line where the nose meets the fender, making the edge razor-thin.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend. An extreme close-up of a hand-sanding block refining a sharp body line. The iconic wedge shape of the Stratos is defined by these crisp edges. As the sander moves, a clean, sharp line emerges from the dusty surface, catching the light like a blade. 8K, Unreal Engine 5, Ray Tracing, geometric precision, automotive design, macro textures, sharp focus, industrial atmosphere.
+
+---
+
+Scene 60 — Phase 5 Bodywork & Sanding: The Clean-Down for Primer**
+**Camera:** Wide shot, pulling back.
+**Action:** The technician uses a high-pressure air hose to blow the dust off the entire car, creating a massive white cloud before the floor is hosed down.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend. The camera pulls back as the entire car is engulfed in a white cloud of dust blown off by a high-pressure air nozzle. As the dust clears, the Lancia stands ready, its body now a uniform, smooth surface of worked fiberglass and filler, stripped of its "barn find" identity and prepared for its first coat of primer. 8K, Unreal Engine 5, Ray Tracing, volumetric dust, dramatic reveal, cinematic transition, high-energy action.
+
+---
+
+Scene 61 — Phase 5 Bodywork & Sanding: Degreasing the Shell**
+**Camera:** Tracking shot, following a microfiber cloth.
+**Action:** A technician wipes the raw, sanded body with a wax and grease remover; the liquid briefly darkens the grey filler before evaporating.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in its Raw Sanded State. The camera follows a blue microfiber cloth as it glides over the wedge-shaped hood. The clear degreasing solvent leaves a streak of dark, wet-look contrast on the matte grey surface that evaporates in seconds. The shop's bright LED panels are reflected perfectly in the fleeting moisture. Every pore of the prepared fiberglass is visible. 8K, Unreal Engine 5, Ray Tracing, fluid evaporation, realistic textile textures, sterile environment, sharp focus.
+
+---
+
+Scene 62 — Phase 5 Bodywork & Sanding: Taping the Door Jams**
+**Camera:** Close-up, low-angle tilt.
+**Action:** Thin green automotive masking tape is applied with surgical precision along the door hinges and interior sills.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend. The camera focuses on a technician’s thumb pressing down a strip of bright green 3M masking tape along the complex curves of the door jam. The raw steel of the central tub is visible just behind the tape. The precision of the mask ensures no overspray will touch the mechanical components. 8K, Unreal Engine 5, Ray Tracing, macro photography, realistic adhesive textures, industrial preparation, high-contrast colors, sharp focus.
+
+---
+
+Scene 63 — Phase 6 Painting: The First Coat of Epoxy Primer**
+**Camera:** Mid-shot, profile view in the spray booth.
+**Action:** The spray gun releases a wide, atomized fan of light grey primer, covering the multicolored body in a single, uniform tone.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in the Spray Booth. The camera is positioned to the side as the spray gun passes by, releasing a fine, misty veil of light grey epoxy primer. As the mist settles, the patchwork of fiberglass and filler vanishes, replaced by a smooth, monolithic grey surface. The volumetric mist is illuminated by the intense booth lights. 8K, Unreal Engine 5, Ray Tracing, aerosol physics, volumetric lighting, paint atomization, professional automotive painting, smooth cinematic movement.
+
+---
+
+Scene 64 — Phase 6 Painting: Drying Under Infrared Lamps**
+**Camera:** Slow-motion panning shot.
+**Action:** Massive orange-glowing infrared lamps move over the primed body to bake the coating, creating a heat-haze effect.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Grey Primer. The camera pans across the car's roof as a bank of infrared heating lamps glows a deep, fiery orange. The heat causes a subtle shimmer in the air—a heat haze that distorts the background. The matte grey primer begins to lose its slight wet sheen as it cures. 8K, Unreal Engine 5, Ray Tracing, thermal glow, heat haze distortion, industrial curing process, moody orange and grey color palette.
+
+---
+
+Scene 65 — Phase 6 Painting: Wet Sanding the Primer**
+**Camera:** Macro lens, handheld-style.
+**Action:** A sanding block and a stream of water move over the primer; a milky-grey slurry flows down the side of the car.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Grey Primer. The camera is inches away from the surface as a technician uses a fine-grit sanding block. A constant stream of water turns the primer dust into a liquid, milky-grey slurry that cascades down the sharp Gandini lines. The surface beneath becomes glass-smooth. 8K, Unreal Engine 5, Ray Tracing, fluid dynamics, macro water effects, tactile textures, high-fidelity restoration, focused lighting.
+
+---
+
+Scene 66 — Phase 6 Painting: Mixing the Rosso Corsa**
+**Camera:** Top-down shot of a mixing scale.
+**Action:** Thick, vibrant red paint is poured into a mixing cup, swirling with a white binder to reach the perfect Lancia factory shade.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of the 1974 Lancia Stratos HF Rosso Corsa Paint Mix. The camera looks down into a clean plastic mixing cup. A stream of heavy, high-pigment red paint pours in, creating a slow-motion spiral as it hits the clear binder. The color is deep, rich, and unmistakable. A metal stir stick begins to fold the colors together. 8K, Unreal Engine 5, Ray Tracing, fluid mixing, vibrant color science, high-gloss paint textures, studio lighting, macro view.
+
+---
+
+Scene 67 — Phase 6 Painting: Spraying the Nose (The Return of Red)**
+**Camera:** Front-on, tracking the spray gun.
+**Action:** The first pass of the base coat hits the front nose; the grey primer is instantly transformed into a deep, vibrant Rosso Corsa.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera tracks the nozzle of the spray gun as it sweeps across the razor-sharp front nose. In its wake, the dull grey primer is replaced by a stunning, saturated red. The paint looks wet and alive, catching every light in the booth. 8K, Unreal Engine 5, Ray Tracing, color transition, high-speed paint application, volumetric mist, vibrant red tones, professional finish.
+
+---
+
+Scene 68 — Phase 6 Painting: Spraying the Door Panels**
+**Camera:** Side profile, low angle.
+**Action:** The spray gun moves vertically, coating the flat, angular door surface with a consistent, overlapping pattern of red.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera is low, looking up at the door as the painter applies the second base coat. The movement is mechanical and precise. The red paint flows into the door handle recesses and over the sharp beltline. The reflection of the painter's silhouette is visible in the wet gloss. 8K, Unreal Engine 5, Ray Tracing, automotive painting, mirror-like wet finish, vibrant saturation, industrial precision, cinematic lighting.
+
+---
+
+Scene 69 — Phase 6 Painting: Spraying the Rear Clamshell**
+**Camera:** High-angle crane shot.
+**Action:** The massive rear fiberglass engine cover is painted, the red flowing over the complex louvers and vents.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera looks down from a crane as the massive rear clamshell is coated. The red paint expertly covers the complex black-slatted vents, creating a high-contrast masterpiece. The scale of the panel emphasizes the radical design of the Stratos. 8K, Unreal Engine 5, Ray Tracing, aerial perspective, complex geometry, wet-paint textures, epic automotive restoration.
+
+---
+
+Scene 70 — Phase 6 Painting: The Clear Coat Flash**
+**Camera:** Macro lens, static focus.
+**Action:** A close-up of the red paint as the first layer of clear coat is applied; the depth of the color doubles as the gloss becomes a mirror.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. An extreme macro shot of the paint surface as the clear coat is applied. The "wet" look becomes permanent as the clear resin levels out, creating a deep, glass-like finish. The reflection of the workshop lights becomes sharp and crystal clear. The Rosso Corsa color pops with incredible intensity. 8K, Unreal Engine 5, Ray Tracing, macro gloss, mirror reflections, subsurface color depth, high-end automotive finish.
+
+---
+
+Scene 71 — Phase 6 Painting: The Final Clear Coat Flow**
+**Camera:** Slow-motion lateral tracking shot, 120fps.
+**Action:** The painter applies the final "wet" coat of clear; the liquid resin flows together to create a seamless, glass-like surface over the roof.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in High-Gloss Rosso Corsa Red. The camera tracks horizontally inches above the roofline as the final layer of clear coat is applied. In slow motion, the atomized clear liquid merges into a perfectly flat, mirror-like sheet. The brilliant red pigment beneath seems to vibrate with new depth. The high-intensity spray booth lights create long, unbroken streaks of white reflection across the fresh finish. 8K, Unreal Engine 5, Ray Tracing, fluid dynamics, mirror reflections, automotive clear coat, hyper-realistic wet surface, professional craftsmanship.
+
+---
+
+Scene 72 — Phase 6 Painting: Inspecting for Dust Nibs**
+**Camera:** Macro lens, handheld with a focused penlight.
+**Action:** A technician uses a small, high-intensity light to scan the dry clear coat, looking for any microscopic imperfections in the red finish.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera is locked in a macro view as a sharp beam from a detailing penlight dances across the polished red fender. The light reveals the flawless, orange-peel-free texture of the paint. The reflection of the light source is a perfect, tiny circle, proving the surface's optical clarity. In the background, the rest of the car glows under the soft-box studio lights. 8K, Unreal Engine 5, Ray Tracing, macro detailing, light physics, mirror finish, high-fidelity paint inspection.
+
+---
+
+Scene 73 — Phase 6 Painting: The Unmasking - The Windshield Seal**
+**Camera:** Close-up, slow pull-back.
+**Action:** The green masking tape is slowly peeled away from the edge of the roof, revealing a razor-sharp line between the new red paint and the black window seal area.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera captures the slow, rhythmic peeling of green automotive tape. As the tape is removed, a perfect, crisp boundary is revealed between the vibrant red bodywork and the matte black primer of the window frame. A thin thread of adhesive stretches and snaps in slow motion. The contrast is sharp and satisfying, emphasizing the quality of the prep work. 8K, Unreal Engine 5, Ray Tracing, macro texture, realistic adhesive physics, color contrast, satisfying restoration moment.
+
+---
+
+Scene 74 — Phase 6 Painting: Removing the Wheel Masking**
+**Camera:** Low-angle, side profile.
+**Action:** The brown masking paper is torn away from the wheel wells, revealing the restored chassis and suspension behind the brilliant red fenders.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera is low as a technician rips away the protective brown paper from the front wheel arch. The reveal shows the contrast between the stunning new exterior paint and the clean, mechanical grey of the inner wheel well and the gold-anodized brake caliper. Dust particles catch the light as the paper crinkles. 8K, Unreal Engine 5, Ray Tracing, material contrast, realistic paper physics, industrial workshop, dramatic reveal.
+
+---
+
+Scene 75 — Phase 6 Painting: Wet Sanding the Clear (1500 Grit)**
+**Camera:** Macro lens, tracking the sanding block.
+**Action:** The brand-new clear coat is sanded with a fine-grit block and water, turning the high-gloss finish into a temporary matte "fog."
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera follows a small sanding block as it moves in straight lines over the clear coat. A stream of water carries away a milky white residue. The previously glossy red paint becomes a soft, velvet-like matte pink as it is leveled. This "color sanding" process is the key to a concours-level finish. 8K, Unreal Engine 5, Ray Tracing, fluid dynamics, tactile texture, professional automotive paint correction, focused lighting.
+
+---
+
+Scene 76 — Phase 6 Painting: The First Buffing Pass**
+**Camera:** Close-up, orbiting the polisher.
+**Action:** A rotary polisher with a wool pad and white compound hits the matte surface, instantly bringing back a deep, swirling gloss.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera orbits the head of a rotary polishing machine. As the wool pad spins, a trail of brilliant, deep red gloss emerges from the matte sanded surface. White polishing compound splatters in tiny droplets, caught by the high-speed motion. The transformation from dull to mirror-like is instantaneous and dramatic. 8K, Unreal Engine 5, Ray Tracing, motion blur, high-gloss transition, abrasive physics, cinematic detailing.
+
+---
+
+Scene 77 — Phase 6 Painting: Final Jewel Polishing**
+**Camera:** Extreme macro of the paint surface.
+**Action:** A fine foam pad and finishing polish are used; the surface becomes so reflective it looks like a pool of red liquid.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. An extreme close-up shot where the camera focus is on the reflection within the paint rather than the paint itself. The overhead workshop rafters and lights are mirrored with perfect geometric precision. The Rosso Corsa color is so deep it feels infinite. A soft foam pad glides across the frame, leaving a trail of pure light. 8K, Unreal Engine 5, Ray Tracing, mirror reflections, light distortion, liquid-metal effect, ultra-high-end finish.
+
+---
+
+Scene 78 — Phase 6 Painting: Cleaning the Vents**
+**Camera:** Mid-shot, panning across the rear.
+**Action:** A detailer uses a small brush to remove polishing dust from the black-slatted vents of the rear clamshell.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera pans across the iconic black rear louvers. A fine-tipped detailing brush sweeps away white compound dust from the corners of the slats. The contrast between the matte black plastic and the blazing red fiberglass surrounds is striking. The car is now 100% clean and ready for parts to be reattached. 8K, Unreal Engine 5, Ray Tracing, meticulous detailing, color contrast, sharp geometric lines, industrial design.
+
+---
+
+Scene 79 — Phase 6 Painting: The Painted Shell Reveal**
+**Camera:** Heroic wide-angle crane shot.
+**Action:** The fully painted and polished shell sits in the center of the booth, looking like a piece of Italian jewelry.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera rises in a slow, majestic crane movement, revealing the entire car sitting in the center of the pristine, white spray booth. The Lancia is a singular, glowing red wedge against the clinical background. The paint is so deep it looks wet. All masking is gone; the car is a masterpiece of form and color. 8K, Unreal Engine 5, Ray Tracing, hero shot, epic scale, volumetric lighting, pristine automotive art.
+
+---
+
+Scene 80 — Phase 6 Painting: Rolling into the Assembly Bay**
+**Camera:** Low-angle tracking shot.
+**Action:** The car is carefully pushed on its dolly from the paint booth back into the main workshop area for reassembly.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera moves backward as the car is pushed toward the viewer. The transition from the warm booth lights to the cooler workshop LEDs causes the red paint to shift in tone. The empty wheel arches and lack of trim highlight how much work is left, but the soul of the car has returned. 8K, Unreal Engine 5, Ray Tracing, smooth movement, cinematic transition, workshop atmosphere, anticipation.
+
+---
+
+Scene 81 — Phase 7 Reassembly: The Heart Returns**
+**Camera:** High-angle wide shot, slow descent.
+**Action:** The restored Ferrari V6, gleaming in silver and red, is lowered back into the rear subframe of the freshly painted chassis.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera descends as the pristine Ferrari V6 engine is lowered via a yellow hoist into the engine bay. The contrast between the vibrant, wet-look red paint of the chassis and the mechanical complexity of the silver engine block is breathtaking. The chrome intake trumpets catch the overhead workshop lights, creating starburst glares. 8K, Unreal Engine 5, Ray Tracing, mechanical mating, industrial scale, high-contrast colors, professional restoration, volumetric lighting.
+
+---
+
+Scene 82 — Phase 7 Reassembly: Connecting the Fuel Lines**
+**Camera:** Macro lens, static focus.
+**Action:** Braided stainless steel fuel lines are threaded onto the triple Weber carburetors and tightened with an anodized blue wrench.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Ferrari V6 Engine. The camera is locked in an extreme close-up on the fuel rail. A technician’s hand uses a specialized aluminum wrench to tighten a blue-and-red AN fitting onto a braided steel line. Every thread of the stainless mesh is visible. A small drop of fresh gasoline glints on the brass fitting of the Weber carburetor. 8K, Unreal Engine 5, Ray Tracing, macro mechanical action, metallic textures, high-fidelity engineering, sharp focus.
+
+---
+
+Scene 83 — Phase 7 Reassembly: The Windshield Install**
+**Camera:** Low-angle wide shot from the front.
+**Action:** Two technicians using large suction cups carefully drop the massive, curved panoramic windshield into the freshly glued frame.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera is positioned low in front of the car as the iconic, wrap-around windshield is lowered into place. The glass is crystal clear, reflecting the entire workshop in its deep curve. The black sealant bead is visible at the edge of the vibrant red roofline. The technicians move with synchronized precision. 8K, Unreal Engine 5, Ray Tracing, glass reflections, careful craftsmanship, automotive assembly, cinematic lighting.
+
+---
+
+Scene 84 — Phase 7 Reassembly: Dashboard Reinstall**
+**Camera:** Interior POV, panning from passenger to driver side.
+**Action:** The fully restored, black Alcantara-wrapped dashboard is slid into the cabin, the Smiths gauges gleaming in the dim interior light.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Interior. The camera pans across the interior as the dashboard is seated. The matte black Alcantara texture is soft and rich, contrasting with the bright chrome bezels of the analog gauges. The toggle switches are all perfectly aligned. Daylight from the workshop pours through the open door, highlighting the "Stratos" logo on the glovebox. 8K, Unreal Engine 5, Ray Tracing, interior textures, fabric shaders, analog aesthetic, nostalgic restoration.
+
+---
+
+Scene 85 — Phase 7 Reassembly: The Pop-Up Headlights**
+**Camera:** Front-on close-up.
+**Action:** The headlight motors are activated; the sharp, red covers flip up in perfect synchronization to reveal the new Hella lamps.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera is eye-level with the front nose. In a smooth, mechanical motion, the pop-up headlights flip open. The glass lenses of the lamps are pristine and catch the light, while the internal mechanisms are greased and silent. The fitment of the red covers against the hood is perfect. 8K, Unreal Engine 5, Ray Tracing, mechanical synchronization, pop-up headlight action, iconic automotive design, sharp focus.
+
+---
+
+Scene 86 — Phase 7 Reassembly: Rear Taillight Wiring**
+**Camera:** Close-up, profile of the rear.
+**Action:** The iconic round Fiat-sourced taillights are snapped into the rear grille, and the bulbs illuminate for a brief test.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera focuses on the circular rear taillight housing. As the light unit is clicked into place, the red lens glows brilliantly for a split second. The black mesh of the rear grille provides a stark contrast to the glowing red light and the surrounding Rosso Corsa paint. 8K, Unreal Engine 5, Ray Tracing, electrical test, lighting effects, color contrast, geometric design, high-fidelity textures.
+
+---
+
+Scene 87 — Phase 7 Reassembly: The Door Handle Click**
+**Camera:** Macro lens, static.
+**Action:** A hand pulls the minimalist flush-mounted door handle; it operates with a crisp, mechanical "snick" against the new rubber seals.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. An extreme macro shot of the silver door handle. As it is pulled, the reflection of the workshop moves across the polished metal. The handle snaps back into its flush position with a sound that implies perfect tolerances. The new rubber seal is dark, supple, and perfectly seated against the red fiberglass. 8K, Unreal Engine 5, Ray Tracing, macro tactile action, mechanical precision, sound visualization, mirror finish.
+
+---
+
+Scene 88 — Phase 7 Reassembly: Mounting the Campagnolos**
+**Camera:** Low-angle tracking shot.
+**Action:** The restored yellow magnesium wheels, now wrapped in fresh Pirelli P7 tires, are slid onto the wheel studs.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera tracks at ground level as the iconic yellow five-spoke Campagnolo wheel is mounted. The vibrant yellow against the Rosso Corsa bodywork creates the classic Lancia rally aesthetic. The fresh black rubber of the tire has a subtle sheen. The gold brake caliper is visible through the spokes. 8K, Unreal Engine 5, Ray Tracing, color theory, wheel fitment, iconic rally aesthetic, high-contrast workshop lighting.
+
+---
+
+Scene 89 — Phase 7 Reassembly: Torquing the Lug Nuts**
+**Camera:** Extreme close-up.
+**Action:** A clicking torque wrench is used on the chrome lug nuts, ensuring the magnesium wheels are secured to the racing hubs.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Campagnolo Wheel. The camera captures the chrome lug nut as a digital torque wrench applies pressure. Tiny reflections of the mechanic’s hands are visible in the chrome. As the wrench clicks, a small green LED on the tool flashes. The yellow paint of the magnesium wheel is flawless and matte. 8K, Unreal Engine 5, Ray Tracing, mechanical torque, macro detail, chrome reflections, professional tool textures.
+
+---
+
+Scene 90 — Phase 7 Reassembly: The Spoiler Attachment**
+**Camera:** Mid-shot, panning across the roof.
+**Action:** The black fiberglass rear wing is bolted onto the roofline, completing the aggressive aerodynamic silhouette.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera pans across the rear of the roof as the black aerodynamic spoiler is lowered into position. The matte black finish of the wing breaks up the sea of red paint, giving the car its final, predatory rally stance. The hardware is stainless steel and gleams under the shop lights. 8K, Unreal Engine 5, Ray Tracing, aerodynamic design, silhouette completion, color contrast, cinematic movement.
+
+
+---
+
+Scene 91 — Phase 7 Reassembly: The Front Grille Mesh**
+**Camera:** Macro lens, slow lateral pan.
+**Action:** The technician snaps the black honeycomb mesh into the front nose intake; the sharp contrast against the Rosso Corsa paint is immediate.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera pans across the front nose intake as a pristine, semi-gloss black honeycomb grille is clicked into place. The deep black shadows of the mesh contrast violently with the brilliant, mirror-polished red fiberglass surrounding it. The texture of the plastic is crisp and new, reflecting the high-key workshop lighting. Small silver mounting screws are tightened with a precision driver. 8K, Unreal Engine 5, Ray Tracing, geometric patterns, color contrast, industrial design, macro automotive textures.
+
+---
+
+Scene 92 — Phase 7 Reassembly: Installing the Stratos Badge**
+**Camera:** Extreme macro, static with a focus pull.
+**Action:** A brand-new chrome and enamel "Stratos" badge is pressed onto the rear panel, the final jewel of the exterior.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. An extreme macro focus on the rear tail panel. A pair of hands carefully aligns the metallic "Stratos HF" badge. As it is pressed into the adhesive, the chrome script glitters under the LED spotlights. The vibrant blue and white enamel of the Lancia logo is sharp and saturated. The reflection in the Rosso Corsa paint shows a distorted, perfect image of the technician. 8K, Unreal Engine 5, Ray Tracing, macro jewelry, chrome reflections, branding, high-fidelity enamel textures.
+
+---
+
+Scene 93 — Phase 7 Reassembly: The Auxiliary Rally Lights**
+**Camera:** Front-on mid-shot, orbiting.
+**Action:** The four massive circular Carello rally lamps are mounted to the nose, their yellow covers being snapped on.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera orbits the front of the car as the signature quad-lighting pod is secured. The large, circular glass lenses of the Carello lamps catch the light like diamonds. A technician snaps on the bright yellow protective covers with the "Carello" script in black. The addition of the lights completes the aggressive, "ready-for-the-stage" rally aesthetic. 8K, Unreal Engine 5, Ray Tracing, glass refraction, iconic rally gear, vibrant yellow and red palette.
+
+---
+
+Scene 94 — Phase 7 Reassembly: Interior Carpet and Trim**
+**Camera:** Low-angle interior shot from the door sill.
+**Action:** The fresh black lightweight carpeting is smoothed down around the gear lever, and the gated shifter plate is screwed in.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Interior. The camera is at floor level, looking at the center tunnel. The black, fine-knit racing carpet is perfectly fitted. A polished metal gated shifter plate is lowered over the chrome gear lever, and the stainless steel screws are driven home. The interior smells of new adhesive and high-grade Alcantara. The contrast between the dark interior and the sliver of Rosso Corsa red on the door jam is striking. 8K, Unreal Engine 5, Ray Tracing, textile shaders, polished metal, interior ergonomics, sharp focus.
+
+---
+
+Scene 95 — Phase 7 Reassembly: The Steering Wheel Install**
+**Camera:** POV shot from the driver's seat.
+**Action:** The three-spoke leather-wrapped Momo steering wheel is bolted to the column; the horn button with the Lancia shield is pressed in.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Interior. A first-person perspective as the steering wheel is mounted. The matte black leather of the Momo wheel has visible hand-stitching in red thread. The central horn button, featuring the classic blue Lancia flag, is pressed into the center with a solid click. In the background, the Smiths tachometer with its redline at 8,000 RPM is in soft focus. 8K, Unreal Engine 5, Ray Tracing, POV cinematography, leather textures, tactile restoration, nostalgic racing cockpit.
+
+---
+
+Scene 96 — Phase 7 Reassembly: Filling the Coolant**
+**Camera:** High-angle close-up.
+**Action:** Bright blue coolant is poured into the header tank; the liquid swirls as it fills the system, reflecting the shop lights.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Engine Bay. The camera looks down at the translucent coolant expansion tank. A steady stream of neon-blue engine coolant pours in, creating bubbles and swirls as the system reaches capacity. The vibrant blue liquid contrasts beautifully with the silver engine block and the red valve covers in the background. A technician's hand secures the pressure cap with a rhythmic twist. 8K, Unreal Engine 5, Ray Tracing, fluid physics, vibrant colors, mechanical preparation, high-contrast lighting.
+
+---
+
+Scene 97 — Phase 7 Reassembly: The Battery Connection**
+**Camera:** Macro lens, side profile.
+**Action:** The negative battery terminal is tightened; a tiny blue spark jumps as the circuit is completed, and the dashboard lights hum to life.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend. An extreme close-up of the battery terminal. As the wrench tightens the nut, a small, brilliant blue electrical spark illuminates the dark corner of the trunk. Simultaneously, the faint mechanical hum of the fuel pump begins in the background. The car’s electrical nervous system is officially active for the first time in decades. 8K, Unreal Engine 5, Ray Tracing, electrical spark effect, macro metal, industrial sound visualization, cinematic tension.
+
+---
+
+Scene 98 — Phase 7 Reassembly: Checking Tire Pressures**
+**Camera:** Ground-level close-up.
+**Action:** A digital gauge is pressed onto the valve stem of the Pirelli P7 tire; a short hiss of air precedes the final reading.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Campagnolo Wheel. The camera is inches from the pavement, focusing on the valve stem of the fresh Pirelli tire. A technician’s hand applies a gauge, and a puff of high-pressure air clears a small circle of dust on the yellow rim. The tire deforms slightly under the weight of the completed car, showing its ready-to-race stance. 8K, Unreal Engine 5, Ray Tracing, macro physics, rubber textures, final preparations, sharp focus.
+
+---
+
+Scene 99 — Phase 7 Reassembly: The Final Wipe Down**
+**Camera:** Slow-motion panning shot, following a microfiber cloth.
+**Action:** A final pass with a quick-detailer spray and a cloth removes the last fingerprint from the hood, leaving the red surface flawless.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera follows a plush grey microfiber cloth as it glides over the center of the hood in slow motion. A fine mist of detailing spray evaporates, leaving behind a surface so reflective it looks like liquid glass. The overhead lights are mirrored in a perfect, unbroken line across the wedge shape. The car is now 100% physically complete. 8K, Unreal Engine 5, Ray Tracing, mirror reflections, textile movement, pristine finish, heroic automotive photography.
+
+---
+
+Scene 100 — Phase 7 Reassembly: Priming the Carbs**
+**Camera:** Close-up on the Weber carburetors.
+**Action:** The throttle linkage is manually flicked; a spray of fuel is visible inside the intake trumpets as the engine is primed for start-up.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Ferrari V6 Engine. The camera focuses on the bank of three dual-choke Weber carburetors. A hand pulls the gold-cadmium plated throttle linkage, and the silver butterflies snap open. Inside the intake trumpets, a fine mist of gasoline is injected, shimmering in the light. The mechanical symphony of clicking linkages and the smell of raw fuel signal the end of the rebuild. 8K, Unreal Engine 5, Ray Tracing, macro mechanical action, fuel atomization, technical precision, high-tension atmosphere.
+
+---
+
+Scene 101 — Phase 8 Reveal: The Ignition Turn**
+**Camera:** Close-up on the steering column and ignition switch.
+**Action:** A period-correct Lancia key is inserted into the ignition and turned; the dashboard needles sweep as the starter motor begins its high-pitched whir.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Interior. The camera is tight on the steering column as a weathered metal key is slid into the ignition. A gloved hand turns the key to the "Crank" position. In the background, the orange needles of the Smiths tachometer and oil pressure gauges jump to life, shivering with electrical current. The high-pitched, mechanical whine of a racing starter motor fills the air, creating a sense of extreme mechanical tension. 8K, Unreal Engine 5, Ray Tracing, macro ignition detail, analog gauge movement, interior shadows, high-fidelity sound visualization, cinematic suspense.
+
+---
+
+Scene 102 — Phase 8 Reveal: The First Fire**
+**Camera:** Low-angle shot behind the exhaust tips.
+**Action:** The engine catches; a violent burst of blue smoke and a flame spit erupt from the dual exhaust as the V6 settles into a raspy, aggressive idle.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera is positioned inches from the ground behind the twin-exit exhaust. As the engine fires, a concussive blast of blue-grey smoke and a momentary orange flame-spit erupt from the black pipes. The entire rear of the car vibrates with the raw energy of the Ferrari-sourced V6. The sound is a metallic, high-frequency bark that echoes off the workshop walls. 8K, Unreal Engine 5, Ray Tracing, particle physics, exhaust flame effect, vibration blur, industrial grit, powerful automotive awakening.
+
+---
+
+Scene 103 — Phase 8 Reveal: Exiting the Workshop**
+**Camera:** Tracking shot, moving backward ahead of the car.
+**Action:** The Lancia rolls slowly out of the sterile workshop and onto the tarmac; the morning sun hits the Rosso Corsa paint for the first time.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera retreats as the car drives slowly toward the open workshop bay doors. As the nose crosses the threshold, the cool LED lighting is replaced by the warm, golden glow of a sunrise. The Rosso Corsa paint undergoes a dramatic color shift, becoming incredibly vibrant and saturated. The sharp wedge silhouette is framed by the industrial architecture of the garage. 8K, Unreal Engine 5, Ray Tracing, volumetric sunlight, color transition, cinematic exit, high-contrast lighting, epic reveal.
+
+---
+
+Scene 104 — Phase 8 Reveal: The Low-Profile Stance**
+**Camera:** 360-degree heroic orbit at ground level.
+**Action:** The car sits idling on the asphalt; the camera circles the car to show the perfect, aggressive rally height and the yellow Campagnolo wheels.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera performs a smooth, low-profile orbital move around the stationary car. The focus is on the radical short wheelbase and the wide, flared fenders. The yellow magnesium wheels pop against the dark pavement. Heat haze ripples from the rear engine vents, distorting the background. The car looks like a predator coiled and ready to strike. 8K, Unreal Engine 5, Ray Tracing, heat haze effect, ground-level cinematography, hero shot, mirror reflections, perfect automotive proportions.
+
+---
+
+Scene 105 — Phase 8 Reveal: The V6 High-RPM Pull**
+**Camera:** Side-on tracking shot from a chase car, moving at high speed.
+**Action:** The Lancia accelerates hard away from the camera; the rear end squats as the tires grip and the engine screams toward the redline.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. A high-speed tracking shot as the Lancia launches down a backroad. The rear suspension compresses visibly under the torque of the V6. Smoke and dust are kicked up from the wide Pirelli tires. The camera captures the blur of the environment as the car shrinks into the distance, its high-pitched engine note a piercing mechanical shriek. 8K, Unreal Engine 5, Ray Tracing, motion blur, dynamic action, suspension squat, high-speed cinematography, raw power.
+
+---
+
+Scene 106 — Phase 8 Reveal: The "Crest" Jump**
+**Camera:** Static low-angle, looking at a small rise in the road.
+**Action:** The Lancia crests a small hill at speed, the suspension fully extending (droop) before settling perfectly back onto the asphalt.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera is locked at a low angle as the car speeds over a rise. For a fraction of a second, the suspension reaches full extension, showing the clean, gold-anodized mechanicals beneath. As it lands, the Bilstein shocks soak up the impact with zero bounce. The red paint flashes brilliantly against the blue sky. 8K, Unreal Engine 5, Ray Tracing, slow-motion action, suspension physics, rally heritage, dramatic lighting, high-fidelity textures.
+
+---
+
+Scene 107 — Phase 8 Reveal: The Cabin POV - Pure Speed**
+**Camera:** Interior POV, mounted behind the driver’s shoulder.
+**Action:** A view of the driver’s hands working the gear lever and the steering wheel as the car carves through a series of tight corners.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Interior. Interior POV during spirited driving. The driver’s hands in leather racing gloves perform a lightning-fast shift through the gated manual box. Outside the curved windshield, the world is a green and grey blur of speed. The tachometer needle bounces near the 8,000 RPM mark. The vibration of the car is visible in the slight jitter of the rearview mirror. 8K, Unreal Engine 5, Ray Tracing, POV driving, motion blur, interior ergonomics, high-speed interior, tactile racing experience.
+
+---
+
+Scene 108 — Phase 8 Reveal: The Beauty Profile**
+**Camera:** Slow, sweeping side-profile pan.
+**Action:** The car is parked at sunset; the camera pans from the front nose to the rear spoiler, capturing the light reflecting off the Gandini lines.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera pans slowly along the flank of the car at sunset. The long, golden light catches the razor-sharp edge of the beltline, creating a glowing highlight that runs the length of the body. The Rosso Corsa paint has a deep, liquid glow. The shadows are long and soft, emphasizing the car's unique wedge-shaped geometry. 8K, Unreal Engine 5, Ray Tracing, sunset lighting, golden hour, mirror reflections, cinematic beauty shot, perfect paint finish.
+
+---
+
+Scene 109 — Phase 8 Reveal: The Engine Bay Close-up**
+**Camera:** Macro lens, handheld-style.
+**Action:** The rear clamshell is open one last time; the hot engine "tinks" as it cools, the heat haze still rising from the intake trumpets.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend Ferrari V6 Engine. A tight macro shot of the cooling engine. Small "tinking" sounds of hot metal are visualized through subtle vibrations of the manifold. Heat haze blurs the air above the silver intake trumpets. The red valve covers are dusty but proud. This is the heart that has been resurrected from the barn, now a living, breathing mechanical god. 8K, Unreal Engine 5, Ray Tracing, heat haze, macro cooling metal, mechanical soul, post-drive atmosphere.
+
+---
+
+Scene 110 — Phase 8 Reveal: The Final Fade**
+**Camera:** High-angle drone shot, pulling straight up.
+**Action:** The Lancia sits on a winding coastal road at dusk; the headlights and taillights are on, and the camera pulls up until the car is just a red speck in the landscape.
+**Duration:** 8 seconds
+**Master AI Prompt (500-800 Characters):** A cinematic, photorealistic shot of a 1974 Lancia Stratos HF Rally Legend in Rosso Corsa Red. The camera begins at roof height and pulls vertically into the sky. The Lancia’s headlights cut two yellow paths into the deepening twilight, while the round red taillights glow behind. The car sits perfectly on the apex of a winding road, a jewel of Italian design returned to its natural habitat. The scene fades to black as the car becomes a tiny, brilliant point of light. 8K, Unreal Engine 5, Ray Tracing, drone cinematography, epic scale, twilight atmosphere, finality, poetic automotive end.
+
+---

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Profile Manager</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .profile-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .profile-item {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 60%;
+            font-size: 16px;
+        }
+
+        .status {
+            margin-top: 10px;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🔑 Google Profile Manager</h1>
+
+    <div class="card">
+        <h2>Create New Profile</h2>
+        <div style="display:flex; gap:10px; flex-wrap: wrap;">
+            <input type="text" id="newProfileName" placeholder="Enter Profile Name (e.g. Account1)">
+            <button class="btn" onclick="launchLogin()" id="launchBtn">1. Launch Browser</button>
+            <button class="btn" onclick="saveProfile()" id="saveBtn" style="background-color: #28a745; display:none;">2.
+                Save & Close</button>
+        </div>
+        <div id="status" class="status"></div>
+    </div>
+
+    <div class="card">
+        <h2>Saved Profiles</h2>
+        <div id="profileList" class="profile-list">
+            <!-- Populated by JS -->
+        </div>
+    </div>
+
+    <script>
+        async function loadProfiles() {
+            const res = await fetch('/api/profiles');
+            const data = await res.json();
+            const container = document.getElementById('profileList');
+            container.innerHTML = data.length ? '' : '<p>No profiles found.</p>';
+
+            data.forEach(p => {
+                const item = document.createElement('div');
+                item.className = 'profile-item';
+                item.innerHTML = `<strong>${p.name}</strong> <small>(${(p.size / 1024).toFixed(1)} KB)</small>`;
+                container.appendChild(item);
+            });
+        }
+
+        async function launchLogin() {
+            const name = document.getElementById('newProfileName').value.trim();
+            if (!name) return alert('Please enter a profile name');
+
+            const launchBtn = document.getElementById('launchBtn');
+            const saveBtn = document.getElementById('saveBtn');
+            const status = document.getElementById('status');
+
+            launchBtn.disabled = true;
+            status.textContent = "Launching browser... Please log in to Google in the popup window.";
+
+            try {
+                const res = await fetch('/api/launch', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ profileName: name })
+                });
+                const msg = await res.json();
+                status.textContent = "Browser Open. Log in, then click 'Save & Close' here.";
+                saveBtn.style.display = 'inline-block';
+            } catch (e) {
+                status.textContent = "Error: " + e.message;
+                launchBtn.disabled = false;
+            }
+        }
+
+        async function saveProfile() {
+            const status = document.getElementById('status');
+            const launchBtn = document.getElementById('launchBtn');
+            const saveBtn = document.getElementById('saveBtn');
+
+            saveBtn.disabled = true;
+            status.textContent = "Saving profile...";
+
+            try {
+                const res = await fetch('/api/save', { method: 'POST' });
+                const msg = await res.json();
+                if (res.ok) {
+                    status.textContent = "✅ " + msg.message;
+                    document.getElementById('newProfileName').value = '';
+                } else {
+                    status.textContent = "❌ Error: " + msg;
+                }
+            } catch (e) {
+                status.textContent = "Error saving: " + e.message;
+            }
+
+            // Reset UI
+            launchBtn.disabled = false;
+            saveBtn.disabled = false;
+            saveBtn.style.display = 'none';
+            loadProfiles();
+        }
+
+        loadProfiles();
+    </script>
+</body>
+
+</html>
