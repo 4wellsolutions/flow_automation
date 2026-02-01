@@ -103,7 +103,7 @@ console.log(`\n▶️ Timeout hardcoded to ${timeoutInput} seconds (${timeoutDis
 const CONFIG = {
   // === CRITICAL PATHS ===
   PROFILES_DIR: "d:\\workspace\\flow\\profiles", // DIRECT PROFILES
-  PROMPTS_DIR: "d:\\workspace\\flow\\frames",
+  PROMPTS_DIR: generationMode === 'Text to Video' ? "d:\\workspace\\flow\\prompts" : "d:\\workspace\\flow\\frames",
   DOWNLOAD_BASE_DIR: "d:\\workspace\\flow\\Videos",
   // ======================
 
