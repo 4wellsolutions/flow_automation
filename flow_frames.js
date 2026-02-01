@@ -1016,15 +1016,15 @@ async function handleCompletedVideo(tabData, tabIndex, windowIdx) {
     // Global counter reset removed (handled locally)
     const status = PROMPT_FILE_STATUS.get(tabData.filename);
     if (status) { status.completed++; checkAndMovePromptFile(tabData.filename); }
+    await closeTabAndCleanup(tabData, tabIndex, windowIdx); // ✅ Close immediately
     return true; // Success
   } else {
     TOTAL_VIDEOS_FAILED++;
     const status = PROMPT_FILE_STATUS.get(tabData.filename);
     if (status) { status.failed++; checkAndMovePromptFile(tabData.filename); }
+    await closeTabAndCleanup(tabData, tabIndex, windowIdx); // ✅ Close immediately
     return false; // Failed download
   }
-
-  await closeTabAndCleanup(tabData, tabIndex, windowIdx);
 }
 
 async function handleFailedVideo(tabData, tabIndex, windowIdx) {

@@ -75,6 +75,7 @@
             font-weight: 600;
             display: flex;
             align-items: center;
+            justify-content: space-between;
             gap: 10px;
         }
 
@@ -138,16 +139,21 @@
             font-size: 0.875rem;
         }
 
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #e5e7eb;
+            color: var(--text-muted);
+        }
+
+        .btn-outline:hover {
+            background: #f9fafb;
+            border-color: #d1d5db;
+        }
+
         .btn:disabled {
             opacity: 0.6;
             cursor: not-allowed;
             transform: none !important;
-        }
-
-        /* --- STATUS BADGE --- */
-        .status-msg {
-            margin-top: 15px;
-            font-size: 0.95rem;
         }
 
         /* --- GRID --- */
@@ -165,6 +171,8 @@
             transition: all 0.2s;
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         .profile-item:hover {
@@ -173,17 +181,31 @@
             border-color: var(--primary);
         }
 
+        .profile-item.inactive {
+            opacity: 0.6;
+            background: #f9fafb;
+            border-style: dashed;
+        }
+
+        .header-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            gap: 10px;
+        }
+
         .profile-name {
             font-weight: 700;
             font-size: 1.1rem;
-            margin-bottom: 5px;
+            margin-bottom: 2px;
             word-break: break-all;
         }
 
         .profile-meta {
             color: var(--text-muted);
             font-size: 0.85rem;
-            margin-bottom: 15px;
+            white-space: nowrap;
         }
 
         .status-badge {
@@ -220,15 +242,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 15px;
+            margin-top: auto;
             border-top: 1px solid #f3f4f6;
             padding-top: 15px;
         }
 
         .delete-btn {
-            position: absolute;
-            top: 15px;
-            right: 15px;
             background: transparent;
             border: none;
             cursor: pointer;
@@ -236,11 +255,79 @@
             transition: all 0.2s;
             padding: 5px;
             border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .delete-btn:hover {
             background: #fee2e2;
             color: var(--danger);
+        }
+
+        /* --- SWITCH --- */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 34px;
+            height: 20px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 12px;
+            width: 12px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: #10b981;
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(14px);
+        }
+
+        .status-text {
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .status-text.active {
+            color: #10b981;
+        }
+
+        .status-text.inactive {
+            color: #9ca3af;
+        }
+
+        .status-msg {
+            margin-top: 15px;
+            font-size: 0.95rem;
         }
     </style>
 </head>
@@ -267,47 +354,94 @@
         </div>
 
         <div class="card">
-            <h2>📂 Saved Profiles</h2>
-            <div id="profileList" class="profile-grid">
-                <!-- Populated by JS -->
+            <h2 style="margin-bottom: 25px;">
+                <span>📂 Saved Profiles</span>
+                <button onclick="loadProfiles()" class="btn btn-sm btn-outline">Refresh List</button>
+            </h2>
+            <div id="profile-grid" class="profile-grid">
+                <div style="color:#666;">Loading profiles...</div>
             </div>
         </div>
     </div>
 
     <script>
         async function loadProfiles() {
-            const res = await fetch('/api/profiles');
-            const data = await res.json();
-            const container = document.getElementById('profileList');
-            container.innerHTML = data.length ? '' : '<p style="grid-column:1/-1; text-align:center; color:#888;">No profiles found.</p>';
+            const container = document.getElementById('profile-grid');
+            try {
+                const res = await fetch('/api/profiles');
+                const data = await res.json();
 
-            data.sort((a, b) => a.name.localeCompare(b.name));
+                container.innerHTML = '';
+                if (!data || data.length === 0) {
+                    container.innerHTML = '<p style="grid-column:1/-1; text-align:center; color:#888;">No profiles found.</p>';
+                    return;
+                }
 
-            data.forEach(p => {
-                const item = document.createElement('div');
-                item.className = 'profile-item';
-                item.innerHTML = `
-                    <button class="delete-btn" onclick="deleteProfile('${p.name}')" title="Delete Profile">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
-                    </button>
-                    <div class="profile-name">${p.name}</div>
-                    <div class="profile-meta">${(p.size / 1024).toFixed(1)} KB</div>
-                    
-                    <div style="display:flex; gap:10px; margin-bottom:10px;">
-                        <div id="badge-gemini-${p.name}" class="status-badge">Gemini: ?</div>
-                        <div id="badge-flow-${p.name}" class="status-badge">Flow: ?</div>
-                    </div>
+                data.sort((a, b) => a.name.localeCompare(b.name));
 
-                    <div class="action-row">
-                        <span style="font-size:0.8rem; color:#aaa;">Checked: <span id="time-${p.name}">Never</span></span>
-                        <div style="display:flex; gap:5px;">
-                            <button class="btn btn-sm btn-primary" onclick="checkStatus('${p.name}', 'gemini')">Gemini</button>
-                            <button class="btn btn-sm" style="background:#8b5cf6; color:white;" onclick="checkStatus('${p.name}', 'flow')">Flow</button>
+                data.forEach(p => {
+                    const status = p.status || 'active'; // Default to active if missing
+                    const isInactive = status === 'inactive';
+                    const isChecked = isInactive ? '' : 'checked';
+
+                    const item = document.createElement('div');
+                    item.className = `profile-item ${isInactive ? 'inactive' : ''}`;
+
+                    item.innerHTML = `
+                        <div class="header-row">
+                            <label class="switch" title="Toggle Active/Inactive">
+                                <input type="checkbox" ${isChecked} onchange="toggleStatus('${p.name}', '${status}')">
+                                <span class="slider"></span>
+                            </label>
+                            <div style="flex:1"></div>
+                            <div class="profile-meta">${(p.size / 1024).toFixed(1)} KB</div>
+                            <button class="delete-btn" onclick="deleteProfile('${p.name}')" title="Delete Profile">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                            </button>
                         </div>
-                    </div>
-                `;
-                container.appendChild(item);
-            });
+
+                        <div class="profile-name">${p.name}</div>
+                        <div class="status-text ${isInactive ? 'inactive' : 'active'}">
+                            ${status.toUpperCase()}
+                        </div>
+                        
+                        <div style="display:flex; gap:10px; margin-bottom:15px;">
+                            <div id="badge-gemini-${p.name}" class="status-badge">Gemini: ?</div>
+                            <div id="badge-flow-${p.name}" class="status-badge">Flow: ?</div>
+                        </div>
+
+                        <div class="action-row">
+                            <span style="font-size:0.8rem; color:#aaa;">Checked: <span id="time-${p.name}">Never</span></span>
+                            <div style="display:flex; gap:5px;">
+                                <button class="btn btn-sm btn-primary" onclick="checkStatus('${p.name}', 'gemini')" ${isInactive ? 'disabled' : ''}>Gemini</button>
+                                <button class="btn btn-sm" style="background:#8b5cf6; color:white;" onclick="checkStatus('${p.name}', 'flow')" ${isInactive ? 'disabled' : ''}>Flow</button>
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(item);
+                });
+            } catch (e) {
+                container.innerHTML = `<div style="color:red; grid-column:1/-1;">Error loading profiles: ${e.message}</div>`;
+            }
+        }
+
+        async function toggleStatus(profileName, currentStatus) {
+            try {
+                const res = await fetch('/api/toggle-status', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ profileName, currentStatus })
+                });
+
+                if (res.ok) {
+                    loadProfiles();
+                } else {
+                    const err = await res.json();
+                    alert("Failed to toggle: " + err);
+                }
+            } catch (e) {
+                alert("Error: " + e.message);
+            }
         }
 
         async function deleteProfile(profileName) {

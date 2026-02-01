@@ -9,12 +9,12 @@ const PORT = 3000;
 // Config
 const BASE_DIR = __dirname;
 const PROFILES_DIR = path.join(BASE_DIR, 'profiles');
+const DISABLED_DIR = path.join(PROFILES_DIR, 'disabled');
 const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36';
 
 // Ensure profiles directory exists
-if (!fs.existsSync(PROFILES_DIR)) {
-    fs.mkdirSync(PROFILES_DIR, { recursive: true });
-}
+if (!fs.existsSync(PROFILES_DIR)) fs.mkdirSync(PROFILES_DIR, { recursive: true });
+if (!fs.existsSync(DISABLED_DIR)) fs.mkdirSync(DISABLED_DIR, { recursive: true });
 
 let activeBrowser = null;
 let activeContext = null;
@@ -26,12 +26,59 @@ app.use(express.json());
 
 // API: List Profiles
 app.get('/api/profiles', (req, res) => {
-    const files = fs.readdirSync(PROFILES_DIR).filter(f => f.endsWith('.json'));
-    const profiles = files.map(f => {
-        const stats = fs.statSync(path.join(PROFILES_DIR, f));
-        return { name: path.parse(f).name, size: stats.size };
-    });
-    res.json(profiles);
+    try {
+        const activeFiles = fs.readdirSync(PROFILES_DIR).filter(f => f.endsWith('.json'));
+        const disabledFiles = fs.readdirSync(DISABLED_DIR).filter(f => f.endsWith('.json'));
+
+        const profiles = [];
+
+        activeFiles.forEach(file => {
+            const stats = fs.statSync(path.join(PROFILES_DIR, file));
+            profiles.push({ name: path.parse(file).name, size: stats.size, status: 'active' });
+        });
+
+        disabledFiles.forEach(file => {
+            const stats = fs.statSync(path.join(DISABLED_DIR, file));
+            profiles.push({ name: path.parse(file).name, size: stats.size, status: 'inactive' });
+        });
+
+        console.log(`Debug: activeFiles found: ${activeFiles.length}, disabledFiles found: ${disabledFiles.length}`);
+        console.log(`Debug First Profile:`, profiles[0]);
+
+        res.json(profiles);
+    } catch (e) {
+        res.status(500).json([]);
+    }
+});
+
+// API: Toggle Profile Status
+app.post('/api/toggle-status', (req, res) => {
+    try {
+        const { profileName, currentStatus } = req.body;
+        if (!profileName) return res.status(400).json("Name required");
+
+        const filename = `${profileName}.json`;
+        let source, dest;
+
+        if (currentStatus === 'active') {
+            source = path.join(PROFILES_DIR, filename);
+            dest = path.join(DISABLED_DIR, filename);
+        } else {
+            source = path.join(DISABLED_DIR, filename);
+            dest = path.join(PROFILES_DIR, filename);
+        }
+
+        if (fs.existsSync(source)) {
+            fs.renameSync(source, dest);
+            console.log(`Moved ${profileName}: ${currentStatus} -> ${currentStatus === 'active' ? 'inactive' : 'active'}`);
+            res.json({ success: true });
+        } else {
+            res.status(404).json("Profile file not found");
+        }
+    } catch (e) {
+        console.error(e);
+        res.status(500).json(e.message);
+    }
 });
 
 // API: Launch Browser for Login
@@ -190,10 +237,16 @@ app.delete('/api/delete', (req, res) => {
         const { profileName } = req.body;
         if (!profileName) return res.status(400).json("Profile name required");
 
-        const filePath = path.join(PROFILES_DIR, `${profileName}.json`);
-        if (fs.existsSync(filePath)) {
-            fs.unlinkSync(filePath);
+        const activePath = path.join(PROFILES_DIR, `${profileName}.json`);
+        const disabledPath = path.join(DISABLED_DIR, `${profileName}.json`);
+
+        if (fs.existsSync(activePath)) {
+            fs.unlinkSync(activePath);
             console.log(`Deleted profile: ${profileName}`);
+            res.json("Profile deleted");
+        } else if (fs.existsSync(disabledPath)) {
+            fs.unlinkSync(disabledPath);
+            console.log(`Deleted inactive profile: ${profileName}`);
             res.json("Profile deleted");
         } else {
             res.status(404).json("Profile not found");
@@ -205,5 +258,8 @@ app.delete('/api/delete', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Profile Manager running at http://localhost:${PORT}`);
+    console.log(`=========================================`);
+    console.log(`Profile Manager v2.1 (Toggle Support)`);
+    console.log(`Running at http://localhost:${PORT}`);
+    console.log(`=========================================`);
 });
