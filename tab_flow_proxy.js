@@ -344,6 +344,16 @@ async function navigateToFlowHome(page, tabIndex, windowIdx) {
 }
 
 async function clickNewProject(page, tabIndex, windowIdx) {
+  // Handle "Create with Flow" splash screen
+  try {
+    const splashBtn = page.locator('button:has-text("Create with Flow")');
+    if (await splashBtn.count() > 0 && await splashBtn.isVisible()) {
+      console.log(`[W${windowIdx}-T${tabIndex}] 🌐 Found splash, clicking "Create with Flow"...`);
+      await splashBtn.click();
+      await sleep(2000);
+    }
+  } catch (e) { }
+
   await page.waitForSelector('button:has-text("New project")', { timeout: 30000 });
   await page.click('button:has-text("New project")');
   await page.waitForURL("**/flow/project/**", { timeout: 45000 });

@@ -540,6 +540,19 @@ async function navigateToFlowHome(page, tabIndex, windowIdx) {
 async function clickNewProject(page, tabIndex, windowIdx) {
   await checkInternetConnection(windowIdx, tabIndex);
   await handlePopup(page);
+
+  // Handle "Create with Flow" splash screen if present
+  try {
+    const splashBtn = page.locator('button:has-text("Create with Flow")');
+    if (await splashBtn.count() > 0 && await splashBtn.isVisible()) {
+      console.log(`🌐 [Window ${windowIdx}] [Tab ${tabIndex}] Found splash screen, clicking "Create with Flow"...`);
+      await splashBtn.click();
+      await sleep(2000); // Wait for transition
+    }
+  } catch (e) {
+    console.log(`⚠️ [Window ${windowIdx}] [Tab ${tabIndex}] Splash screen check warning: ${e.message}`);
+  }
+
   console.log(`🌐 [Window ${windowIdx}] [Tab ${tabIndex}] Clicking "New project"...`);
   await page.waitForSelector('button:has-text("New project")', { timeout: 30000 });
   await page.click('button:has-text("New project")');
