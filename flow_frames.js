@@ -119,7 +119,12 @@ const CONFIG = {
   DOWNLOAD_TIMEOUT: 60000,
   INTERNET_CHECK_RETRY_DELAY: 30000,
   ACTION_RETRIES: 3,
-  ACTION_RETRY_DELAY: 2000
+  ACTION_RETRY_DELAY: 2000,
+  USER_AGENT: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+
+  // === RATE LIMIT PROTECTION ===
+  MAX_CONSECUTIVE_FAILURES: 5,   // If 5 fails in a row globally...
+  COOLDOWN_MINUTES: 60           // ...pause for 60 minutes
 };
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -129,11 +134,13 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 // ==========================================
 let SCRIPT_START_TIME = null;
 let GLOBAL_PROMPT_QUEUE = [];
-let GLOBAL_PROMPT_INDEX = 0;
+let GLOBAL_PROMPT_INDEX = 0; // Keeping for reference, though unused in new logic
 const QUEUE_LOCK = { locked: false };
 let TOTAL_VIDEOS_COMPLETED = 0;
 let TOTAL_VIDEOS_FAILED = 0;
 let TOTAL_VIDEOS_SKIPPED = 0;
+let CONSECUTIVE_FAILURES = 0; // New tracker
+let IS_COOLDOWN_ACTIVE = false;
 const PROMPT_FILE_STATUS = new Map();
 let INTERNET_LAST_STATUS = true;
 
@@ -336,6 +343,8 @@ function loadAllPromptsFromFiles() {
 
       lines.forEach(line => {
         const trimmed = line.trim();
+        if (trimmed.includes('---')) return; // Ignore separator lines
+
         if (/^\d+\.\s/.test(trimmed)) {
           if (currentPrompt) prompts.push(currentPrompt);
           currentPrompt = trimmed.replace(/^\d+\.\s/, "").trim();
@@ -348,9 +357,10 @@ function loadAllPromptsFromFiles() {
     else {
       // === BLOCK PARAGRAPHS ===
       let blocks = content.split(/\n\s*\n/);
-      prompts = blocks.map(p => p.trim()).filter(p => p.length > 0 && !p.includes('======='));
+      prompts = blocks.map(p => p.trim())
+        .filter(p => p.length > 0 && !p.includes('=======') && !p.includes('---'));
 
-      if (prompts.length === 0 && content.trim().length > 0 && !content.includes('=======')) {
+      if (prompts.length === 0 && content.trim().length > 0 && !content.includes('=======') && !content.includes('---')) {
         prompts = [content.trim()];
       }
     }
@@ -369,38 +379,90 @@ function loadAllPromptsFromFiles() {
   return allPrompts;
 }
 
-async function getNextPrompt() {
+// ==========================================
+// RATE LIMIT BACKOFF Logic
+// ==========================================
+async function checkCooldown() {
+  if (CONSECUTIVE_FAILURES >= CONFIG.MAX_CONSECUTIVE_FAILURES) {
+    if (!IS_COOLDOWN_ACTIVE) {
+      IS_COOLDOWN_ACTIVE = true;
+      console.log(`\n${"=".repeat(60)}`);
+      console.log(`⛔ RATE LIMIT TRIGGERED: ${CONSECUTIVE_FAILURES} consecutive failures!`);
+      console.log(`⏸️  Pausing ALL operations for ${CONFIG.COOLDOWN_MINUTES} minutes...`);
+      console.log(`${"=".repeat(60)}`);
+
+      let remainingMinutes = CONFIG.COOLDOWN_MINUTES;
+      while (remainingMinutes > 0) {
+        process.stdout.write(`\r⏳ COOLDOWN: Resuming in ${remainingMinutes} minute(s)...   `);
+        await sleep(60000); // Wait 1 minute
+        remainingMinutes--;
+      }
+
+      console.log(`\n\n✅ Cooldown finished. Resuming operations.`);
+      CONSECUTIVE_FAILURES = 0; // Reset counter to give it another try
+      IS_COOLDOWN_ACTIVE = false;
+    } else {
+      // If another thread already triggered it, just wait until it clears
+      while (IS_COOLDOWN_ACTIVE) {
+        await sleep(5000);
+      }
+    }
+  }
+}
+
+async function getNextPrompt(requestingProfileName) {
   while (QUEUE_LOCK.locked) await sleep(10);
   QUEUE_LOCK.locked = true;
 
-  while (GLOBAL_PROMPT_INDEX < GLOBAL_PROMPT_QUEUE.length) {
-    const prompt = GLOBAL_PROMPT_QUEUE[GLOBAL_PROMPT_INDEX];
+  try {
+    // Iterate to find the first suitable prompt for this profile
+    for (let i = 0; i < GLOBAL_PROMPT_QUEUE.length; i++) {
+      const prompt = GLOBAL_PROMPT_QUEUE[i];
 
-    if (!CONFIG.OVERWRITE_MODE && checkIfVideoExists(prompt.filename, prompt.promptIndex)) {
-      console.log(`\n⏭️ SKIPPED: ${prompt.filename} #${prompt.promptIndex} (Video exists)`);
-      TOTAL_VIDEOS_SKIPPED++;
-      const status = PROMPT_FILE_STATUS.get(prompt.filename);
-      if (status) { status.skipped++; checkAndMovePromptFile(prompt.filename); }
-      GLOBAL_PROMPT_INDEX++;
-      continue;
-    }
+      // Check if this profile is banned from this prompt
+      if (prompt.failedProfiles && prompt.failedProfiles.includes(requestingProfileName)) {
+        continue; // Skip this prompt, let others take it
+      }
 
-    if (CONFIG.GENERATION_MODE !== 'Text to Video') {
-      const imgPath = findImagePath(prompt.filename, prompt.promptIndex);
-      if (!imgPath) {
-        console.log(`\n🚫 SKIPPED: ${prompt.filename} #${prompt.promptIndex} (Image missing)`);
+      // Check conditions (File/Image existence)
+      if (!CONFIG.OVERWRITE_MODE && checkIfVideoExists(prompt.filename, prompt.promptIndex)) {
+        console.log(`\n⏭️ SKIPPED: ${prompt.filename} #${prompt.promptIndex} (Video exists)`);
         TOTAL_VIDEOS_SKIPPED++;
         const status = PROMPT_FILE_STATUS.get(prompt.filename);
         if (status) { status.skipped++; checkAndMovePromptFile(prompt.filename); }
-        GLOBAL_PROMPT_INDEX++;
+
+        // Remove from queue and continue searching
+        GLOBAL_PROMPT_QUEUE.splice(i, 1);
+        i--;
         continue;
       }
-      prompt.foundImagePath = imgPath;
-    }
 
-    GLOBAL_PROMPT_INDEX++;
-    QUEUE_LOCK.locked = false;
-    return { prompt, globalIndex: GLOBAL_PROMPT_INDEX };
+      if (CONFIG.GENERATION_MODE !== 'Text to Video') {
+        const imgPath = findImagePath(prompt.filename, prompt.promptIndex);
+        if (!imgPath) {
+          console.log(`\n🚫 SKIPPED: ${prompt.filename} #${prompt.promptIndex} (Image missing)`);
+          TOTAL_VIDEOS_SKIPPED++;
+          const status = PROMPT_FILE_STATUS.get(prompt.filename);
+          if (status) { status.skipped++; checkAndMovePromptFile(prompt.filename); }
+
+          // Remove from queue and continue searching
+          GLOBAL_PROMPT_QUEUE.splice(i, 1);
+          i--;
+          continue;
+        }
+        prompt.foundImagePath = imgPath;
+      }
+
+      // Found a valid prompt! Remove it from queue and return it.
+      const selectedPrompt = GLOBAL_PROMPT_QUEUE.splice(i, 1)[0];
+      QUEUE_LOCK.locked = false;
+
+      // We use a timestamp-based ID for tracking since global index is gone
+      const trackId = `${selectedPrompt.filename}-${selectedPrompt.promptIndex}`;
+      return { prompt: selectedPrompt, globalIndex: trackId };
+    }
+  } catch (e) {
+    console.log(`⚠️ Error in getNextPrompt: ${e.message}`);
   }
 
   QUEUE_LOCK.locked = false;
@@ -676,6 +738,10 @@ async function getVideoStatus(page) {
 
       const txt = card.innerText || "";
       if (/failed/i.test(txt)) return "failed";
+
+      const percentMatch = txt.match(/(\d{1,3})%/);
+      if (percentMatch) return `${percentMatch[1]}%`;
+
       if (card.querySelector("video[src]")) return "complete";
 
       return "pending";
@@ -810,7 +876,8 @@ async function runOneWindow(profile, windowIdx) {
     // Use stored state for this profile
     const context = await browser.newContext({
       storageState: profile.path,
-      viewport: null
+      viewport: null,
+      userAgent: CONFIG.USER_AGENT
     });
 
     // ⚓ ANCHOR TAB (Prevents browser from closing when all worker tabs cycle)
@@ -819,10 +886,11 @@ async function runOneWindow(profile, windowIdx) {
     console.log(`⚓ [Window ${windowIdx}] Anchor tab opened (keeps window alive).`);
 
     const activeTabs = new Map();
+    let consecutiveProfileFailures = 0; // Local failure tracker
 
     // INITIAL FILL
     for (let i = 1; i <= CONFIG.MAX_TABS; i++) {
-      const next = await getNextPrompt();
+      const next = await getNextPrompt(profile.name);
       if (!next) break;
       const tab = await setupNewTabWithPrompt(context, next.prompt, i, windowIdx, next.globalIndex, profile.name);
       if (tab) activeTabs.set(i, tab);
@@ -830,12 +898,27 @@ async function runOneWindow(profile, windowIdx) {
 
     // MONITOR LOOP
     while (activeTabs.size > 0 || getRemainingPrompts() > 0) {
+
+      // === PER-PROFILE RATE LIMIT CHECK ===
+      if (consecutiveProfileFailures >= CONFIG.MAX_CONSECUTIVE_FAILURES) {
+        console.log(`\n${"=".repeat(60)}`);
+        console.log(`⛔ [Window ${windowIdx}] PROFILE PAUSED: ${profile.name}`);
+        console.log(`⚠️ Too many consecutive failures. Cooling down for ${CONFIG.COOLDOWN_MINUTES} mins...`);
+        console.log(`${"=".repeat(60)}`);
+
+        await sleep(CONFIG.COOLDOWN_MINUTES * 60 * 1000);
+
+        console.log(`\n✅ [Window ${windowIdx}] Resuming profile: ${profile.name}`);
+        consecutiveProfileFailures = 0; // Reset after cooldown
+      }
+
       await checkInternetConnection(windowIdx);
 
       const tabsToCheck = [...activeTabs.entries()];
       for (const [idx, tab] of tabsToCheck) {
         try {
           if (tab.page && !tab.page.isClosed()) {
+            // ... (rest of logic)
             await handlePopup(tab.page);
             tab.status = await getVideoStatus(tab.page);
           } else {
@@ -853,7 +936,12 @@ async function runOneWindow(profile, windowIdx) {
 
         if (tab.status === 'complete') {
           try {
-            await handleCompletedVideo(tab, idx, windowIdx);
+            // PASS LOCAL COUNTER REF (Simulated by handling return logic or updating external map if needed, 
+            // but here we are in same scope if we inline handleCompleted logic or return status)
+            // Ideally handleCompletedVideo should return success/fail to update our local counter.
+            // Let's modify handleCompletedVideo to return boolean.
+            const success = await handleCompletedVideo(tab, idx, windowIdx);
+            if (success) consecutiveProfileFailures = 0; // Reset on success
           } catch (e) {
             await closeTabAndCleanup(tab, idx, windowIdx);
           }
@@ -863,17 +951,21 @@ async function runOneWindow(profile, windowIdx) {
           console.log(`\n⚠️ [Window ${windowIdx}] [Tab ${idx}] Failed/Error detected.`);
           await closeTabAndCleanup(tab, idx, windowIdx);
 
-          // RE-QUEUE LOGIC
+          consecutiveProfileFailures++; // Increment local counter
+
+          // RE-QUEUE LOGIC 
+          // ... (existing logic)
           const currentGlobalRetries = tab.globalRetryCount || 0;
           if (currentGlobalRetries < 3) {
-            console.log(`🔄 [Window ${windowIdx}] Push prompt back to queue... (Global Retry: ${currentGlobalRetries + 1}/3)`);
-            GLOBAL_PROMPT_QUEUE.push({
+            reQueuePrompt({
               filename: tab.filename,
               promptIndex: tab.promptIndex,
-              text: tab.promptText,
+              promptText: tab.promptText,
               foundImagePath: tab.foundImagePath,
-              globalRetryCount: currentGlobalRetries + 1
-            });
+              globalRetryCount: currentGlobalRetries,
+              failedProfiles: tab.failedProfiles,
+              profileName: profile.name
+            }, windowIdx);
           } else {
             console.log(`❌ [Window ${windowIdx}] Max Global Retries exceeded. Faking failure.`);
             await handleFailedVideo(tab, idx, windowIdx);
@@ -883,7 +975,7 @@ async function runOneWindow(profile, windowIdx) {
       }
 
       while (activeTabs.size < CONFIG.MAX_TABS) {
-        const next = await getNextPrompt();
+        const next = await getNextPrompt(profile.name);
         if (!next) break;
 
         let slot = 1;
@@ -921,12 +1013,15 @@ async function handleCompletedVideo(tabData, tabIndex, windowIdx) {
 
   if (downloaded) {
     TOTAL_VIDEOS_COMPLETED++;
+    // Global counter reset removed (handled locally)
     const status = PROMPT_FILE_STATUS.get(tabData.filename);
     if (status) { status.completed++; checkAndMovePromptFile(tabData.filename); }
+    return true; // Success
   } else {
     TOTAL_VIDEOS_FAILED++;
     const status = PROMPT_FILE_STATUS.get(tabData.filename);
     if (status) { status.failed++; checkAndMovePromptFile(tabData.filename); }
+    return false; // Failed download
   }
 
   await closeTabAndCleanup(tabData, tabIndex, windowIdx);
@@ -935,10 +1030,30 @@ async function handleCompletedVideo(tabData, tabIndex, windowIdx) {
 async function handleFailedVideo(tabData, tabIndex, windowIdx) {
   console.log(`\n❌ [Window ${windowIdx}] [Tab ${tabIndex}] GENERATION FAILED (Max Retries)`);
   TOTAL_VIDEOS_FAILED++;
+  // Global increment removed (handled locally)
   logFailedPromptToFiles(tabData);
   const status = PROMPT_FILE_STATUS.get(tabData.filename);
   if (status) { status.failed++; checkAndMovePromptFile(tabData.filename); }
   await closeTabAndCleanup(tabData, tabIndex, windowIdx);
+}
+
+function reQueuePrompt(tabData, windowIdx) {
+  console.log(`🔄 [Window ${windowIdx}] Push prompt back to queue... (Global Retry: ${(tabData.globalRetryCount || 0) + 1}/3)`);
+
+  // Add this profile to the failed list for this prompt
+  const failedProfiles = tabData.failedProfiles || [];
+  if (!failedProfiles.includes(tabData.profileName)) {
+    failedProfiles.push(tabData.profileName);
+  }
+
+  GLOBAL_PROMPT_QUEUE.push({
+    filename: tabData.filename,
+    promptIndex: tabData.promptIndex,
+    text: tabData.promptText,
+    foundImagePath: tabData.foundImagePath,
+    globalRetryCount: (tabData.globalRetryCount || 0) + 1,
+    failedProfiles: failedProfiles // Persist the ban list
+  });
 }
 
 // ==========================================

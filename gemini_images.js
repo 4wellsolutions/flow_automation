@@ -23,7 +23,7 @@ const CONFIG = {
     TIMEOUT_MS: 300000,
     HEADLESS: false,
     ACTION_DELAY: 2000,
-    USER_AGENT: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36' // Use a static UA for better compatibility
+    USER_AGENT: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36' // Use a static UA for better compatibility
 };
 
 const STATS = {
@@ -72,21 +72,48 @@ async function setupPage(context, profileName, targetUrl = "https://gemini.googl
     await page.goto(targetUrl, { waitUntil: 'domcontentloaded', timeout: 60000 });
     await sleep(5000);
 
-    // Check Login
+    // Check Login / "Choose an account"
     try {
-        await page.waitForSelector('div[contenteditable="true"], textarea', { state: 'visible', timeout: 15000 });
+        await page.waitForSelector('div[contenteditable="true"], textarea', { state: 'visible', timeout: 10000 });
     } catch (error) {
-        console.log(`   ⚠️ [${profileName}] Session validation failed. Reloading...`);
-        await page.reload();
+        console.log(`   ⚠️ [${profileName}] Session validation failed. Checking for 'Choose an account'...`);
+
+        // Check for "Choose an account" screen
         try {
-            await page.waitForSelector('div[contenteditable="true"], textarea', { state: 'visible', timeout: 30000 });
-        } catch (e2) {
-            console.log(`   ❌ [${profileName}] Profile might be expired or logged out.`);
-            throw new Error("Login Failed");
+            const listSelector = 'ul li div[data-email]';
+            // Wait briefly for account list
+            await page.waitForSelector(listSelector, { timeout: 3000 });
+
+            console.log(`ℹ️ [${profileName}] Found 'Choose an account' screen. Selecting profile...`);
+            const accounts = await page.$$(listSelector);
+            for (const acc of accounts) {
+                const email = await acc.getAttribute('data-email');
+                if (email && profileName.includes(email)) {
+                    await acc.click();
+                    await page.waitForTimeout(3000); // Wait for click to process
+                    break;
+                }
+            }
+        } catch (e) {
+            // No list, proceed
+        }
+
+        // Final verification of login status
+        try {
+            await page.waitForSelector('div[contenteditable="true"], textarea', { state: 'visible', timeout: 5000 });
+            console.log(`✅ [${profileName}] Login Successful.`);
+        } catch (e) {
+            console.log(`❌ [${profileName}] Login Failed or Timed Out (Check 'debug_fail' screenshot).`);
+            throw new Error("Login verification failed");
         }
     }
 
-    // Set Pro Model if available
+    // Pro Mode Check
+    await checkAndSelectProMode(page);
+    return page;
+}
+
+async function checkAndSelectProMode(page) {
     try {
         const modeTrigger = page.locator('div[data-test-id="bard-mode-menu-button"]');
         if (await modeTrigger.count() > 0 && await modeTrigger.isVisible()) {
@@ -98,12 +125,11 @@ async function setupPage(context, profileName, targetUrl = "https://gemini.googl
                 if (await proOption.isVisible()) {
                     await proOption.click();
                     await sleep(2000);
+                    console.log("   ✨ Switched to Pro/Advanced Model");
                 }
             }
         }
     } catch (e) { }
-
-    return page;
 }
 
 async function switchToImageTool(page) {
@@ -198,9 +224,87 @@ async function generateAndDownloadImage(page, promptText, storyName, promptNumbe
 }
 
 // ==========================================
+// SESSION VALIDATION
+// ==========================================
+async function validateAndRefreshSessions() {
+    console.log('\n🔐 Validating sessions before starting...\n');
+
+    const profileFiles = fs.readdirSync(CONFIG.PROFILES_DIR).filter(f => f.endsWith('.json'));
+    if (profileFiles.length === 0) return { valid: 0, invalid: 0 };
+
+    const browser = await chromium.launch({ headless: true });
+    const results = { valid: 0, invalid: 0, invalidProfiles: [] };
+
+    for (const file of profileFiles) {
+        const profileName = path.parse(file).name;
+        const profilePath = path.join(CONFIG.PROFILES_DIR, file);
+
+        try {
+            const context = await browser.newContext({
+                storageState: profilePath,
+                userAgent: CONFIG.USER_AGENT,
+                viewport: null
+            });
+
+            const page = await context.newPage();
+            await page.goto("https://gemini.google.com/app", { waitUntil: 'domcontentloaded', timeout: 20000 });
+            await sleep(3000);
+
+            // Check login status
+            try {
+                await page.waitForSelector('div[contenteditable="true"], textarea', { state: 'visible', timeout: 5000 });
+                console.log(`   ✅ ${profileName}`);
+
+                // Save refreshed session
+                await context.storageState({ path: profilePath });
+                results.valid++;
+            } catch (e) {
+                console.log(`   ❌ ${profileName} - LOGGED OUT`);
+                results.invalid++;
+                results.invalidProfiles.push(profileName);
+            }
+
+            await context.close();
+        } catch (e) {
+            console.log(`   ⚠️  ${profileName} - Error: ${e.message}`);
+            results.invalid++;
+            results.invalidProfiles.push(profileName);
+        }
+
+        await sleep(1000);
+    }
+
+    await browser.close();
+
+    console.log(`\n📊 Validation Summary: ${results.valid} valid, ${results.invalid} invalid\n`);
+
+    if (results.invalid > 0) {
+        console.log('⚠️  WARNING: Some profiles need re-login:');
+        results.invalidProfiles.forEach(p => console.log(`   - ${p}`));
+        console.log('\n💡 Run "node manage_profiles.js" to fix invalid profiles.\n');
+
+        const proceed = readlineSync.keyInYN('Continue with valid profiles only?');
+        if (!proceed) {
+            console.log('❌ Aborted by user.');
+            process.exit(0);
+        }
+    }
+
+    return results;
+}
+
+// ==========================================
 // MAIN
 // ==========================================
 async function main() {
+    // Auto-validate sessions first
+    const sessionCheck = await validateAndRefreshSessions();
+
+    if (sessionCheck.valid === 0) {
+        console.log('❌ No valid profiles found. Please login first using "node manage_profiles.js"');
+        return;
+    }
+
     console.log('\nSelect Generation Mode:');
     console.log('  1. Story Mode (Consistent Character/Setting) - Maintains chat context per file.');
     console.log('  2. Bulk Mode (Fast/Independent) - Parallelizes all prompts, no context retention.');
@@ -231,26 +335,163 @@ async function main() {
         workQueue = [...allPrompts];
     }
 
-    const browser = await chromium.launch({ headless: CONFIG.HEADLESS });
+    const browser = await chromium.launch({
+        headless: CONFIG.HEADLESS,
+        args: ["--start-maximized"]
+    });
 
-    const workers = profileFiles.map((pf, i) => {
+    // ==========================================
+    // WORKER SELECTION (Smart Allocator)
+    // ==========================================
+    let selectedProfiles = [];
+
+    if (isStoryMode) {
+        // 1. Identify "Required" profiles (stories with existing sessions)
+        const requiredProfiles = new Set();
+        const unclaimedStoriesCount = workQueue.filter(story => {
+            const sPath = getSessionPath(story[0].filename);
+            if (fs.existsSync(sPath)) {
+                try {
+                    const sess = JSON.parse(fs.readFileSync(sPath));
+                    if (sess.profileName) {
+                        requiredProfiles.add(sess.profileName);
+                        return false; // Not unclaimed
+                    }
+                } catch (e) { }
+            }
+            return true; // Unclaimed (no session or invalid)
+        }).length;
+
+        console.log(`📋 Planning: ${requiredProfiles.size} Resumed Stories, ${unclaimedStoriesCount} New Stories.`);
+
+        // 2. Select the actual profile files to use
+        const usedProfileNames = new Set();
+
+        // Add Required Profiles first
+        profileFiles.forEach(pf => {
+            const name = path.parse(pf).name;
+            if (requiredProfiles.has(name)) {
+                selectedProfiles.push(pf);
+                usedProfileNames.add(name);
+            }
+        });
+
+        // Add extra profiles for unclaimed stories (up to the number of unclaimed stories)
+        let neededExtras = unclaimedStoriesCount;
+        for (const pf of profileFiles) {
+            if (neededExtras <= 0) break;
+            const name = path.parse(pf).name;
+            if (!usedProfileNames.has(name)) {
+                selectedProfiles.push(pf);
+                usedProfileNames.add(name);
+                neededExtras--;
+            }
+        }
+
+    } else {
+        // Bulk Mode: Use all available profiles to maximize throughput
+        selectedProfiles = [...profileFiles];
+    }
+
+    console.log(`🚀 Launching ${selectedProfiles.length} Worker(s) for the job...`);
+    if (selectedProfiles.length === 0) {
+        console.log("❌ No profiles available or no work to do.");
+        await browser.close();
+        return;
+    }
+
+    const workers = selectedProfiles.map((pf, i) => {
         return (async () => {
             const profilePath = path.join(CONFIG.PROFILES_DIR, pf);
-            const context = await browser.newContext({ storageState: profilePath, userAgent: CONFIG.USER_AGENT });
+            // Use a standard, identifying User Agent to match Manage Profiles
+            const userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36';
+
+            const context = await browser.newContext({
+                storageState: profilePath,
+                userAgent: userAgent,
+                viewport: null
+            });
             const profileName = path.parse(pf).name;
             console.log(`🤖 Worker ${i + 1}: Ready (${profileName})`);
 
             let page = null;
+            let sessionRefreshInterval = null;
 
             try {
                 // Initial Page Setup (Done once per worker in Bulk Mode, or per story in Story Mode)
-                page = await setupPage(context, profileName);
+                try {
+                    page = await setupPage(context, profileName);
+                } catch (setupError) {
+                    console.error(`❌ [${profileName}] Setup Failed. Saving debug screenshot...`);
+                    const debugPath = path.join(BASE_DIR, `debug_fail_${profileName}_${Date.now()}.png`);
+                    if (context.pages().length > 0) {
+                        await context.pages()[0].screenshot({ path: debugPath });
+                        console.error(`   📸 Screenshot saved to: ${debugPath}`);
+                    }
+                    throw setupError;
+                }
+
+                // ✅ SAVE UPDATED SESSION (Rotates identifiers/cookies to keep session alive)
+                await context.storageState({ path: profilePath });
+                console.log(`   💾 [${profileName}] Session saved/updated.`);
+
+                // Setup periodic session refresh (every 30 minutes during work)
+                sessionRefreshInterval = setInterval(async () => {
+                    try {
+                        await context.storageState({ path: profilePath });
+                        console.log(`   🔄 [${profileName}] Session auto-refreshed.`);
+                    } catch (e) {
+                        console.log(`   ⚠️  [${profileName}] Session refresh failed: ${e.message}`);
+                    }
+                }, 30 * 60 * 1000); // 30 minutes
 
                 while (workQueue.length > 0) {
                     // === STORY MODE LOGIC ===
                     if (isStoryMode) {
-                        const storyPrompts = workQueue.shift();
-                        if (!storyPrompts) break;
+                        // SMART QUEUE: Find a job suitable for this profile
+                        let storyIndex = -1;
+
+                        // 1. Look for existing session match
+                        for (let k = 0; k < workQueue.length; k++) {
+                            const storyName = workQueue[k][0].filename;
+                            const sessionPath = getSessionPath(storyName);
+                            if (fs.existsSync(sessionPath)) {
+                                try {
+                                    const sess = JSON.parse(fs.readFileSync(sessionPath));
+                                    if (sess.profileName === profileName) {
+                                        storyIndex = k;
+                                        break;
+                                    }
+                                } catch (e) { }
+                            }
+                        }
+
+                        // 2. If no existing match, take first UNCLAIMED story
+                        if (storyIndex === -1) {
+                            for (let k = 0; k < workQueue.length; k++) {
+                                const storyName = workQueue[k][0].filename;
+                                const sessionPath = getSessionPath(storyName);
+                                if (!fs.existsSync(sessionPath)) {
+                                    storyIndex = k;
+                                    break;
+                                }
+                            }
+                        }
+
+                        // 3. Fallback: If strict consistency is NOT required, maybe take any? 
+                        // But user said "check session file... open ONLY that profile". 
+                        // So if we have stories locked to OTHER profiles, we must SKIP them.
+
+                        if (storyIndex === -1) {
+                            // No suitable work found for this profile.
+                            // But checking queue length > 0 in outer loop might be race-condition prone if we can't take anything.
+                            // We should break if we can't find work.
+                            // BUT: Maybe work becomes available? No, queue is static.
+                            // So we break.
+                            break;
+                        }
+
+                        const storyPrompts = workQueue.splice(storyIndex, 1)[0]; // Atomic remove
 
                         const filename = storyPrompts[0].filename;
                         console.log(`📘 Worker ${i + 1}: Starting Story: ${filename}`);
@@ -260,15 +501,36 @@ async function main() {
 
                         // If we are switching stories, we might need a Clean Page or Reset Context to avoid bleeding context
                         // Check if current URL matches saved session
+                        // Check if current URL matches saved session
                         if (savedSession && savedSession.profileName === profileName) {
                             if (page.url() !== savedSession.url) {
                                 console.log(`   ↻ Restoring session for ${filename}...`);
                                 await page.goto(savedSession.url);
                                 await sleep(3000);
+
+                                // Check if restoration failed (redirected to login)
+                                try {
+                                    await page.waitForSelector('div[contenteditable="true"], textarea', { state: 'visible', timeout: 5000 });
+                                } catch (e) {
+                                    console.log(`   ⚠️ [${filename}] Session restoration failed. Deleting invalid session file...`);
+
+                                    // Delete the invalid session file so next time it starts fresh
+                                    try {
+                                        const sessionPath = getSessionPath(filename);
+                                        if (fs.existsSync(sessionPath)) fs.unlinkSync(sessionPath);
+                                        console.log(`   🗑️ Invalid session file deleted.`);
+                                    } catch (err) {
+                                        console.error(`   ❌ Failed to delete session file: ${err.message}`);
+                                    }
+
+                                    console.log(`   ✨ Starting New Chat for ${filename}...`);
+                                    await page.goto("https://gemini.google.com/app");
+                                    await sleep(3000);
+                                }
                             }
                         } else {
                             // New Story or different profile: Go to Home to start fresh chat
-                            if (page.url().includes('/app/')) {
+                            if (!page.url().includes('/app/')) { // Fixed check
                                 console.log(`   ✨ New Chat for ${filename}...`);
                                 await page.goto("https://gemini.google.com/app");
                                 await sleep(2000);
@@ -327,16 +589,30 @@ async function main() {
                         // Ensure Image Tool
                         await switchToImageTool(page);
 
-                        // In Bulk Mode, every prompt is treated as a fresh request or continuation of a chaotic chat.
-                        // To be safe and fast, we just include the system instruction prefix every time?
-                        // OR: We rely on "Pro" model handling it.
-                        // Let's include system instruction = true to be safe, so every image enforces 16:9.
                         const success = await generateAndDownloadImage(page, promptData.text, promptData.filename, promptData.promptIndex, true);
 
                         if (success) {
                             promptManager.updateStatus(promptData.filename, 'completed');
                         } else {
-                            promptManager.updateStatus(promptData.filename, 'failed');
+                            console.log(`   🔄 Worker ${i + 1}: Generation failed. Refreshing and retrying...`);
+                            try {
+                                await page.reload();
+                                await page.waitForSelector('div[contenteditable="true"], textarea', { state: 'visible', timeout: 30000 });
+                                await checkAndSelectProMode(page);
+                                await switchToImageTool(page);
+
+                                console.log(`   🔁 Worker ${i + 1}: Retry Attempt 2...`);
+                                const retrySuccess = await generateAndDownloadImage(page, promptData.text, promptData.filename, promptData.promptIndex, true);
+                                if (retrySuccess) {
+                                    promptManager.updateStatus(promptData.filename, 'completed');
+                                } else {
+                                    promptManager.updateStatus(promptData.filename, 'failed');
+                                    console.log(`   ❌ Worker ${i + 1}: Retry failed.`);
+                                }
+                            } catch (retryErr) {
+                                console.log(`   ❌ Worker ${i + 1}: Fatal error during retry: ${retryErr.message}`);
+                                promptManager.updateStatus(promptData.filename, 'failed');
+                            }
                         }
                         await sleep(CONFIG.ACTION_DELAY);
                     }
@@ -344,6 +620,7 @@ async function main() {
             } catch (err) {
                 console.log(`❌ Worker ${i + 1} Error: ${err.message}`);
             } finally {
+                if (sessionRefreshInterval) clearInterval(sessionRefreshInterval);
                 if (page) await page.close();
                 await context.close();
             }

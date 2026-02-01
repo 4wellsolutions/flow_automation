@@ -6,3 +6,5 @@ node_modules/
 Videos/
 frames/
 prompts_fail.txt
+images_gemini/
+prompts/

@@ -4,93 +4,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Profile Manager</title>
+    <title>Flow Profile Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #6366f1;
+            --primary-hover: #4f46e5;
+            --bg: #f3f4f6;
+            --card-bg: #ffffff;
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            color: #333;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            padding: 40px 20px;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 40px;
+            text-align: center;
         }
 
         h1 {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* --- CARDS --- */
         .card {
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-bottom: 30px;
         }
 
-        .profile-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        .card h2 {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
             gap: 10px;
+        }
+
+        /* --- FORMS --- */
+        .input-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 12px 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.2s;
+            outline: none;
+            font-family: inherit;
+        }
+
+        input[type="text"]:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: white;
+        }
+
+        .btn-success:hover {
+            filter: brightness(95%);
+        }
+
+        .btn-sm {
+            padding: 8px 16px;
+            font-size: 0.875rem;
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        /* --- STATUS BADGE --- */
+        .status-msg {
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+
+        /* --- GRID --- */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
         }
 
         .profile-item {
             background: white;
-            padding: 15px;
-            border-radius: 6px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+
+        .profile-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            word-break: break-all;
+        }
+
+        .profile-meta {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: #f3f4f6;
+            color: var(--text-muted);
+        }
+
+        .status-logged-in {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .status-logged-out {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .status-error {
+            background: #ffedd5;
+            color: #9a3412;
+        }
+
+        .status-restart {
+            background: #f3e8ff;
+            color: #6b21a8;
+        }
+
+        .action-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-top: 15px;
+            border-top: 1px solid #f3f4f6;
+            padding-top: 15px;
         }
 
-        .btn {
-            background: #007bff;
-            color: white;
+        .delete-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: transparent;
             border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
             cursor: pointer;
-            font-size: 16px;
+            color: #d1d5db;
+            transition: all 0.2s;
+            padding: 5px;
+            border-radius: 6px;
         }
 
-        .btn:hover {
-            background: #0056b3;
-        }
-
-        input {
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            width: 60%;
-            font-size: 16px;
-        }
-
-        .status {
-            margin-top: 10px;
-            color: #666;
-            font-style: italic;
+        .delete-btn:hover {
+            background: #fee2e2;
+            color: var(--danger);
         }
     </style>
 </head>
 
 <body>
-    <h1>🔑 Google Profile Manager</h1>
+    <div class="container">
+        <header>
+            <h1>Flow Profile Manager</h1>
+            <p class="subtitle">Securely manage and verify your Gemini automation profiles</p>
+        </header>
 
-    <div class="card">
-        <h2>Create New Profile</h2>
-        <div style="display:flex; gap:10px; flex-wrap: wrap;">
-            <input type="text" id="newProfileName" placeholder="Enter Profile Name (e.g. Account1)">
-            <button class="btn" onclick="launchLogin()" id="launchBtn">1. Launch Browser</button>
-            <button class="btn" onclick="saveProfile()" id="saveBtn" style="background-color: #28a745; display:none;">2.
-                Save & Close</button>
+        <div class="card">
+            <h2>✨ Create or Refresh Profile</h2>
+            <div class="input-group">
+                <input type="text" id="newProfileName" placeholder="Enter Profile Name (e.g. WorkAccount)">
+                <button class="btn btn-primary" onclick="launchLogin()" id="launchBtn">
+                    Launch Browser
+                </button>
+                <button class="btn btn-success" onclick="saveProfile()" id="saveBtn" style="display:none;">
+                    💾 Save Profile
+                </button>
+            </div>
+            <div id="status" class="status-msg"></div>
         </div>
-        <div id="status" class="status"></div>
-    </div>
 
-    <div class="card">
-        <h2>Saved Profiles</h2>
-        <div id="profileList" class="profile-list">
-            <!-- Populated by JS -->
+        <div class="card">
+            <h2>📂 Saved Profiles</h2>
+            <div id="profileList" class="profile-grid">
+                <!-- Populated by JS -->
+            </div>
         </div>
     </div>
 
@@ -99,14 +279,105 @@
             const res = await fetch('/api/profiles');
             const data = await res.json();
             const container = document.getElementById('profileList');
-            container.innerHTML = data.length ? '' : '<p>No profiles found.</p>';
+            container.innerHTML = data.length ? '' : '<p style="grid-column:1/-1; text-align:center; color:#888;">No profiles found.</p>';
+
+            data.sort((a, b) => a.name.localeCompare(b.name));
 
             data.forEach(p => {
                 const item = document.createElement('div');
                 item.className = 'profile-item';
-                item.innerHTML = `<strong>${p.name}</strong> <small>(${(p.size / 1024).toFixed(1)} KB)</small>`;
+                item.innerHTML = `
+                    <button class="delete-btn" onclick="deleteProfile('${p.name}')" title="Delete Profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                    </button>
+                    <div class="profile-name">${p.name}</div>
+                    <div class="profile-meta">${(p.size / 1024).toFixed(1)} KB</div>
+                    
+                    <div style="display:flex; gap:10px; margin-bottom:10px;">
+                        <div id="badge-gemini-${p.name}" class="status-badge">Gemini: ?</div>
+                        <div id="badge-flow-${p.name}" class="status-badge">Flow: ?</div>
+                    </div>
+
+                    <div class="action-row">
+                        <span style="font-size:0.8rem; color:#aaa;">Checked: <span id="time-${p.name}">Never</span></span>
+                        <div style="display:flex; gap:5px;">
+                            <button class="btn btn-sm btn-primary" onclick="checkStatus('${p.name}', 'gemini')">Gemini</button>
+                            <button class="btn btn-sm" style="background:#8b5cf6; color:white;" onclick="checkStatus('${p.name}', 'flow')">Flow</button>
+                        </div>
+                    </div>
+                `;
                 container.appendChild(item);
             });
+        }
+
+        async function deleteProfile(profileName) {
+            if (!confirm(`Are you sure you want to permanently delete "${profileName}"?`)) return;
+
+            try {
+                const res = await fetch('/api/delete', {
+                    method: 'DELETE',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ profileName })
+                });
+
+                if (res.ok) {
+                    loadProfiles();
+                } else {
+                    const msg = await res.json();
+                    alert("Failed to delete: " + msg);
+                }
+            } catch (e) {
+                alert("Error: " + e.message);
+            }
+        }
+
+        async function checkStatus(profileName, type) {
+            const badgeId = type === 'flow' ? `badge-flow-${profileName}` : `badge-gemini-${profileName}`;
+            const endpoint = type === 'flow' ? '/api/check-flow-status' : '/api/check-status';
+
+            const badge = document.getElementById(badgeId);
+            const timeEl = document.getElementById(`time-${profileName}`);
+
+            badge.className = 'status-badge';
+            badge.textContent = "Checking...";
+            badge.style.background = "#e0e7ff";
+            badge.style.color = "#4338ca";
+
+            try {
+                const res = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ profileName })
+                });
+
+                if (res.status === 404) {
+                    badge.className = 'status-badge status-restart';
+                    badge.textContent = "RESTART SERVER";
+                    alert("Please restart 'node manage_profiles.js' backend.");
+                    return;
+                }
+
+                const data = await res.json();
+
+                if (data.status === "LOGGED_IN") {
+                    badge.className = 'status-badge status-logged-in';
+                    badge.textContent = "✅ " + (type === 'flow' ? "Flow In" : "Gemini In");
+                } else if (data.status === "LOGGED_OUT") {
+                    badge.className = 'status-badge status-logged-out';
+                    badge.textContent = "❌ Logged Out";
+                } else {
+                    badge.className = 'status-badge status-error';
+                    badge.textContent = "⚠️ " + (data.message || "Error");
+                }
+
+                const now = new Date();
+                timeEl.textContent = now.toLocaleTimeString();
+
+            } catch (e) {
+                badge.className = 'status-badge status-error';
+                badge.textContent = "Net Error";
+                console.error(e);
+            }
         }
 
         async function launchLogin() {
@@ -118,7 +389,7 @@
             const status = document.getElementById('status');
 
             launchBtn.disabled = true;
-            status.textContent = "Launching browser... Please log in to Google in the popup window.";
+            status.innerHTML = `<span style="color:var(--primary)">🚀 Launching browser... Please log in to Google in the popup window.</span>`;
 
             try {
                 const res = await fetch('/api/launch', {
@@ -127,10 +398,11 @@
                     body: JSON.stringify({ profileName: name })
                 });
                 const msg = await res.json();
-                status.textContent = "Browser Open. Log in, then click 'Save & Close' here.";
-                saveBtn.style.display = 'inline-block';
+                status.innerHTML = `<strong>Browser Open.</strong> Log in completely, then come back here and click <strong>'Save Profile'</strong>.`;
+                saveBtn.style.display = 'inline-flex';
             } catch (e) {
                 status.textContent = "Error: " + e.message;
+                status.style.color = "var(--danger)";
                 launchBtn.disabled = false;
             }
         }
@@ -147,10 +419,10 @@
                 const res = await fetch('/api/save', { method: 'POST' });
                 const msg = await res.json();
                 if (res.ok) {
-                    status.textContent = "✅ " + msg.message;
+                    status.innerHTML = `<span style="color:var(--success)">✅ Profile saved successfully!</span>`;
                     document.getElementById('newProfileName').value = '';
                 } else {
-                    status.textContent = "❌ Error: " + msg;
+                    status.innerHTML = `<span style="color:var(--danger)">❌ Error: ${msg}</span>`;
                 }
             } catch (e) {
                 status.textContent = "Error saving: " + e.message;

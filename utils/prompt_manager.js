@@ -7,11 +7,11 @@ class PromptManager {
         this.promptsDir = path.join(baseDir, 'prompts');
         this.doneDir = path.join(this.promptsDir, 'done');
         this.retryFile = path.join(this.promptsDir, 'prompts_fail.txt');
-        
+
         // Ensure directories exist
         if (!fs.existsSync(this.promptsDir)) fs.mkdirSync(this.promptsDir, { recursive: true });
         if (!fs.existsSync(this.doneDir)) fs.mkdirSync(this.doneDir, { recursive: true });
-        
+
         this.promptFileStatus = new Map();
     }
 
@@ -74,9 +74,12 @@ class PromptManager {
 
             lines.forEach(line => {
                 const trimmed = line.trim();
+                // Ignore separator lines
+                if (trimmed.includes('---')) return;
+
                 // Start of new numbered item
                 if (/^\d+\.\s/.test(trimmed)) {
-                    if (currentPrompt) prompts.push(currentPrompt); 
+                    if (currentPrompt) prompts.push(currentPrompt);
                     currentPrompt = trimmed.replace(/^\d+\.\s/, "").trim();
                 } else if (trimmed.length > 0 && !trimmed.includes('=======')) {
                     // Append continuation lines
@@ -85,13 +88,14 @@ class PromptManager {
             });
             if (currentPrompt) prompts.push(currentPrompt);
             return prompts;
-        } 
+        }
 
         // 3. Fallback: Block paragraphs separated by empty lines
         const blocks = content.split(/\n\s*\n/);
-        const validBlocks = blocks.map(p => p.trim()).filter(p => p.length > 0 && !p.includes('======='));
-        
-        if (validBlocks.length === 0 && content.trim().length > 0) {
+        const validBlocks = blocks.map(p => p.trim())
+            .filter(p => p.length > 0 && !p.includes('=======') && !p.includes('---'));
+
+        if (validBlocks.length === 0 && content.trim().length > 0 && !content.includes('=======') && !content.includes('---')) {
             return [content.trim()];
         }
         return validBlocks;
@@ -122,7 +126,7 @@ class PromptManager {
         if (totalProcessed === status.total) {
             const sourceFile = path.join(this.promptsDir, `${filename}.txt`);
             const destFile = path.join(this.doneDir, `${filename}.txt`);
-            
+
             try {
                 if (fs.existsSync(sourceFile)) {
                     fs.renameSync(sourceFile, destFile);
