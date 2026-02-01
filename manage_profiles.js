@@ -53,6 +53,7 @@ app.get('/api/profiles', (req, res) => {
 
 // API: Toggle Profile Status
 app.post('/api/toggle-status', (req, res) => {
+    console.log(`[API] HIT: /api/toggle-status`);
     try {
         const { profileName, currentStatus } = req.body;
         if (!profileName) return res.status(400).json("Name required");
@@ -206,12 +207,24 @@ app.post('/api/check-flow-status', async (req, res) => {
             const signInBtn = await page.locator('button:has-text("Sign in")').count();
 
             // Check for known logged-in element (e.g. settings cog, or canvas)
-            const canvas = await page.locator('canvas').count();
-            const loggedInText = await page.getByText("Text to Video").count();
+            let canvas = await page.locator('canvas').count();
+            let loggedInText = await page.getByText("Text to Video", { exact: false }).count();
+            let createBtn = await page.locator('button:has-text("Create with Flow")');
+
+            if (await createBtn.count() > 0) {
+                console.log("Found 'Create with Flow' button, clicking...");
+                await createBtn.click();
+                await new Promise(r => setTimeout(r, 3000)); // Wait for transition
+                // Re-check elements after click
+                canvas = await page.locator('canvas').count();
+                loggedInText = await page.getByText("Text to Video", { exact: false }).count();
+            }
+
+            const newProjectBtn = await page.getByText("New project", { exact: false }).count();
 
             if (signIn > 0 || signInBtn > 0) {
                 status = "LOGGED_OUT";
-            } else if (canvas > 0 || loggedInText > 0) {
+            } else if (canvas > 0 || loggedInText > 0 || newProjectBtn > 0) {
                 status = "LOGGED_IN";
             } else {
                 status = "UNCERTAIN";
