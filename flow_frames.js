@@ -97,6 +97,17 @@ const timeoutDisplay = timeoutMinutes > 0
   : `${timeoutSeconds}s`;
 console.log(`\n▶️ Timeout hardcoded to ${timeoutInput} seconds (${timeoutDisplay})\n`);
 
+console.log('Run in Headless Mode? (Saves resources)');
+console.log('  1. Yes (Recommended for speed/low resource)');
+console.log('  2. No (Visible browser)');
+const headlessInput = readlineSync.questionInt('\nEnter your choice (1 or 2): ');
+const isHeadless = headlessInput === 1;
+
+const workerCountInput = readlineSync.questionInt('\nHow many concurrent windows (workers) to run? (0 = Run All): ');
+const maxWorkers = workerCountInput <= 0 ? 0 : workerCountInput;
+if (maxWorkers > 0) console.log(`\n▶️ Will run up to ${maxWorkers} concurrent windows.\n`);
+else console.log(`\n▶️ Will run all profiles simultaneously.\n`);
+
 // ==========================================
 // SYSTEM CONFIGURATION
 // ==========================================
@@ -113,6 +124,8 @@ const CONFIG = {
   MODEL_PREFERENCE: modelPreference,
   OVERWRITE_MODE: overwriteMode,
   TIMEOUT_SECONDS: timeoutInput,
+  HEADLESS: isHeadless,
+  MAX_WORKERS: maxWorkers,
 
   POLL_MS: 1000,
   TAB_OPEN_DELAY: 2000,
@@ -882,7 +895,7 @@ async function runOneWindow(profile, windowIdx) {
     console.log(`\n🌐 [Window ${windowIdx}] Launching browser for Profile: ${profile.name}...`);
 
     const browser = await chromium.launch({
-      headless: false,
+      headless: CONFIG.HEADLESS,
       args: ["--start-maximized"]
     });
 
@@ -1089,9 +1102,38 @@ async function main() {
     initializePromptFileTracking(prompts);
     GLOBAL_PROMPT_QUEUE = prompts;
 
-    console.log(`\n🚀 Launching ${profiles.length} window(s)...`);
+    console.log(`\n🚀 Launching... (Active Profiles: ${profiles.length})`);
 
-    await Promise.allSettled(profiles.map((p, i) => runOneWindow(p, i + 1)));
+    // === WORKER POOL LOGIC ===
+    const maxConcurrency = CONFIG.MAX_WORKERS > 0 ? CONFIG.MAX_WORKERS : profiles.length;
+    const profileQueue = [...profiles];
+    
+    // Worker function: keeps picking profiles until queue is empty
+    async function worker(workerId) {
+      while (profileQueue.length > 0) {
+        // Pick next profile (Thread-safe-ish since JS is single threaded event loop)
+        const profile = profileQueue.shift(); 
+        if (!profile) break;
+
+        console.log(`\n👷 [Worker ${workerId}] Starting Profile: ${profile.name}`);
+        try {
+          // runOneWindow now acts as a "task" for the worker
+          await runOneWindow(profile, workerId); 
+        } catch (e) {
+          console.error(`❌ [Worker ${workerId}] Error in profile ${profile.name}: ${e.message}`);
+        }
+        console.log(`✅ [Worker ${workerId}] Finished Profile: ${profile.name}`);
+      }
+    }
+
+    // Spawn workers
+    const workers = [];
+    const actualWorkers = Math.min(maxConcurrency, profiles.length);
+    for (let i = 1; i <= actualWorkers; i++) {
+        workers.push(worker(i));
+    }
+
+    await Promise.allSettled(workers);
 
     const totalTime = Date.now() - SCRIPT_START_TIME;
     console.log("\n" + "=".repeat(60));
