@@ -244,6 +244,32 @@ app.post('/api/check-flow-status', async (req, res) => {
     }
 });
 
+// API: Clear Profile Cache (localStorage/sessionStorage)
+app.post('/api/clear-cache', (req, res) => {
+    try {
+        const { profileName } = req.body;
+        if (!profileName) return res.status(400).json("Profile name required");
+
+        const activePath = path.join(PROFILES_DIR, `${profileName}.json`);
+        const disabledPath = path.join(DISABLED_DIR, `${profileName}.json`);
+
+        const filePath = fs.existsSync(activePath) ? activePath : (fs.existsSync(disabledPath) ? disabledPath : null);
+
+        if (!filePath) return res.status(404).json("Profile not found");
+
+        const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        // Clear origins (localStorage, sessionStorage) but keep cookies
+        data.origins = [];
+
+        fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+        console.log(`Cleared cache for: ${profileName}`);
+        res.json("Cache cleared");
+    } catch (e) {
+        console.error(e);
+        res.status(500).json(e.message);
+    }
+});
+
 // API: Delete Profile
 app.delete('/api/delete', (req, res) => {
     try {
