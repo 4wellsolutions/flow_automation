@@ -24,6 +24,8 @@ console.log('  1. Veo 3.1 - Fast (Standard)');
 console.log('  2. Veo 3.1 - Fast [Lower Priority] (Zero Credit)');
 const modelChoiceInput = readlineSync.questionInt('\nEnter your choice (1 or 2): ');
 
+// Borderless Mode Removed
+
 let modelPreference = '';
 if (modelChoiceInput === 2) {
   modelPreference = 'Veo 3.1 - Fast [Lower Priority]';
@@ -97,20 +99,19 @@ const timeoutDisplay = timeoutMinutes > 0
   : `${timeoutSeconds}s`;
 console.log(`\n▶️ Timeout hardcoded to ${timeoutInput} seconds (${timeoutDisplay})\n`);
 
-console.log('Run in Headless Mode? (Saves resources)');
-console.log('  1. Yes (Recommended for speed/low resource)');
-console.log('  2. No (Visible browser)');
-const headlessInput = readlineSync.questionInt('\nEnter your choice (1 or 2): ');
-const isHeadless = headlessInput === 1;
+const isHeadless = false;
 
 const workerCountInput = readlineSync.questionInt('\nHow many concurrent windows (workers) to run? (0 = Run All): ');
-const maxWorkers = workerCountInput <= 0 ? 0 : workerCountInput;
+const maxWorkers = (workerCountInput <= 0 ? 0 : workerCountInput);
 if (maxWorkers > 0) console.log(`\n▶️ Will run up to ${maxWorkers} concurrent windows.\n`);
 else console.log(`\n▶️ Will run all profiles simultaneously.\n`);
+
+
 
 // ==========================================
 // SYSTEM CONFIGURATION
 // ==========================================
+const BASE_DIR = "d:\\workspace\\flow";
 const CONFIG = {
   // === CRITICAL PATHS ===
   PROFILES_DIR: "d:\\workspace\\flow\\profiles", // DIRECT PROFILES
@@ -126,6 +127,14 @@ const CONFIG = {
   TIMEOUT_SECONDS: timeoutInput,
   HEADLESS: isHeadless,
   MAX_WORKERS: maxWorkers,
+  IS_REAL_CHROME: false,
+  CHROME_EXE: "",
+  CHROME_USER_DATA: "",
+  CHROME_PROFILE_DIR: "",
+  IS_PARALLEL_REAL: false,
+  CHROME_MASTER_DIR: "",
+  CHROME_LIST_FILE: "",
+  IS_FILE_LIST_MODE: false,
 
   POLL_MS: 1000,
   TAB_OPEN_DELAY: 2000,
@@ -133,11 +142,8 @@ const CONFIG = {
   INTERNET_CHECK_RETRY_DELAY: 30000,
   ACTION_RETRIES: 3,
   ACTION_RETRY_DELAY: 2000,
-  USER_AGENT: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+  USER_AGENT: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.7559.110 Safari/537.36',
 
-  // === RATE LIMIT PROTECTION ===
-  MAX_CONSECUTIVE_FAILURES: 5,   // If 5 fails in a row globally...
-  COOLDOWN_MINUTES: 60           // ...pause for 60 minutes
 };
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -152,8 +158,6 @@ const QUEUE_LOCK = { locked: false };
 let TOTAL_VIDEOS_COMPLETED = 0;
 let TOTAL_VIDEOS_FAILED = 0;
 let TOTAL_VIDEOS_SKIPPED = 0;
-let CONSECUTIVE_FAILURES = 0; // New tracker
-let IS_COOLDOWN_ACTIVE = false;
 const PROMPT_FILE_STATUS = new Map();
 let INTERNET_LAST_STATUS = true;
 
@@ -169,6 +173,7 @@ function formatElapsedTime(milliseconds) {
   if (minutes > 0) return `${minutes}m ${seconds}s`;
   return `${seconds}s`;
 }
+
 
 // ==========================================
 // GENERIC RETRY WRAPPER
@@ -395,33 +400,8 @@ function loadAllPromptsFromFiles() {
 // ==========================================
 // RATE LIMIT BACKOFF Logic
 // ==========================================
-async function checkCooldown() {
-  if (CONSECUTIVE_FAILURES >= CONFIG.MAX_CONSECUTIVE_FAILURES) {
-    if (!IS_COOLDOWN_ACTIVE) {
-      IS_COOLDOWN_ACTIVE = true;
-      console.log(`\n${"=".repeat(60)}`);
-      console.log(`⛔ RATE LIMIT TRIGGERED: ${CONSECUTIVE_FAILURES} consecutive failures!`);
-      console.log(`⏸️  Pausing ALL operations for ${CONFIG.COOLDOWN_MINUTES} minutes...`);
-      console.log(`${"=".repeat(60)}`);
-
-      let remainingMinutes = CONFIG.COOLDOWN_MINUTES;
-      while (remainingMinutes > 0) {
-        process.stdout.write(`\r⏳ COOLDOWN: Resuming in ${remainingMinutes} minute(s)...   `);
-        await sleep(60000); // Wait 1 minute
-        remainingMinutes--;
-      }
-
-      console.log(`\n\n✅ Cooldown finished. Resuming operations.`);
-      CONSECUTIVE_FAILURES = 0; // Reset counter to give it another try
-      IS_COOLDOWN_ACTIVE = false;
-    } else {
-      // If another thread already triggered it, just wait until it clears
-      while (IS_COOLDOWN_ACTIVE) {
-        await sleep(5000);
-      }
-    }
-  }
-}
+// Rate Limit Backoff Logic Removed by User Request
+// async function checkCooldown() { ... }
 
 async function getNextPrompt(requestingProfileName) {
   while (QUEUE_LOCK.locked) await sleep(10);
@@ -492,6 +472,7 @@ function getRemainingPrompts() {
 function loadAllProfiles() {
   console.log("\n👤 Loading profiles...");
   if (!fs.existsSync(CONFIG.PROFILES_DIR)) {
+    fs.mkdirSync(CONFIG.PROFILES_DIR, { recursive: true });
     console.log(`❌ Profile dir not found: ${CONFIG.PROFILES_DIR}`);
     throw new Error(`Profile dir not found`);
   }
@@ -766,9 +747,12 @@ async function getVideoStatus(page) {
       if (/failed/i.test(txt)) return "failed";
 
       const percentMatch = txt.match(/(\d{1,3})%/);
-      if (percentMatch) return `${percentMatch[1]}%`;
+      if (percentMatch) return "generating"; // [Changed] Return normalized status for timeout logic
 
       if (card.querySelector("video[src]")) return "complete";
+
+      // If we have a card but no explicit status, assume generating/preparing
+      return "generating";
 
       return "pending";
     });
@@ -867,6 +851,7 @@ async function setupNewTabWithPrompt(context, promptData, tabIndex, windowIdx, g
       promptIndex: promptData.promptIndex,
       globalIndex: globalIndex,
       startTime: Date.now(),
+      lastProgressTime: Date.now(), // [New] Track progress for smart timeout
       status: "pending",
       profileName,
       foundImagePath: promptData.foundImagePath,
@@ -894,13 +879,20 @@ async function runOneWindow(profile, windowIdx) {
   try {
     console.log(`\n🌐 [Window ${windowIdx}] Launching browser for Profile: ${profile.name}...`);
 
-    const browser = await chromium.launch({
+    let browser, context;
+
+
+
+    const launchArgs = [];
+    launchArgs.push("--start-maximized");
+
+    browser = await chromium.launch({
       headless: CONFIG.HEADLESS,
-      args: ["--start-maximized"]
+      args: launchArgs
     });
 
     // Use stored state for this profile
-    const context = await browser.newContext({
+    context = await browser.newContext({
       storageState: profile.path,
       viewport: null,
       userAgent: CONFIG.USER_AGENT
@@ -912,7 +904,7 @@ async function runOneWindow(profile, windowIdx) {
     console.log(`⚓ [Window ${windowIdx}] Anchor tab opened (keeps window alive).`);
 
     const activeTabs = new Map();
-    let consecutiveProfileFailures = 0; // Local failure tracker
+    // consecutiveProfileFailures removed
 
     // INITIAL FILL
     for (let i = 1; i <= CONFIG.MAX_TABS; i++) {
@@ -926,17 +918,7 @@ async function runOneWindow(profile, windowIdx) {
     while (activeTabs.size > 0 || getRemainingPrompts() > 0) {
 
       // === PER-PROFILE RATE LIMIT CHECK ===
-      if (consecutiveProfileFailures >= CONFIG.MAX_CONSECUTIVE_FAILURES) {
-        console.log(`\n${"=".repeat(60)}`);
-        console.log(`⛔ [Window ${windowIdx}] PROFILE PAUSED: ${profile.name}`);
-        console.log(`⚠️ Too many consecutive failures. Cooling down for ${CONFIG.COOLDOWN_MINUTES} mins...`);
-        console.log(`${"=".repeat(60)}`);
 
-        await sleep(CONFIG.COOLDOWN_MINUTES * 60 * 1000);
-
-        console.log(`\n✅ [Window ${windowIdx}] Resuming profile: ${profile.name}`);
-        consecutiveProfileFailures = 0; // Reset after cooldown
-      }
 
       await checkInternetConnection(windowIdx);
 
@@ -954,9 +936,26 @@ async function runOneWindow(profile, windowIdx) {
           tab.status = 'error';
         }
 
-        const elapsed = (Date.now() - tab.startTime) / 1000;
-        if (elapsed > CONFIG.TIMEOUT_SECONDS && tab.status !== 'complete') {
-          console.log(`⏰ [Window ${windowIdx}] [Tab ${idx}] TIMEOUT`);
+        const currentStatus = tab.status;
+
+        // [New] Smart Timeout Logic
+        // If status changes (e.g. pending -> generating), OR if status is 'generating' (implies activity),
+        // we reset the timeout clock.
+        if (currentStatus !== 'error' && currentStatus !== 'failed') {
+          // If we transitioned to generating, or are still generating, assume progress
+          if (currentStatus === 'generating' || currentStatus === 'complete') {
+            tab.lastProgressTime = Date.now();
+          }
+        }
+
+        // Calculate time since LAST PROGRESS, not just start time
+        const timeSinceProgress = (Date.now() - (tab.lastProgressTime || tab.startTime)) / 1000;
+
+        // Use a longer timeout for active generation vs initial load
+        const dynamicTimeout = (tab.status === 'generating') ? (CONFIG.TIMEOUT_SECONDS * 2) : CONFIG.TIMEOUT_SECONDS;
+
+        if (timeSinceProgress > dynamicTimeout && tab.status !== 'complete') {
+          console.log(`⏰ [Window ${windowIdx}] [Tab ${idx}] TIMEOUT (Stuck for ${Math.round(timeSinceProgress)}s)`);
           tab.status = 'failed';
         }
 
@@ -964,10 +963,9 @@ async function runOneWindow(profile, windowIdx) {
           try {
             // PASS LOCAL COUNTER REF (Simulated by handling return logic or updating external map if needed, 
             // but here we are in same scope if we inline handleCompleted logic or return status)
-            // Ideally handleCompletedVideo should return success/fail to update our local counter.
             // Let's modify handleCompletedVideo to return boolean.
             const success = await handleCompletedVideo(tab, idx, windowIdx);
-            if (success) consecutiveProfileFailures = 0; // Reset on success
+            // if (success) consecutiveProfileFailures = 0; // Removed
           } catch (e) {
             await closeTabAndCleanup(tab, idx, windowIdx);
           }
@@ -977,7 +975,7 @@ async function runOneWindow(profile, windowIdx) {
           console.log(`\n⚠️ [Window ${windowIdx}] [Tab ${idx}] Failed/Error detected.`);
           await closeTabAndCleanup(tab, idx, windowIdx);
 
-          consecutiveProfileFailures++; // Increment local counter
+          // consecutiveProfileFailures++; // Removed
 
           // RE-QUEUE LOGIC 
           // ... (existing logic)
@@ -992,9 +990,6 @@ async function runOneWindow(profile, windowIdx) {
               failedProfiles: tab.failedProfiles,
               profileName: profile.name
             }, windowIdx);
-          } else {
-            console.log(`❌ [Window ${windowIdx}] Max Global Retries exceeded. Faking failure.`);
-            await handleFailedVideo(tab, idx, windowIdx);
           }
           activeTabs.delete(idx);
         }
@@ -1039,6 +1034,12 @@ async function handleCompletedVideo(tabData, tabIndex, windowIdx) {
 
   if (downloaded) {
     TOTAL_VIDEOS_COMPLETED++;
+
+    // --- PERIODIC CLEANUP (Every 2 Videos) ---
+    if (TOTAL_VIDEOS_COMPLETED > 0 && TOTAL_VIDEOS_COMPLETED % 2 === 0) {
+      await cleanSiteData(tabData.page);
+    }
+    // -----------------------------------------
     // Global counter reset removed (handled locally)
     const status = PROMPT_FILE_STATUS.get(tabData.filename);
     if (status) { status.completed++; checkAndMovePromptFile(tabData.filename); }
@@ -1082,6 +1083,20 @@ function reQueuePrompt(tabData, windowIdx) {
   });
 }
 
+async function cleanSiteData(page) {
+  try {
+    console.log("   🧹 [Periodic Cleanup] Clearing Site Data (Cookies Preserved)...");
+    const client = await page.context().newCDPSession(page);
+    // Clearing 'cookies' here would log the user out, so we exclude it based on previous request.
+    await client.send('Storage.clearDataForOrigin', {
+      origin: page.url(),
+      storageTypes: 'appcache,cache_storage,file_systems,indexeddb,local_storage,shader_cache,websql,service_workers'
+    });
+  } catch (e) {
+    console.log(`   ⚠️ Cleanup Failed: ${e.message}`);
+  }
+}
+
 // ==========================================
 // MAIN ENTRY POINT
 // ==========================================
@@ -1094,7 +1109,6 @@ async function main() {
 
     if (!fs.existsSync(CONFIG.DOWNLOAD_BASE_DIR)) fs.mkdirSync(CONFIG.DOWNLOAD_BASE_DIR, { recursive: true });
 
-    const profiles = loadAllProfiles();
     const prompts = loadAllPromptsFromFiles();
 
     if (prompts.length === 0) { console.log("⚠️ No prompts found. Exiting."); return; }
@@ -1102,23 +1116,33 @@ async function main() {
     initializePromptFileTracking(prompts);
     GLOBAL_PROMPT_QUEUE = prompts;
 
+    // === PROFILE LOADING ===
+    let profiles = [];
+    // Load Bundled Profiles directly
+    profiles = fs.readdirSync(CONFIG.PROFILES_DIR)
+      .filter(f => f.endsWith('.json'))
+      .map(f => ({
+        name: path.parse(f).name,
+        path: path.join(CONFIG.PROFILES_DIR, f)
+      }));
+
     console.log(`\n🚀 Launching... (Active Profiles: ${profiles.length})`);
 
     // === WORKER POOL LOGIC ===
     const maxConcurrency = CONFIG.MAX_WORKERS > 0 ? CONFIG.MAX_WORKERS : profiles.length;
     const profileQueue = [...profiles];
-    
+
     // Worker function: keeps picking profiles until queue is empty
     async function worker(workerId) {
       while (profileQueue.length > 0) {
         // Pick next profile (Thread-safe-ish since JS is single threaded event loop)
-        const profile = profileQueue.shift(); 
+        const profile = profileQueue.shift();
         if (!profile) break;
 
         console.log(`\n👷 [Worker ${workerId}] Starting Profile: ${profile.name}`);
         try {
           // runOneWindow now acts as a "task" for the worker
-          await runOneWindow(profile, workerId); 
+          await runOneWindow(profile, workerId);
         } catch (e) {
           console.error(`❌ [Worker ${workerId}] Error in profile ${profile.name}: ${e.message}`);
         }
@@ -1126,11 +1150,13 @@ async function main() {
       }
     }
 
-    // Spawn workers
+
+
+    // --- START WORKERS ---
     const workers = [];
     const actualWorkers = Math.min(maxConcurrency, profiles.length);
     for (let i = 1; i <= actualWorkers; i++) {
-        workers.push(worker(i));
+      workers.push(worker(i));
     }
 
     await Promise.allSettled(workers);
