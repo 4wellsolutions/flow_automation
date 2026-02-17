@@ -115,7 +115,7 @@ const BASE_DIR = "d:\\workspace\\flow";
 const CONFIG = {
   // === CRITICAL PATHS ===
   PROFILES_DIR: "d:\\workspace\\flow\\profiles", // DIRECT PROFILES
-  PROMPTS_DIR: generationMode === 'Text to Video' ? "d:\\workspace\\flow\\prompts" : "d:\\workspace\\flow\\frames",
+  PROMPTS_DIR: generationMode === 'Frames to Video' ? "d:\\workspace\\flow\\frames" : "d:\\workspace\\flow\\prompts",
   DOWNLOAD_BASE_DIR: "d:\\workspace\\flow\\Videos",
   // ======================
 
@@ -331,6 +331,37 @@ function findImagePath(filename, promptIndex) {
   return null;
 }
 
+function parseImagesFromPrompt(promptText) {
+  // Match "images: [file1.png, file2.png]" or "images: file.png" (case-insensitive)
+  const match = promptText.match(/^\s*images:\s*(?:\[([^\]]+)\]|(.+))$/im);
+  if (!match) return { cleanText: promptText, imageFiles: [] };
+
+  const raw = (match[1] || match[2]).trim();
+  const imageFiles = raw.split(/[,\s]+/).map(f => f.trim()).filter(f => f.length > 0);
+
+  // Remove the images: line from the prompt text
+  const cleanText = promptText.replace(/^\s*images:\s*(?:\[[^\]]*\]|.+)$/im, '').trim();
+
+  return { cleanText, imageFiles };
+}
+
+function findImageByName(filename, imageName) {
+  const base = path.join(CONFIG.PROMPTS_DIR, filename);
+  const fullPath = path.join(base, imageName);
+  if (fs.existsSync(fullPath)) return fullPath;
+
+  // Try adding extensions if the name doesn't have one
+  const hasExt = /\.[a-zA-Z0-9]+$/.test(imageName);
+  if (!hasExt) {
+    const extensions = ['.png', '.jpg', '.jpeg', '.webp'];
+    for (const ext of extensions) {
+      const tryPath = path.join(base, `${imageName}${ext}`);
+      if (fs.existsSync(tryPath)) return tryPath;
+    }
+  }
+  return null;
+}
+
 function loadAllPromptsFromFiles() {
   console.log(`\n📂 Loading prompts from: ${CONFIG.PROMPTS_DIR}`);
 
@@ -384,12 +415,24 @@ function loadAllPromptsFromFiles() {
     }
 
     prompts.forEach((text, index) => {
-      allPrompts.push({
+      const promptObj = {
         filename: baseName,
         promptIndex: index + 1,
         text: text,
         globalRetryCount: 0
-      });
+      };
+
+      // For Ingredients mode, parse images: directive from prompt text
+      if (CONFIG.GENERATION_MODE === 'Ingredients to Video') {
+        const { cleanText, imageFiles } = parseImagesFromPrompt(text);
+        if (imageFiles.length > 0) {
+          promptObj.text = cleanText;
+          promptObj.parsedImageFiles = imageFiles;
+          console.log(`      🖼️ Prompt #${index + 1}: images: [${imageFiles.join(', ')}]`);
+        }
+      }
+
+      allPrompts.push(promptObj);
     });
     console.log(`   ✓ ${file}: ${prompts.length} prompts`);
   }
@@ -431,19 +474,44 @@ async function getNextPrompt(requestingProfileName) {
       }
 
       if (CONFIG.GENERATION_MODE !== 'Text to Video') {
-        const imgPath = findImagePath(prompt.filename, prompt.promptIndex);
-        if (!imgPath) {
-          console.log(`\n🚫 SKIPPED: ${prompt.filename} #${prompt.promptIndex} (Image missing)`);
-          TOTAL_VIDEOS_SKIPPED++;
-          const status = PROMPT_FILE_STATUS.get(prompt.filename);
-          if (status) { status.skipped++; checkAndMovePromptFile(prompt.filename); }
-
-          // Remove from queue and continue searching
-          GLOBAL_PROMPT_QUEUE.splice(i, 1);
-          i--;
-          continue;
+        // For Ingredients mode with parsed image files from images: directive
+        if (CONFIG.GENERATION_MODE === 'Ingredients to Video' && prompt.parsedImageFiles && prompt.parsedImageFiles.length > 0) {
+          const resolvedPaths = [];
+          let missing = false;
+          for (const imgFile of prompt.parsedImageFiles) {
+            const resolved = findImageByName(prompt.filename, imgFile);
+            if (!resolved) {
+              console.log(`\n🚫 SKIPPED: ${prompt.filename} #${prompt.promptIndex} (Image missing: ${imgFile})`);
+              missing = true;
+              break;
+            }
+            resolvedPaths.push(resolved);
+          }
+          if (missing) {
+            TOTAL_VIDEOS_SKIPPED++;
+            const status = PROMPT_FILE_STATUS.get(prompt.filename);
+            if (status) { status.skipped++; checkAndMovePromptFile(prompt.filename); }
+            GLOBAL_PROMPT_QUEUE.splice(i, 1);
+            i--;
+            continue;
+          }
+          prompt.foundImagePaths = resolvedPaths;
+          prompt.foundImagePath = resolvedPaths[0]; // backward compat
+        } else {
+          // Default: index-based image lookup
+          const imgPath = findImagePath(prompt.filename, prompt.promptIndex);
+          if (!imgPath) {
+            console.log(`\n🚫 SKIPPED: ${prompt.filename} #${prompt.promptIndex} (Image missing)`);
+            TOTAL_VIDEOS_SKIPPED++;
+            const status = PROMPT_FILE_STATUS.get(prompt.filename);
+            if (status) { status.skipped++; checkAndMovePromptFile(prompt.filename); }
+            GLOBAL_PROMPT_QUEUE.splice(i, 1);
+            i--;
+            continue;
+          }
+          prompt.foundImagePath = imgPath;
+          prompt.foundImagePaths = [imgPath];
         }
-        prompt.foundImagePath = imgPath;
       }
 
       // Found a valid prompt! Remove it from queue and return it.
@@ -614,11 +682,13 @@ async function configureProjectSettings(page, tabIndex, windowIdx) {
 }
 
 // ========== MAIN SUBMISSION (WITH SAFETY WRAPPER) ==========
-async function pasteAndSubmitPrompt(page, rawPromptText, foundImagePath, tabIndex, windowIdx) {
+async function pasteAndSubmitPrompt(page, rawPromptText, foundImagePath, tabIndex, windowIdx, foundImagePaths = null) {
   await checkInternetConnection(windowIdx, tabIndex);
 
-  const imgName = foundImagePath ? path.basename(foundImagePath) : "None";
-  console.log(`📝 [Window ${windowIdx}] [Tab ${tabIndex}] Mode: ${CONFIG.GENERATION_MODE} (Image: ${imgName})`);
+  // Normalize to array of image paths
+  const imagePaths = foundImagePaths || (foundImagePath ? [foundImagePath] : []);
+  const imgNames = imagePaths.length > 0 ? imagePaths.map(p => path.basename(p)).join(', ') : "None";
+  console.log(`📝 [Window ${windowIdx}] [Tab ${tabIndex}] Mode: ${CONFIG.GENERATION_MODE} (Images: ${imgNames})`);
 
   // --- 1. SWITCH MODE ---
   try {
@@ -653,15 +723,48 @@ async function pasteAndSubmitPrompt(page, rawPromptText, foundImagePath, tabInde
     }
   } catch (e) { console.log(`⚠️ Mode switch warning: ${e.message}`); }
 
-  // --- 2. UPLOAD IMAGE (SAFE) ---
-  if (CONFIG.GENERATION_MODE !== 'Text to Video') {
-    try {
-      console.log(`🖼️ [Window ${windowIdx}] [Tab ${tabIndex}] Uploading image...`);
-      await handlePopup(page);
+  // --- 2. UPLOAD IMAGE(S) (SAFE) ---
+  if (CONFIG.GENERATION_MODE !== 'Text to Video' && imagePaths.length > 0) {
+    console.log(`🔍 [DEBUG] imagePaths array (${imagePaths.length} images):`);
+    imagePaths.forEach((p, i) => console.log(`   [${i}]: ${p}`));
 
-      const addBtn = page.locator('button').filter({ has: page.locator('i.google-symbols:text-is("add")') }).first();
+    for (let imgIdx = 0; imgIdx < imagePaths.length; imgIdx++) {
+      const currentImagePath = imagePaths[imgIdx];
+      try {
+        console.log(`🖼️ [Window ${windowIdx}] [Tab ${tabIndex}] Uploading image ${imgIdx + 1}/${imagePaths.length}: ${currentImagePath}`);
+        await handlePopup(page);
 
-      if (await addBtn.isVisible()) {
+        // For 2nd+ images: wait for the previous image thumbnail to fully render
+        if (imgIdx > 0) {
+          console.log(`⏳ [Window ${windowIdx}] [Tab ${tabIndex}] Waiting for previous image to fully process...`);
+          // Wait for the number of uploaded image thumbnails to match imgIdx
+          for (let waitAttempt = 0; waitAttempt < 15; waitAttempt++) {
+            const thumbnailCount = await page.locator('img[src*="blob:"], img[src*="data:"], img[src*="googleusercontent"]').count();
+            if (thumbnailCount >= imgIdx) break;
+            await sleep(1000);
+          }
+          await sleep(1000);
+
+          // Dismiss any lingering menus or dialogs
+          await page.keyboard.press('Escape').catch(() => { });
+          await sleep(500);
+          await handlePopup(page);
+        }
+
+        // Remove old file inputs to force the app to create fresh ones
+        await page.evaluate(() => {
+          document.querySelectorAll('input[type="file"]').forEach(input => {
+            try { input.value = ''; } catch (e) { }
+          });
+        });
+        await sleep(500);
+
+        // Find and click the add button
+        const addBtn = page.locator('button').filter({ has: page.locator('i.google-symbols:text-is("add")') }).last();
+        await addBtn.waitFor({ state: 'visible', timeout: 15000 });
+        await sleep(500);
+
+        // Intercept file chooser BEFORE clicking
         const fileChooserPromise = page.waitForEvent('filechooser', { timeout: 15000 });
         await addBtn.click();
 
@@ -669,46 +772,112 @@ async function pasteAndSubmitPrompt(page, rawPromptText, foundImagePath, tabInde
         try {
           fileChooser = await fileChooserPromise;
         } catch (fcError) {
-          console.log(`⚠️ [Window ${windowIdx}] [Tab ${tabIndex}] File chooser timeout. Trying fallback menu...`);
+          console.log(`⚠️ [Window ${windowIdx}] [Tab ${tabIndex}] File chooser timeout for image ${imgIdx + 1}. Trying fallback menu...`);
           await handlePopup(page);
-          const uploadBtnInMenu = page.locator('div[role="menu"] button:has-text("Upload")').first();
+          // The add button may have opened a menu instead of file chooser
+          const uploadBtnInMenu = page.locator('[role="menu"] button:has-text("Upload"), [role="menu"] [role="menuitem"]:has-text("Upload"), [role="listbox"] [role="option"]:has-text("Upload")').first();
           if (await uploadBtnInMenu.isVisible()) {
             const menuChooserPromise = page.waitForEvent('filechooser', { timeout: 10000 });
             await uploadBtnInMenu.click();
             fileChooser = await menuChooserPromise;
+          } else {
+            // Try clicking upload button directly as last resort 
+            console.log(`⚠️ [Window ${windowIdx}] [Tab ${tabIndex}] Menu upload button not found, looking for any upload option...`);
+            const anyUploadBtn = page.locator('button:has-text("Upload"), [role="menuitem"]:has-text("Upload")').first();
+            if (await anyUploadBtn.count() > 0 && await anyUploadBtn.isVisible()) {
+              const anyChooserPromise = page.waitForEvent('filechooser', { timeout: 10000 });
+              await anyUploadBtn.click();
+              fileChooser = await anyChooserPromise;
+            }
           }
         }
 
         if (fileChooser) {
-          await fileChooser.setFiles([foundImagePath]);
-          console.log(`📂 [Window ${windowIdx}] [Tab ${tabIndex}] File set: ${path.basename(foundImagePath)}`);
+          console.log(`🔍 [DEBUG] Setting file on chooser for image ${imgIdx + 1}: ${currentImagePath}`);
+          await fileChooser.setFiles([currentImagePath]);
+          console.log(`📂 [Window ${windowIdx}] [Tab ${tabIndex}] File set: ${path.basename(currentImagePath)}`);
         } else {
-          const hiddenInput = page.locator('input[type="file"]').first();
-          if (await hiddenInput.count() > 0) {
-            await hiddenInput.setInputFiles([foundImagePath]);
+          // Fallback: directly set on the newest file input
+          console.log(`📎 [Window ${windowIdx}] [Tab ${tabIndex}] Using hidden input fallback for image ${imgIdx + 1}...`);
+          const fileInputs = page.locator('input[type="file"]');
+          const inputCount = await fileInputs.count();
+          if (inputCount > 0) {
+            const targetInput = fileInputs.nth(inputCount - 1);
+            await targetInput.setInputFiles([currentImagePath]);
+            console.log(`📂 [Window ${windowIdx}] [Tab ${tabIndex}] File set via input: ${path.basename(currentImagePath)}`);
           } else {
-            throw new Error("Could not find file picker");
+            throw new Error(`Could not find file picker for image ${imgIdx + 1}`);
           }
         }
 
-        await sleep(2000);
+        // Wait for crop editor to load the image
+        await sleep(3000);
         await handlePopup(page);
 
         const cropBtn = page.locator('button:has-text("Crop and Save")').first();
-        for (let i = 0; i < 10; i++) {
+        let cropClicked = false;
+        for (let i = 0; i < 15; i++) {
           await handlePopup(page);
           if (await cropBtn.isVisible()) {
             await cropBtn.click();
-            console.log(`✅ [Window ${windowIdx}] [Tab ${tabIndex}] Clicked 'Crop and Save'`);
+            console.log(`✅ [Window ${windowIdx}] [Tab ${tabIndex}] Clicked 'Crop and Save' for image ${imgIdx + 1}`);
+            cropClicked = true;
             break;
           }
           await sleep(1000);
         }
-        await sleep(1000);
+        if (!cropClicked) {
+          console.log(`⚠️ [Window ${windowIdx}] [Tab ${tabIndex}] Crop button never appeared for image ${imgIdx + 1}, continuing...`);
+        }
+
+        // Wait for crop dialog to fully close before next upload
+        if (imgIdx < imagePaths.length - 1) {
+          console.log(`⏳ [Window ${windowIdx}] [Tab ${tabIndex}] Waiting for crop dialog to close for image ${imgIdx + 1}...`);
+          await page.locator('button:has-text("Crop and Save")').waitFor({ state: 'hidden', timeout: 15000 }).catch(() => { });
+          await sleep(3000);
+          await handlePopup(page);
+
+          // Wait for this ingredient to fully appear (button with "close" icon = processed ingredient)
+          console.log(`⏳ [Window ${windowIdx}] [Tab ${tabIndex}] Waiting for ingredient ${imgIdx + 1} to register...`);
+          const expectedIngredients = imgIdx + 1;
+          for (let waitAttempt = 0; waitAttempt < 20; waitAttempt++) {
+            const ingredientCount = await page.locator('button:has(i.google-symbols:text-is("close"))').count();
+            if (ingredientCount >= expectedIngredients) {
+              console.log(`✅ [Window ${windowIdx}] [Tab ${tabIndex}] ${ingredientCount} ingredient(s) confirmed`);
+              break;
+            }
+            await sleep(1000);
+          }
+          await sleep(1000);
+        } else {
+          // Last image: wait for crop to close + ingredient to register
+          await page.locator('button:has-text("Crop and Save")').waitFor({ state: 'hidden', timeout: 15000 }).catch(() => { });
+          await sleep(2000);
+        }
+      } catch (e) {
+        throw new Error(`Upload Failed (image ${imgIdx + 1}: ${path.basename(currentImagePath)}): ${e.message}`);
       }
-    } catch (e) {
-      throw new Error(`Upload Failed: ${e.message}`);
     }
+
+    // --- VERIFY ALL INGREDIENTS ARE PRESENT BEFORE SUBMITTING ---
+    console.log(`🔍 [Window ${windowIdx}] [Tab ${tabIndex}] Verifying all ${imagePaths.length} ingredients are present...`);
+    let allIngredientsReady = false;
+    for (let verifyAttempt = 0; verifyAttempt < 30; verifyAttempt++) {
+      await handlePopup(page);
+      const ingredientCount = await page.locator('button:has(i.google-symbols:text-is("close"))').count();
+      if (ingredientCount >= imagePaths.length) {
+        console.log(`✅ [Window ${windowIdx}] [Tab ${tabIndex}] All ${ingredientCount}/${imagePaths.length} ingredients confirmed!`);
+        allIngredientsReady = true;
+        break;
+      }
+      console.log(`⏳ [Window ${windowIdx}] [Tab ${tabIndex}] Only ${ingredientCount}/${imagePaths.length} ingredients ready, waiting...`);
+      await sleep(2000);
+    }
+    if (!allIngredientsReady) {
+      const finalCount = await page.locator('button:has(i.google-symbols:text-is("close"))').count();
+      console.log(`⚠️ [Window ${windowIdx}] [Tab ${tabIndex}] Warning: Only ${finalCount}/${imagePaths.length} ingredients detected after waiting. Proceeding anyway...`);
+    }
+    await sleep(1000);
   }
 
   // --- 3. PASTE TEXT & GENERATE ---
@@ -839,7 +1008,7 @@ async function setupNewTabWithPrompt(context, promptData, tabIndex, windowIdx, g
     await executeWithRetry(() => navigateToFlowHome(page, tabIndex, windowIdx), "Navigate Home", windowIdx, tabIndex);
     await executeWithRetry(() => clickNewProject(page, tabIndex, windowIdx), "Click New Project", windowIdx, tabIndex);
     await executeWithRetry(() => configureProjectSettings(page, tabIndex, windowIdx), "Configure Settings", windowIdx, tabIndex);
-    await executeWithRetry(() => pasteAndSubmitPrompt(page, promptData.text, promptData.foundImagePath, tabIndex, windowIdx), "Submit Prompt", windowIdx, tabIndex);
+    await executeWithRetry(() => pasteAndSubmitPrompt(page, promptData.text, promptData.foundImagePath, tabIndex, windowIdx, promptData.foundImagePaths), "Submit Prompt", windowIdx, tabIndex);
 
     console.log(`✅ [Window ${windowIdx}] [Tab ${tabIndex}] Setup complete & generating...`);
     console.log(`${"=".repeat(60)}`);
@@ -855,6 +1024,8 @@ async function setupNewTabWithPrompt(context, promptData, tabIndex, windowIdx, g
       status: "pending",
       profileName,
       foundImagePath: promptData.foundImagePath,
+      foundImagePaths: promptData.foundImagePaths,
+      parsedImageFiles: promptData.parsedImageFiles,
       globalRetryCount: promptData.globalRetryCount || 0
     };
   } catch (e) {
@@ -986,6 +1157,8 @@ async function runOneWindow(profile, windowIdx) {
               promptIndex: tab.promptIndex,
               promptText: tab.promptText,
               foundImagePath: tab.foundImagePath,
+              foundImagePaths: tab.foundImagePaths,
+              parsedImageFiles: tab.parsedImageFiles,
               globalRetryCount: currentGlobalRetries,
               failedProfiles: tab.failedProfiles,
               profileName: profile.name
@@ -1078,6 +1251,8 @@ function reQueuePrompt(tabData, windowIdx) {
     promptIndex: tabData.promptIndex,
     text: tabData.promptText,
     foundImagePath: tabData.foundImagePath,
+    foundImagePaths: tabData.foundImagePaths,
+    parsedImageFiles: tabData.parsedImageFiles,
     globalRetryCount: (tabData.globalRetryCount || 0) + 1,
     failedProfiles: failedProfiles // Persist the ban list
   });
