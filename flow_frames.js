@@ -1052,8 +1052,6 @@ async function runOneWindow(profile, windowIdx) {
 
     let browser, context;
 
-
-
     const launchArgs = [];
     launchArgs.push("--start-maximized");
 
@@ -1074,82 +1072,112 @@ async function runOneWindow(profile, windowIdx) {
     await anchorPage.goto('about:blank');
     console.log(`⚓ [Window ${windowIdx}] Anchor tab opened (keeps window alive).`);
 
+    // Shared state for status display
     const activeTabs = new Map();
-    // consecutiveProfileFailures removed
 
-    // INITIAL FILL
-    for (let i = 1; i <= CONFIG.MAX_TABS; i++) {
-      const next = await getNextPrompt(profile.name);
-      if (!next) break;
-      const tab = await setupNewTabWithPrompt(context, next.prompt, i, windowIdx, next.globalIndex, profile.name);
-      if (tab) activeTabs.set(i, tab);
-    }
+    // Status display interval
+    const statusInterval = setInterval(() => {
+      if (activeTabs.size > 0) {
+        process.stdout.write(`\r${formatStatusLine(activeTabs, windowIdx)}`);
+      }
+    }, CONFIG.POLL_MS);
 
-    // MONITOR LOOP
-    while (activeTabs.size > 0 || getRemainingPrompts() > 0) {
+    // ==========================================
+    // PER-TAB INDEPENDENT WORKER
+    // ==========================================
+    async function tabWorker(tabSlot) {
+      console.log(`🔧 [Window ${windowIdx}] [Tab ${tabSlot}] Worker started`);
 
-      // === PER-PROFILE RATE LIMIT CHECK ===
+      while (true) {
+        // --- 1. GRAB NEXT PROMPT ---
+        await checkInternetConnection(windowIdx, tabSlot);
+        const next = await getNextPrompt(profile.name);
+        if (!next) {
+          console.log(`📭 [Window ${windowIdx}] [Tab ${tabSlot}] No more prompts. Worker exiting.`);
+          break;
+        }
 
+        // --- 2. SETUP TAB (open, navigate, configure, submit) ---
+        console.log(`\n🆕 [Window ${windowIdx}] [Tab ${tabSlot}] Loading prompt: ${next.prompt.filename} #${next.prompt.promptIndex}`);
+        const tab = await setupNewTabWithPrompt(context, next.prompt, tabSlot, windowIdx, next.globalIndex, profile.name);
 
-      await checkInternetConnection(windowIdx);
+        if (!tab) {
+          console.log(`❌ [Window ${windowIdx}] [Tab ${tabSlot}] Setup failed, re-queuing...`);
+          const retries = next.prompt.globalRetryCount || 0;
+          if (retries < 3) {
+            reQueuePrompt({
+              filename: next.prompt.filename,
+              promptIndex: next.prompt.promptIndex,
+              promptText: next.prompt.text,
+              foundImagePath: next.prompt.foundImagePath,
+              foundImagePaths: next.prompt.foundImagePaths,
+              parsedImageFiles: next.prompt.parsedImageFiles,
+              globalRetryCount: retries,
+              failedProfiles: next.prompt.failedProfiles,
+              profileName: profile.name
+            }, windowIdx);
+          }
+          await sleep(2000);
+          continue;
+        }
 
-      const tabsToCheck = [...activeTabs.entries()];
-      for (const [idx, tab] of tabsToCheck) {
-        try {
-          if (tab.page && !tab.page.isClosed()) {
-            // ... (rest of logic)
-            await handlePopup(tab.page);
-            tab.status = await getVideoStatus(tab.page);
-          } else {
+        // Register in shared map for status display
+        activeTabs.set(tabSlot, tab);
+
+        // --- 3. MONITOR UNTIL DONE ---
+        let finalStatus = 'pending';
+        while (true) {
+          await sleep(CONFIG.POLL_MS);
+
+          try {
+            await checkInternetConnection(windowIdx, tabSlot);
+
+            if (tab.page && !tab.page.isClosed()) {
+              await handlePopup(tab.page);
+              tab.status = await getVideoStatus(tab.page);
+            } else {
+              tab.status = 'error';
+            }
+          } catch (e) {
             tab.status = 'error';
           }
-        } catch (e) {
-          tab.status = 'error';
-        }
 
-        const currentStatus = tab.status;
+          // Smart timeout: reset clock on progress
+          if (tab.status !== 'error' && tab.status !== 'failed') {
+            if (tab.status === 'generating' || tab.status === 'complete') {
+              tab.lastProgressTime = Date.now();
+            }
+          }
 
-        // [New] Smart Timeout Logic
-        // If status changes (e.g. pending -> generating), OR if status is 'generating' (implies activity),
-        // we reset the timeout clock.
-        if (currentStatus !== 'error' && currentStatus !== 'failed') {
-          // If we transitioned to generating, or are still generating, assume progress
-          if (currentStatus === 'generating' || currentStatus === 'complete') {
-            tab.lastProgressTime = Date.now();
+          const timeSinceProgress = (Date.now() - (tab.lastProgressTime || tab.startTime)) / 1000;
+          const dynamicTimeout = (tab.status === 'generating') ? (CONFIG.TIMEOUT_SECONDS * 2) : CONFIG.TIMEOUT_SECONDS;
+
+          if (timeSinceProgress > dynamicTimeout && tab.status !== 'complete') {
+            console.log(`⏰ [Window ${windowIdx}] [Tab ${tabSlot}] TIMEOUT (Stuck for ${Math.round(timeSinceProgress)}s)`);
+            tab.status = 'failed';
+          }
+
+          // Check terminal states
+          if (tab.status === 'complete' || tab.status === 'failed' || tab.status === 'error') {
+            finalStatus = tab.status;
+            break;
           }
         }
 
-        // Calculate time since LAST PROGRESS, not just start time
-        const timeSinceProgress = (Date.now() - (tab.lastProgressTime || tab.startTime)) / 1000;
-
-        // Use a longer timeout for active generation vs initial load
-        const dynamicTimeout = (tab.status === 'generating') ? (CONFIG.TIMEOUT_SECONDS * 2) : CONFIG.TIMEOUT_SECONDS;
-
-        if (timeSinceProgress > dynamicTimeout && tab.status !== 'complete') {
-          console.log(`⏰ [Window ${windowIdx}] [Tab ${idx}] TIMEOUT (Stuck for ${Math.round(timeSinceProgress)}s)`);
-          tab.status = 'failed';
-        }
-
-        if (tab.status === 'complete') {
+        // --- 4. HANDLE RESULT ---
+        if (finalStatus === 'complete') {
           try {
-            // PASS LOCAL COUNTER REF (Simulated by handling return logic or updating external map if needed, 
-            // but here we are in same scope if we inline handleCompleted logic or return status)
-            // Let's modify handleCompletedVideo to return boolean.
-            const success = await handleCompletedVideo(tab, idx, windowIdx);
-            // if (success) consecutiveProfileFailures = 0; // Removed
+            await handleCompletedVideo(tab, tabSlot, windowIdx);
           } catch (e) {
-            await closeTabAndCleanup(tab, idx, windowIdx);
+            console.log(`⚠️ [Window ${windowIdx}] [Tab ${tabSlot}] Download error: ${e.message}`);
+            await closeTabAndCleanup(tab, tabSlot, windowIdx);
           }
-          activeTabs.delete(idx);
+        } else {
+          // Failed or error
+          console.log(`\n⚠️ [Window ${windowIdx}] [Tab ${tabSlot}] ${finalStatus.toUpperCase()} detected.`);
+          await closeTabAndCleanup(tab, tabSlot, windowIdx);
 
-        } else if (tab.status === 'failed' || tab.status === 'error') {
-          console.log(`\n⚠️ [Window ${windowIdx}] [Tab ${idx}] Failed/Error detected.`);
-          await closeTabAndCleanup(tab, idx, windowIdx);
-
-          // consecutiveProfileFailures++; // Removed
-
-          // RE-QUEUE LOGIC 
-          // ... (existing logic)
+          // Re-queue with retry limit
           const currentGlobalRetries = tab.globalRetryCount || 0;
           if (currentGlobalRetries < 3) {
             reQueuePrompt({
@@ -1164,28 +1192,25 @@ async function runOneWindow(profile, windowIdx) {
               profileName: profile.name
             }, windowIdx);
           }
-          activeTabs.delete(idx);
         }
+
+        // Remove from status display
+        activeTabs.delete(tabSlot);
       }
 
-      while (activeTabs.size < CONFIG.MAX_TABS) {
-        const next = await getNextPrompt(profile.name);
-        if (!next) break;
-
-        let slot = 1;
-        while (activeTabs.has(slot)) slot++;
-
-        console.log(`\n🆕 [Window ${windowIdx}] [Tab ${slot}] Loading next prompt...`);
-        const tab = await setupNewTabWithPrompt(context, next.prompt, slot, windowIdx, next.globalIndex, profile.name);
-        if (tab) activeTabs.set(slot, tab);
-      }
-
-      if (activeTabs.size === 0 && getRemainingPrompts() === 0) break;
-
-      process.stdout.write(`\r${formatStatusLine(activeTabs, windowIdx)}`);
-      await sleep(CONFIG.POLL_MS);
+      console.log(`� [Window ${windowIdx}] [Tab ${tabSlot}] Worker finished`);
     }
 
+    // ==========================================
+    // SPAWN ALL TAB WORKERS IN PARALLEL
+    // ==========================================
+    const tabWorkers = [];
+    for (let i = 1; i <= CONFIG.MAX_TABS; i++) {
+      tabWorkers.push(tabWorker(i));
+    }
+    await Promise.all(tabWorkers);
+
+    clearInterval(statusInterval);
     await browser.close();
     console.log(`\n✅ [Window ${windowIdx}] Window processing complete.`);
   } catch (error) {
