@@ -332,15 +332,16 @@ function findImagePath(filename, promptIndex) {
 }
 
 function parseImagesFromPrompt(promptText) {
-  // Match "images: [file1.png, file2.png]" or "images: file.png" (case-insensitive)
-  const match = promptText.match(/^\s*images:\s*(?:\[([^\]]+)\]|(.+))$/im);
+  // Match "image:" or "images:" (singular/plural, case-insensitive)
+  // Supports: image:3.jpg,4.jpg,1.jpg  |  images: [file1.png, file2.png]  |  image: file.png
+  const match = promptText.match(/^\s*images?:\s*(?:\[([^\]]+)\]|(.+))$/im);
   if (!match) return { cleanText: promptText, imageFiles: [] };
 
   const raw = (match[1] || match[2]).trim();
   const imageFiles = raw.split(/[,\s]+/).map(f => f.trim()).filter(f => f.length > 0);
 
-  // Remove the images: line from the prompt text
-  const cleanText = promptText.replace(/^\s*images:\s*(?:\[[^\]]*\]|.+)$/im, '').trim();
+  // Remove the image:/images: line from the prompt text
+  const cleanText = promptText.replace(/^\s*images?:\s*(?:\[[^\]]*\]|.+)$/im, '').trim();
 
   return { cleanText, imageFiles };
 }
@@ -383,10 +384,19 @@ function loadAllPromptsFromFiles() {
 
     let prompts = [];
 
-    // === NUMBERED LIST DETECTION ===
-    const isNumberedList = /^\d+\.\s/m.test(content);
+    // === SCENE-BASED DETECTION (Scene 1 —, Scene 2 —, etc.) ===
+    const isSceneBased = /^Scene\s+\d+\s*[—–-]/m.test(content);
 
-    if (isNumberedList) {
+    if (isSceneBased) {
+      // Split by "Scene N —" headers, keeping each full scene as one prompt
+      const sceneBlocks = content.split(/(?=^Scene\s+\d+\s*[—–-])/m);
+      prompts = sceneBlocks
+        .map(block => block.trim())
+        .filter(block => block.length > 0 && /^Scene\s+\d+/i.test(block));
+      console.log(`   📎 Scene-based format detected: ${prompts.length} scenes`);
+    }
+    // === NUMBERED LIST DETECTION ===
+    else if (/^\d+\.\s/m.test(content)) {
       const lines = content.split(/\r?\n/);
       let currentPrompt = "";
 
@@ -474,31 +484,40 @@ async function getNextPrompt(requestingProfileName) {
       }
 
       if (CONFIG.GENERATION_MODE !== 'Text to Video') {
-        // For Ingredients mode with parsed image files from images: directive
-        if (CONFIG.GENERATION_MODE === 'Ingredients to Video' && prompt.parsedImageFiles && prompt.parsedImageFiles.length > 0) {
-          const resolvedPaths = [];
-          let missing = false;
-          for (const imgFile of prompt.parsedImageFiles) {
-            const resolved = findImageByName(prompt.filename, imgFile);
-            if (!resolved) {
-              console.log(`\n🚫 SKIPPED: ${prompt.filename} #${prompt.promptIndex} (Image missing: ${imgFile})`);
-              missing = true;
-              break;
+        // For Ingredients mode with parsed image files from image: directive
+        if (CONFIG.GENERATION_MODE === 'Ingredients to Video') {
+          if (prompt.parsedImageFiles && prompt.parsedImageFiles.length > 0) {
+            const resolvedPaths = [];
+            let missing = false;
+            for (const imgFile of prompt.parsedImageFiles) {
+              const resolved = findImageByName(prompt.filename, imgFile);
+              if (!resolved) {
+                console.log(`\n🚫 SKIPPED: ${prompt.filename} #${prompt.promptIndex} (Image missing: ${imgFile})`);
+                missing = true;
+                break;
+              }
+              resolvedPaths.push(resolved);
             }
-            resolvedPaths.push(resolved);
+            if (missing) {
+              TOTAL_VIDEOS_SKIPPED++;
+              const status = PROMPT_FILE_STATUS.get(prompt.filename);
+              if (status) { status.skipped++; checkAndMovePromptFile(prompt.filename); }
+              GLOBAL_PROMPT_QUEUE.splice(i, 1);
+              i--;
+              continue;
+            }
+            prompt.foundImagePaths = resolvedPaths;
+            prompt.foundImagePath = resolvedPaths[0]; // backward compat
+            prompt.effectiveMode = 'Ingredients to Video';
+          } else {
+            // No images for this scene — fallback to Text to Video
+            console.log(`🔀 [Auto-Fallback] ${prompt.filename} #${prompt.promptIndex}: No images → using Text to Video`);
+            prompt.effectiveMode = 'Text to Video';
+            prompt.foundImagePaths = [];
+            prompt.foundImagePath = null;
           }
-          if (missing) {
-            TOTAL_VIDEOS_SKIPPED++;
-            const status = PROMPT_FILE_STATUS.get(prompt.filename);
-            if (status) { status.skipped++; checkAndMovePromptFile(prompt.filename); }
-            GLOBAL_PROMPT_QUEUE.splice(i, 1);
-            i--;
-            continue;
-          }
-          prompt.foundImagePaths = resolvedPaths;
-          prompt.foundImagePath = resolvedPaths[0]; // backward compat
         } else {
-          // Default: index-based image lookup
+          // Default: index-based image lookup (Frames to Video)
           const imgPath = findImagePath(prompt.filename, prompt.promptIndex);
           if (!imgPath) {
             console.log(`\n🚫 SKIPPED: ${prompt.filename} #${prompt.promptIndex} (Image missing)`);
@@ -681,6 +700,117 @@ async function configureProjectSettings(page, tabIndex, windowIdx) {
   }
 }
 
+// ========== SWITCH GENERATION MODE ==========
+async function switchGenerationMode(page, tabIndex, windowIdx, modeOverride = null) {
+  try {
+    await handlePopup(page);
+    console.log(`🔀 [Window ${windowIdx}] [Tab ${tabIndex}] Looking for mode dropdown...`);
+
+    // Wait for ANY combobox button to appear first (with timeout)
+    const anyCombobox = page.locator('button[role="combobox"]').first();
+    await anyCombobox.waitFor({ state: 'visible', timeout: 15000 }).catch(() => { });
+
+    // Now try to find the mode-specific dropdown
+    // Include "Create Image" since that's the default mode on new projects
+    const modeDropdown = page.locator('button[role="combobox"]').filter({
+      has: page.locator('span:text-is("Text to Video"), span:text-is("Ingredients to Video"), span:text-is("Frames to Video"), span:text-is("Create Image")')
+    }).first();
+
+    let modeVisible = false;
+    try {
+      await modeDropdown.waitFor({ state: 'visible', timeout: 5000 });
+      modeVisible = true;
+    } catch (e) {
+      console.log(`⚠️ [Window ${windowIdx}] [Tab ${tabIndex}] Mode dropdown not found with exact text match, trying broader search...`);
+      const allComboboxes = await page.locator('button[role="combobox"]').all();
+      for (const cb of allComboboxes) {
+        const text = await cb.innerText().catch(() => '');
+        console.log(`   🔍 Combobox text: "${text}"`);
+        // If we find a combobox with image/video mode text, use it
+        if (/image|video|text|ingredient|frame/i.test(text)) {
+          modeVisible = true;
+          break;
+        }
+      }
+    }
+
+    if (modeVisible) {
+      const currentModeText = await modeDropdown.innerText();
+      console.log(`🔍 [Window ${windowIdx}] [Tab ${tabIndex}] Current mode: "${currentModeText}"`);
+
+      const effectiveMode = modeOverride || CONFIG.GENERATION_MODE;
+      let targetKeyword = "Frames";
+      if (effectiveMode.includes("Text")) targetKeyword = "Text";
+      if (effectiveMode.includes("Ingredients")) targetKeyword = "Ingredients";
+
+      if (!currentModeText.includes(targetKeyword)) {
+        console.log(`🔀 [Window ${windowIdx}] [Tab ${tabIndex}] Switching from "${currentModeText.trim()}" to '${effectiveMode}'...`);
+        await modeDropdown.click({ timeout: 5000 });
+        await sleep(1500);
+        await handlePopup(page);
+
+        // Log all visible options for debugging
+        const allOptions = await page.evaluate(() => {
+          const opts = document.querySelectorAll('[role="option"], [role="menuitem"], [role="listbox"] *');
+          return Array.from(opts).map(o => ({
+            text: o.textContent.trim().substring(0, 100),
+            role: o.getAttribute('role'),
+            tag: o.tagName
+          }));
+        });
+        console.log(`🔍 [Window ${windowIdx}] [Tab ${tabIndex}] Dropdown options found:`);
+        allOptions.forEach((o, i) => console.log(`   [${i}] <${o.tag} role="${o.role}"> "${o.text}"`));
+
+        let optionClicked = false;
+
+        // Approach 1: Playwright locator with case-insensitive matching
+        try {
+          const targetOption = page.locator('[role="option"], [role="menuitem"]').filter({ hasText: new RegExp(targetKeyword, 'i') });
+          await targetOption.first().waitFor({ state: 'visible', timeout: 5000 });
+          await targetOption.first().click({ timeout: 5000 });
+          optionClicked = true;
+          console.log(`✅ [Window ${windowIdx}] [Tab ${tabIndex}] Selected: ${targetKeyword}`);
+        } catch (optErr) {
+          console.log(`⚠️ [Window ${windowIdx}] [Tab ${tabIndex}] Locator approach failed, trying evaluate...`);
+        }
+
+        // Approach 2: page.evaluate with case-insensitive match
+        if (!optionClicked) {
+          optionClicked = await page.evaluate((keyword) => {
+            const lowerKeyword = keyword.toLowerCase();
+            const options = document.querySelectorAll('[role="option"], [role="menuitem"]');
+            for (const opt of options) {
+              if (opt.textContent.toLowerCase().includes(lowerKeyword)) {
+                opt.click();
+                return true;
+              }
+            }
+            const anyClickable = document.querySelectorAll('[role="listbox"] *, [role="menu"] *, [data-value]');
+            for (const el of anyClickable) {
+              if (el.textContent.toLowerCase().includes(lowerKeyword) && (el.tagName === 'BUTTON' || el.tagName === 'DIV' || el.tagName === 'LI' || el.getAttribute('role'))) {
+                el.click();
+                return true;
+              }
+            }
+            return false;
+          }, targetKeyword);
+          if (optionClicked) console.log(`✅ [Window ${windowIdx}] [Tab ${tabIndex}] Selected via evaluate: ${targetKeyword}`);
+          else console.log(`❌ [Window ${windowIdx}] [Tab ${tabIndex}] Could not find option "${targetKeyword}" in dropdown`);
+        }
+
+        await sleep(2000);
+        await handlePopup(page);
+
+        // If dropdown is still open, press Escape to close it
+        await page.keyboard.press('Escape').catch(() => { });
+        await sleep(500);
+      } else {
+        console.log(`✅ [Window ${windowIdx}] [Tab ${tabIndex}] Already in correct mode: ${targetKeyword}`);
+      }
+    }
+  } catch (e) { console.log(`⚠️ [Window ${windowIdx}] [Tab ${tabIndex}] Mode switch warning: ${e.message}`); }
+}
+
 // ========== MAIN SUBMISSION (WITH SAFETY WRAPPER) ==========
 async function pasteAndSubmitPrompt(page, rawPromptText, foundImagePath, tabIndex, windowIdx, foundImagePaths = null) {
   await checkInternetConnection(windowIdx, tabIndex);
@@ -690,38 +820,7 @@ async function pasteAndSubmitPrompt(page, rawPromptText, foundImagePath, tabInde
   const imgNames = imagePaths.length > 0 ? imagePaths.map(p => path.basename(p)).join(', ') : "None";
   console.log(`📝 [Window ${windowIdx}] [Tab ${tabIndex}] Mode: ${CONFIG.GENERATION_MODE} (Images: ${imgNames})`);
 
-  // --- 1. SWITCH MODE ---
-  try {
-    await handlePopup(page);
-
-    const modeDropdown = page.locator('button[role="combobox"]').filter({
-      has: page.locator('span:text-is("Text to Video"), span:text-is("Ingredients to Video"), span:text-is("Frames to Video")')
-    }).first();
-
-    if (await modeDropdown.isVisible()) {
-      const currentModeText = await modeDropdown.innerText();
-
-      let targetKeyword = "Frames";
-      if (CONFIG.GENERATION_MODE.includes("Text")) targetKeyword = "Text";
-      if (CONFIG.GENERATION_MODE.includes("Ingredients")) targetKeyword = "Ingredients";
-
-      if (!currentModeText.includes(targetKeyword)) {
-        console.log(`🔀 [Window ${windowIdx}] [Tab ${tabIndex}] Switching to '${CONFIG.GENERATION_MODE}'...`);
-        await modeDropdown.click();
-        await sleep(1000);
-        await handlePopup(page);
-
-        const targetOption = page.locator('[role="option"], [role="menuitem"]').filter({ hasText: targetKeyword });
-        if (await targetOption.count() > 0) {
-          await targetOption.first().click();
-        } else {
-          console.log(`⚠️ Option with text "${targetKeyword}" not found!`);
-        }
-        await sleep(1500);
-        await handlePopup(page);
-      }
-    }
-  } catch (e) { console.log(`⚠️ Mode switch warning: ${e.message}`); }
+  // NOTE: Mode switching is now done earlier in setupNewTabWithPrompt (before configureProjectSettings)
 
   // --- 2. UPLOAD IMAGE(S) (SAFE) ---
   if (CONFIG.GENERATION_MODE !== 'Text to Video' && imagePaths.length > 0) {
@@ -882,19 +981,216 @@ async function pasteAndSubmitPrompt(page, rawPromptText, foundImagePath, tabInde
 
   // --- 3. PASTE TEXT & GENERATE ---
   await handlePopup(page);
-  console.log(`📝 [Window ${windowIdx}] [Tab ${tabIndex}] Pasting prompt...`);
-  const inputSelector = 'textarea, input[type="text"], div[contenteditable="true"]';
-  const input = await page.waitForSelector(inputSelector, { timeout: 30000 });
-  await input.click({ clickCount: 3 });
-  await input.press("Backspace");
-  await input.fill(rawPromptText);
+  await sleep(1500);
+  console.log(`📝 [Window ${windowIdx}] [Tab ${tabIndex}] Pasting prompt text...`);
 
+  // Click "Expand" if visible to get the full text input area
+  try {
+    const expandBtn = page.locator('button:has-text("Expand")').first();
+    if (await expandBtn.isVisible({ timeout: 3000 }).catch(() => false)) {
+      await expandBtn.click({ timeout: 3000 });
+      console.log(`📐 [Window ${windowIdx}] [Tab ${tabIndex}] Clicked Expand to open full input`);
+      await sleep(1500);
+      await handlePopup(page);
+    }
+  } catch (e) { }
+
+  // Debug: Log all input-like elements
+  const inputDebug = await page.evaluate(() => {
+    const result = [];
+    document.querySelectorAll('div[contenteditable="true"]').forEach((el, i) => {
+      result.push({ type: 'contenteditable', i, text: el.textContent.substring(0, 80), placeholder: el.getAttribute('data-placeholder') || el.getAttribute('aria-placeholder') || '' });
+    });
+    document.querySelectorAll('textarea').forEach((el, i) => {
+      result.push({ type: 'textarea', i, placeholder: el.placeholder || '', value: el.value.substring(0, 80) });
+    });
+    document.querySelectorAll('input[type="text"]').forEach((el, i) => {
+      result.push({ type: 'input', i, placeholder: el.placeholder || '', value: el.value.substring(0, 80) });
+    });
+    return result;
+  });
+  console.log(`🔍 [Window ${windowIdx}] [Tab ${tabIndex}] Input elements found: ${inputDebug.length}`);
+  inputDebug.forEach((el, i) => console.log(`   [${i}] ${el.type} placeholder="${el.placeholder}" text="${el.text || el.value || ''}"`));
+
+  let inputFilled = false;
+
+  // Approach 1: Use Playwright's fill() — works for textarea/input and triggers framework events properly
+  try {
+    const promptInput = page.locator('div[contenteditable="true"], textarea, input[type="text"]').first();
+    await promptInput.waitFor({ state: 'visible', timeout: 10000 });
+    await promptInput.click({ timeout: 5000 });
+    await sleep(500);
+    await promptInput.fill(rawPromptText, { timeout: 5000 });
+    inputFilled = true;
+    console.log(`✅ [Window ${windowIdx}] [Tab ${tabIndex}] Prompt filled via fill()`);
+  } catch (e) {
+    console.log(`⚠️ [Window ${windowIdx}] [Tab ${tabIndex}] fill() failed: ${e.message}`);
+  }
+
+  // Approach 2: Click input and type via keyboard (most reliable for contenteditable)
+  if (!inputFilled) {
+    try {
+      console.log(`📝 [Window ${windowIdx}] [Tab ${tabIndex}] Trying click+keyboard type...`);
+      const promptInput = page.locator('div[contenteditable="true"], textarea').first();
+      await promptInput.click({ timeout: 5000 });
+      await sleep(500);
+      await page.keyboard.press('Control+a');
+      await sleep(200);
+      await page.keyboard.press('Backspace');
+      await sleep(200);
+      await page.keyboard.type(rawPromptText, { delay: 5 });
+      inputFilled = true;
+      console.log(`✅ [Window ${windowIdx}] [Tab ${tabIndex}] Prompt typed via keyboard`);
+    } catch (e) {
+      console.log(`⚠️ [Window ${windowIdx}] [Tab ${tabIndex}] Keyboard type failed: ${e.message}`);
+    }
+  }
+
+  // Approach 3: Click on visible placeholder text, then type
+  if (!inputFilled) {
+    try {
+      console.log(`📝 [Window ${windowIdx}] [Tab ${tabIndex}] Trying placeholder click+type...`);
+      let clicked = false;
+      for (const placeholderText of ['Generate a video with text and ingredients', 'Describe a video', 'Generate a video', 'Type in the prompt box']) {
+        const el = page.locator(`text="${placeholderText}"`).first();
+        if (await el.count() > 0) {
+          await el.click({ timeout: 3000 });
+          clicked = true;
+          console.log(`   Clicked on placeholder: "${placeholderText}"`);
+          break;
+        }
+      }
+      if (clicked) {
+        await sleep(500);
+        await page.keyboard.press('Control+a');
+        await sleep(200);
+        await page.keyboard.press('Backspace');
+        await sleep(200);
+        await page.keyboard.type(rawPromptText, { delay: 5 });
+        inputFilled = true;
+        console.log(`✅ [Window ${windowIdx}] [Tab ${tabIndex}] Prompt typed after placeholder click`);
+      }
+    } catch (e) {
+      console.log(`⚠️ [Window ${windowIdx}] [Tab ${tabIndex}] Placeholder click+type failed: ${e.message}`);
+    }
+  }
+
+  // Approach 4: Last resort — page.evaluate to set text directly
+  if (!inputFilled) {
+    try {
+      console.log(`📝 [Window ${windowIdx}] [Tab ${tabIndex}] Trying evaluate approach...`);
+      await page.evaluate((text) => {
+        const editables = document.querySelectorAll('div[contenteditable="true"]');
+        for (const el of editables) {
+          el.focus();
+          el.textContent = text;
+          el.dispatchEvent(new Event('input', { bubbles: true }));
+          el.dispatchEvent(new Event('change', { bubbles: true }));
+          // Also try InputEvent for React-like frameworks
+          el.dispatchEvent(new InputEvent('input', { bubbles: true, data: text, inputType: 'insertText' }));
+          return;
+        }
+        const textareas = document.querySelectorAll('textarea');
+        for (const ta of textareas) {
+          const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLTextAreaElement.prototype, 'value').set;
+          nativeInputValueSetter.call(ta, text);
+          ta.dispatchEvent(new Event('input', { bubbles: true }));
+          ta.dispatchEvent(new Event('change', { bubbles: true }));
+          return;
+        }
+      }, rawPromptText);
+      inputFilled = true;
+      console.log(`✅ [Window ${windowIdx}] [Tab ${tabIndex}] Prompt set via evaluate()`);
+    } catch (e) {
+      console.log(`❌ [Window ${windowIdx}] [Tab ${tabIndex}] All input approaches failed: ${e.message}`);
+    }
+  }
+
+  if (!inputFilled) {
+    console.log(`❌ [Window ${windowIdx}] [Tab ${tabIndex}] FAILED to paste prompt text!`);
+  }
+
+  await sleep(1000);
   await handlePopup(page);
-  const btn = page.locator("button:has-text('Generate'), button:has-text('Submit'), button:has-text('Create')").first();
-  await btn.waitFor({ state: 'visible', timeout: 30000 });
-  await btn.click();
 
-  console.log(`🚀 [Window ${windowIdx}] [Tab ${tabIndex}] Prompt submitted!`);
+  // --- SUBMIT ---
+  console.log(`🚀 [Window ${windowIdx}] [Tab ${tabIndex}] Looking for submit button...`);
+
+  // Debug: log last buttons on the page
+  const buttonDebug = await page.evaluate(() => {
+    return Array.from(document.querySelectorAll('button')).slice(-10).map(btn => ({
+      text: btn.textContent.trim().substring(0, 50),
+      ariaLabel: btn.getAttribute('aria-label') || '',
+      disabled: btn.disabled,
+      visible: btn.offsetParent !== null,
+      iconText: btn.querySelector('i') ? btn.querySelector('i').textContent.trim() : ''
+    }));
+  });
+  console.log(`� [Window ${windowIdx}] [Tab ${tabIndex}] Last 10 buttons:`);
+  buttonDebug.forEach((b, i) => console.log(`   [${i}] "${b.text}" icon="${b.iconText}" aria="${b.ariaLabel}" disabled=${b.disabled} visible=${b.visible}`));
+
+  let submitted = false;
+
+  // Try arrow_forward button first (the → icon visible in screenshots)
+  try {
+    const arrowBtn = page.locator('button:has(i.google-symbols:text-is("arrow_forward"))').first();
+    if (await arrowBtn.count() > 0 && await arrowBtn.isVisible({ timeout: 3000 }).catch(() => false)) {
+      await arrowBtn.click({ timeout: 5000 });
+      submitted = true;
+      console.log(`🚀 [Window ${windowIdx}] [Tab ${tabIndex}] Submitted via arrow_forward button`);
+    }
+  } catch (e) { }
+
+  // Try Enter key
+  if (!submitted) {
+    try {
+      await page.keyboard.press('Enter');
+      await sleep(2000);
+      const hasCard = await page.locator('[data-index="1"]').count();
+      if (hasCard > 0) {
+        submitted = true;
+        console.log(`🚀 [Window ${windowIdx}] [Tab ${tabIndex}] Submitted via Enter key`);
+      }
+    } catch (e) { }
+  }
+
+  // Try text-based Generate/Submit button
+  if (!submitted) {
+    try {
+      const textBtn = page.locator("button:has-text('Generate'), button:has-text('Submit'), button:has-text('Create')").first();
+      if (await textBtn.count() > 0 && await textBtn.isVisible({ timeout: 2000 }).catch(() => false)) {
+        await textBtn.click({ timeout: 5000 });
+        submitted = true;
+        console.log(`🚀 [Window ${windowIdx}] [Tab ${tabIndex}] Submitted via text button`);
+      }
+    } catch (e) { }
+  }
+
+  // Last resort: evaluate to find and click any submit button
+  if (!submitted) {
+    try {
+      submitted = await page.evaluate(() => {
+        const btns = document.querySelectorAll('button');
+        for (const btn of btns) {
+          const iconText = btn.querySelector('i') ? btn.querySelector('i').textContent.trim().toLowerCase() : '';
+          const text = (btn.textContent || '').toLowerCase().trim();
+          const ariaLabel = (btn.getAttribute('aria-label') || '').toLowerCase();
+          if ((iconText === 'arrow_forward' || iconText === 'send' ||
+            text.includes('generate') || text.includes('submit') || text.includes('send') ||
+            ariaLabel.includes('generate') || ariaLabel.includes('submit') || ariaLabel.includes('send')) &&
+            btn.offsetParent !== null && !btn.disabled) {
+            btn.click();
+            return true;
+          }
+        }
+        return false;
+      });
+      if (submitted) console.log(`🚀 [Window ${windowIdx}] [Tab ${tabIndex}] Submitted via evaluate`);
+      else console.log(`❌ [Window ${windowIdx}] [Tab ${tabIndex}] Could not find submit button!`);
+    } catch (e) { }
+  }
+
+  console.log(`${submitted ? '🚀' : '❌'} [Window ${windowIdx}] [Tab ${tabIndex}] Prompt ${submitted ? 'submitted!' : 'submission failed!'}`);
   await handlePopup(page);
   await sleep(1000);
 }
@@ -1007,6 +1303,12 @@ async function setupNewTabWithPrompt(context, promptData, tabIndex, windowIdx, g
     const page = await executeWithRetry(() => openNewTab(context, tabIndex, windowIdx), "Open New Tab", windowIdx, tabIndex);
     await executeWithRetry(() => navigateToFlowHome(page, tabIndex, windowIdx), "Navigate Home", windowIdx, tabIndex);
     await executeWithRetry(() => clickNewProject(page, tabIndex, windowIdx), "Click New Project", windowIdx, tabIndex);
+    // Use per-scene effective mode (falls back to Text to Video for imageless Ingredients scenes)
+    const effectiveMode = promptData.effectiveMode || CONFIG.GENERATION_MODE;
+    if (effectiveMode !== CONFIG.GENERATION_MODE) {
+      console.log(`🔀 [Window ${windowIdx}] [Tab ${tabIndex}] Scene override: using '${effectiveMode}' instead of '${CONFIG.GENERATION_MODE}'`);
+    }
+    await executeWithRetry(() => switchGenerationMode(page, tabIndex, windowIdx, effectiveMode), "Switch Mode", windowIdx, tabIndex);
     await executeWithRetry(() => configureProjectSettings(page, tabIndex, windowIdx), "Configure Settings", windowIdx, tabIndex);
     await executeWithRetry(() => pasteAndSubmitPrompt(page, promptData.text, promptData.foundImagePath, tabIndex, windowIdx, promptData.foundImagePaths), "Submit Prompt", windowIdx, tabIndex);
 
